@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Buying — Полный гайд. Фабрика креативов на n8n</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --dim: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --red: #f85149;
+    --orange: #d29922;
+    --code-bg: #1c2128;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    padding: 0;
+  }
+  /* Print */
+  @media print {
+    body { background: white; color: black; font-size: 12px; }
+    .no-print { display: none !important; }
+    .toc { page-break-after: always; }
+    .section { page-break-inside: avoid; }
+    pre { white-space: pre-wrap; word-break: break-word; }
+    :root { --bg: white; --surface: #f6f8fa; --border: #d0d7de; --text: #1f2328; --dim: #656d76; --code-bg: #f6f8fa; }
+    .card { border: 1px solid #d0d7de !important; }
+    .tag { border: 1px solid #d0d7de !important; }
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 0 30px;
+    text-align: center;
+  }
+  @media print { .header { background: white !important; border-bottom: 2px solid #000; } }
+  .header h1 { font-size: 2em; margin-bottom: 8px; background: linear-gradient(135deg, #58a6ff, #3fb950); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  @media print { .header h1 { -webkit-text-fill-color: #1f2328; color: #1f2328; background: none; } }
+  .header p { color: var(--dim); font-size: 1em; }
+  .header .meta { color: var(--dim); font-size: 0.85em; margin-top: 8px; }
+
+  /* TOC */
+  .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px 28px; margin: 24px 0; }
+  .toc h2 { font-size: 1.1em; margin-bottom: 12px; color: var(--accent); }
+  .toc ol { padding-left: 20px; }
+  .toc ol li { margin: 4px 0; }
+  .toc ol li a { color: var(--text); text-decoration: none; }
+  .toc ol li a:hover { color: var(--accent); text-decoration: underline; }
+  .toc ol ol { margin: 2px 0 6px 0; }
+  .toc ol ol li { margin: 2px 0; }
+  .toc ol ol li a { color: var(--dim); font-size: 0.9em; }
+
+  /* Sections */
+  .section { margin: 32px 0; }
+  .section h2 {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+  .section h3 {
+    font-size: 1.15em;
+    margin: 20px 0 8px;
+    color: var(--text);
+  }
+  .section h4 {
+    font-size: 1em;
+    margin: 16px 0 6px;
+    color: var(--dim);
+    font-weight: 600;
+  }
+  .section p { margin: 8px 0; }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .card-title { font-weight: 600; margin-bottom: 6px; color: var(--accent); }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    margin: 2px;
+  }
+  .tag-green { border-color: var(--green); color: var(--green); }
+  .tag-red { border-color: var(--red); color: var(--red); }
+  .tag-orange { border-color: var(--orange); color: var(--orange); }
+  .tag-blue { border-color: var(--accent); color: var(--accent); }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9em;
+  }
+  th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  th { background: var(--surface); color: var(--accent); font-weight: 600; }
+  td { background: var(--bg); }
+
+  /* Code */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    margin: 12px 0;
+  }
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9em;
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  pre code { background: none; padding: 0; border-radius: 0; }
+
+  /* Steps */
+  .step { display: flex; gap: 12px; margin: 10px 0; align-items: flex-start; }
+  .step-num {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.85em;
+  }
+  .step-body { flex: 1; }
+  .step-body strong { display: block; }
+
+  /* Status */
+  .status { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 600; }
+  .status-ok { background: rgba(63,185,80,0.15); color: var(--green); }
+  .status-warn { background: rgba(210,153,34,0.15); color: var(--orange); }
+  .status-bad { background: rgba(248,81,73,0.15); color: var(--red); }
+
+  /* Highlight */
+  .hl { background: rgba(88,166,255,0.1); border-left: 3px solid var(--accent); padding: 10px 14px; margin: 12px 0; border-radius: 0 6px 6px 0; }
+  .hl-green { background: rgba(63,185,80,0.1); border-left-color: var(--green); }
+  .hl-red { background: rgba(248,81,73,0.1); border-left-color: var(--red); }
+
+  /* Diagram */
+  .diagram { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.8em; line-height: 1.4; white-space: pre; overflow-x: auto; background: var(--code-bg); border: 1px solid var(--border); border-radius: 6px; padding: 14px; margin: 12px 0; }
+
+  /* Checklist */
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 4px 0 4px 24px; position: relative; }
+  .checklist li::before { content: '□'; position: absolute; left: 0; color: var(--dim); }
+  .checklist li.done::before { content: '☑'; color: var(--green); }
+  .checklist li.done { color: var(--dim); }
+
+  /* Two column */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0; }
+  @media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
+  .col-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; }
+  .col-card h4 { margin-top: 0; }
+
+  /* Print button */
+  .print-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 12px 0;
+    text-decoration: none;
+  }
+  .print-btn:hover { opacity: 0.9; }
+  @media print { .print-btn { display: none; } }
+
+  .page-break { page-break-before: always; }
+  @media screen { .page-break { margin-top: 40px; border-top: 2px dashed var(--border); } }
+
+  .footer { text-align: center; padding: 30px 0; color: var(--dim); font-size: 0.85em; border-top: 1px solid var(--border); margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>🎯 Media Buying — Полный гайд</h1>
+    <p>От нуля до автоматизированной фабрики креативов на n8n + AI</p>
+    <div class="meta">Дата: 14 июля 2026 • Уровень: с нуля • Вертикаль: Gambling/Casino</div>
+    <button class="print-btn no-print" onclick="window.print()">🖨 Сохранить как PDF / Распечатать</button>
+    <p style="font-size:0.8em;color:var(--dim);margin-top:6px" class="no-print">Ctrl+P → «Сохранить как PDF» для получения файла</p>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ======== TOC ======== -->
+<div class="toc no-print">
+  <h2>📑 Содержание</h2>
+  <ol>
+    <li><a href="#s1">Структура рекламного кабинета Facebook</a></li>
+    <li><a href="#s2">Прокси — подробно</a></li>
+    <li><a href="#s3">Keitaro — трекер</a></li>
+    <li><a href="#s4">Facebook-аккаунты</a></li>
+    <li><a href="#s5">Платёжные карты</a></li>
+    <li><a href="#s6">Партнёрки и офферы</a></li>
+    <li><a href="#s7">Связка Facebook → Keitaro → Оффер</a></li>
+    <li><a href="#s8">Креативы — полный разбор</a>
+      <ol>
+        <li><a href="#s8.1">Форматы и структура</a></li>
+        <li><a href="#s8.2">Стоп-слова и триггеры</a></li>
+        <li><a href="#s8.3">Нативная подача</a></li>
+        <li><a href="#s8.4">Психологические триггеры</a></li>
+        <li><a href="#s8.5">Визуал и текст</a></li>
+        <li><a href="#s8.6">Видео-креативы</a></li>
+        <li><a href="#s8.7">Тестирование и оптимизация</a></li>
+        <li><a href="#s8.8">Продвинутые приёмы</a></li>
+      </ol>
+    </li>
+    <li><a href="#s9">Генерация картинок (Midjourney / DALL-E)</a></li>
+    <li><a href="#s10">CapCut — видеокреативы</a></li>
+    <li><a href="#s11">Как избегать бана по креативам</a></li>
+    <li><a href="#s12">Диагностика: креатив не взлетел</a></li>
+    <li><a href="#s13">Фабрика креативов на n8n</a>
+      <ol>
+        <li><a href="#s13.1">Что такое n8n и установка</a></li>
+        <li><a href="#s13.2">Все ноды с реальным кодом</a></li>
+        <li><a href="#s13.3">Полная схема workflow</a></li>
+      </ol>
+    </li>
+    <li><a href="#s14">ComfyUI + Flux локально</a></li>
+    <li><a href="#s15">Видео-генерация (Runway / Kling)</a></li>
+    <li><a href="#s16">Claude-стратег с аналитикой</a></li>
+    <li><a href="#s17">Чек-лист: всё что нужно для запуска</a></li>
+    <li><a href="#s18">Бюджет и калькуляция</a></li>
+  </ol>
+</div>
+
+<!-- ======== 1 ======== -->
+<div class="section" id="s1">
+<h2>1. Структура рекламного кабинета Facebook</h2>
+
+<h3>Иерархия</h3>
+<div class="diagram">Личный профиль → Business Manager (BM) → Ad Account (РК)
+                                        → Page (страница)
+                                        → Pixel (пиксель)</div>
+
+<table>
+  <tr><th>Сущность</th><th>Роль</th></tr>
+  <tr><td><strong>Личный профиль</strong></td><td>Твоё «лицо» в Facebook. К нему привязывается BM.</td></tr>
+  <tr><td><strong>Business Manager (BM)</strong></td><td>Штаб-квартира. Внутри BM создаются рекламные кабинеты, страницы, пиксели.</td></tr>
+  <tr><td><strong>Рекламный аккаунт (РК)</strong></td><td>То, где ты крутишь рекламу, видишь spend, статистику. <span class="tag tag-orange">Лимиты: от $50/день</span></td></tr>
+  <tr><td><strong>Страница (Page)</strong></td><td>Объявление всегда идёт от имени страницы. Без страницы — нельзя запустить рекламу.</td></tr>
+  <tr><td><strong>Пиксель (Pixel)</strong></td><td>JS-код на лендинге. Передаёт действия пользователя обратно в Facebook.</td></tr>
+</table>
+
+<h3>Business Manager</h3>
+<p>Ты <strong>обязательно</strong> работаешь через BM. Не через личный кабинет.</p>
+<ul>
+  <li>Создаёшь на <code>business.facebook.com/overview</code></li>
+  <li>Внутри BM: 3-5 рекламных аккаунтов, 1-2 страницы, 1-2 пикселя</li>
+  <li><strong>Лимиты нового BM:</strong> только 2 рекламных аккаунта, низкий spending limit</li>
+  <li>Лимиты повышаются временем и тратами</li>
+</ul>
+
+<h3>Рекламный аккаунт</h3>
+<ul>
+  <li>Создаётся внутри BM, получает числовой ID</li>
+  <li><strong>Spending limit:</strong> $50/день для нового. Повышается ступенями: $100 → $250 → $500+</li>
+  <li><strong>Валюта:</strong> USD (при создании, потом не меняется)</li>
+  <li><strong>Карты:</strong> лучше иметь 2-3 запасных</li>
+</ul>
+
+<h3>Страница</h3>
+<ul>
+  <li>Для серой вертикали: страница должна выглядеть живой (аватар, 3-5 постов, описание)</li>
+  <li>Не используй одну страницу для всего — если её заблокируют, вся реклама упадёт</li>
+</ul>
+
+<h3>Правила безопасности (основные причины банов)</h3>
+<table>
+  <tr><th>Причина</th><th>Решение</th></tr>
+  <tr><td>Прямая ссылка на казино</td><td>Использовать трекинговый домен (Keitaro)</td></tr>
+  <tr><td>Триггерные креативы (фишки, карты, рулетка)</td><td>Нативная подача (инвестиции, тесты, лайфстайл)</td></tr>
+  <tr><td>Новый аккаунт сразу льёт большие бюджеты</td><td>Прогрев 1-2 недели, плавный старт</td></tr>
+  <tr><td>Один IP на много аккаунтов</td><td>Residential прокси — 1 IP на 1 акк</td></tr>
+  <tr><td>Карта отклонена/спор</td><td>VCC / Capitalist / AdvCash</td></tr>
+</table>
+</div>
+
+<!-- ======== 2 ======== -->
+<div class="section page-break" id="s2">
+<h2>2. Прокси — подробно</h2>
+
+<p><strong>Proxy</strong> — посредник между твоим компьютером и интернетом. Facebook видит IP прокси, а не твой реальный.</p>
+
+<p><strong>Правило:</strong> 1 аккаунт = 1 уникальный residential IP.</p>
+
+<h3>Типы прокси</h3>
+<table>
+  <tr><th>Тип</th><th>Откуда IP</th><th>Для баинга?</th></tr>
+  <tr><td><strong>Residential</strong></td><td>Реальные устройства людей по всему миру</td><td><span class="tag tag-green">✅ Да</span></td></tr>
+  <tr><td><strong>Mobile</strong></td><td>С мобильных операторов</td><td><span class="tag tag-green">✅ Да</span></td></tr>
+  <tr><td><strong>Datacenter</strong></td><td>Сервера в дата-центрах</td><td><span class="tag tag-red">❌ Нет</span></td></tr>
+</table>
+
+<h3>Как купить (Proxy6)</h3>
+<ol>
+  <li><strong>Регистрация:</strong> proxy6.net → Sign Up (email под баинг)</li>
+  <li><strong>Пополнение:</strong> USDT (TRC20), AdvCash, Capitalist — от $5-10</li>
+  <li><strong>Покупка:</strong> Аренда прокси → IPv4 → HTTP(S) → 1 шт → 1 месяц</li>
+  <li><strong>Формат:</strong> <code>http://user:pass@ip:port</code></li>
+</ol>
+
+<div class="hl">
+  <strong>🧪 Проверка прокси:</strong> Создай профиль в антидетект-браузере → вставь прокси → открой <code>2ip.ru</code> — должен показываться IP прокси, не твой. Проверь <code>whoer.net</code> на утечки (WebRTC, DNS).
+</div>
+
+<h3>Частые проблемы</h3>
+<table>
+  <tr><th>Симптом</th><th>Решение</th></tr>
+  <tr><td>Не подключается</td><td>Проверь формат, добавь <code>http://</code> перед IP</td></tr>
+  <tr><td>Медленная</td><td>Запроси замену через поддержку Proxy6</td></tr>
+  <tr><td>Facebook видит твой IP</td><td>WebRTC утекает — отключи в антидетекте</td></tr>
+</table>
+</div>
+
+<!-- ======== 3 ======== -->
+<div class="section page-break" id="s3">
+<h2>3. Keitaro — трекер</h2>
+
+<h3>Зачем нужен</h3>
+<ul>
+  <li>Считать клики + конверсии (Facebook не знает, кто зарегистрировался на казино)</li>
+  <li>Маскировать ссылку (Facebook видит <code>твой-домен.com/click?id=...</code>)</li>
+  <li>Оптимизировать: видеть какой креатив даёт профит</li>
+</ul>
+
+<h3>Как работает</h3>
+<div class="diagram">Facebook объявление → ссылка на Keitaro
+  → Keitaro записывает клик + страну + ОС + креатив
+  → Редиректит на оффер казино
+  → Казино конвертит → шлёт Postback в Keitaro
+  → Keitaro показывает статистику</div>
+
+<h3>Установка</h3>
+<p><strong>Вариант А — Облачная версия:</strong> Купить готовый хостинг Keitaro ($15-30/мес). Ничего не настраивать.</p>
+<p><strong>Вариант Б — Self-hosted (на своём VPS):</strong></p>
+<ol>
+  <li>Арендовать VPS (Hetzner CX22 — €7/мес)</li>
+  <li>Установить Ubuntu 22.04</li>
+  <li>Поставить панель (HestiaCP / CyberPanel)</li>
+  <li>Направить домен (A-запись → IP сервера)</li>
+  <li>Скачать Keitaro, закинуть в <code>/var/www/html</code>, запустить установщик</li>
+</ol>
+</div>
+
+<!-- ======== 4 ======== -->
+<div class="section page-break" id="s4">
+<h2>4. Facebook-аккаунты</h2>
+
+<h3>Свой личный — не использовать</h3>
+<div class="hl-red">Если заблокируют — потеряешь всё: мессенджер, страницы, BM.</div>
+
+<h3>Вариант А — Купить фармленные (рекомендуется)</h3>
+<p>Фармленный аккаунт: создан 30+ дней назад, есть аватар, друзья (30+), посты, лайки, поведение живого человека.</p>
+<ul>
+  <li><strong>Цена:</strong> $3-10 за штуку</li>
+  <li><strong>В комплекте:</strong> Email + пароль, cookies, user-agent</li>
+  <li><strong>Где искать:</strong> Telegram-каналы, чаты по арбитражу</li>
+</ul>
+
+<h3>Вариант Б — Фармить самому</h3>
+<ol>
+  <li>Создать аккаунт через антидетект + прокси</li>
+  <li>Каждый день: лайкать, добавлять друзей, смотреть видео</li>
+  <li>2-4 недели — и аккаунт готов к использованию</li>
+</ol>
+
+<h3>Как заходить в купленный аккаунт (важно!)</h3>
+<ol>
+  <li>Создать новый профиль в антидетект-браузере</li>
+  <li>Указать прокси той же страны, что и аккаунт</li>
+  <li>Импортировать cookies (если продавец дал)</li>
+  <li>Ввести логин/пароль</li>
+  <li>Проверить <code>whoer.net</code> — не светится ли реальный IP</li>
+  <li>Первые 1-2 дня: просто сидеть, лайкать, листать ленту</li>
+</ol>
+
+<h3>Сколько нужно для старта</h3>
+<p><strong>Минимум 2-3 аккаунта:</strong> 1 основной + 1-2 запасных. Когда один забанят — быстро переключаешься.</p>
+</div>
+
+<!-- ======== 5 ======== -->
+<div class="section page-break" id="s5">
+<h2>5. Платёжные карты</h2>
+
+<h3>Как работает оплата в Facebook</h3>
+<ol>
+  <li><strong>Авторизация (pre-auth):</strong> при привязке снимает $1-2 и сразу возвращает</li>
+  <li><strong>Списание (billing):</strong> при достижении порога $25-50 или раз в 7 дней</li>
+</ol>
+
+<h3>Какие карты работают</h3>
+<table>
+  <tr><th>Тип карты</th><th>Работает?</th></tr>
+  <tr><td>Твоя личная банковская карта</td><td><span class="tag tag-red">❌ Чаще всего нет</span></td></tr>
+  <tr><td>Российские карты</td><td><span class="tag tag-red">❌ Не работают</span></td></tr>
+  <tr><td>Виртуальные карты (Capitalist)</td><td><span class="tag tag-orange">⚠️ Бывает</span></td></tr>
+  <tr><td>Карты европейских/американских банков</td><td><span class="tag tag-green">✅ Лучше всего</span></td></tr>
+</table>
+
+<h3>Рекомендация для старта</h3>
+<ol>
+  <li>Зарегистрироваться на <strong>Capitalist</strong> (<code>capitalist.net</code>)</li>
+  <li>Пополнить через USDT</li>
+  <li>Заказать виртуальную карту ($2-5 за выпуск)</li>
+  <li>Привязать к рекламному кабинету Facebook</li>
+  <li>Если не прошла — заказать другую (другой BIN)</li>
+</ol>
+
+<p><strong>BIN (первые 6 цифр карты):</strong> Facebook смотрит на него и определяет банк. Некоторые BIN-ы «в доверии», другие — нет.</p>
+<p><strong>Сколько карт:</strong> минимум 2-3. 1 основная + 1-2 запасных.</p>
+</div>
+
+<!-- ======== 6 ======== -->
+<div class="section page-break" id="s6">
+<h2>6. Партнёрки и офферы</h2>
+
+<h3>Схема</h3>
+<div class="diagram">Ты ← CPA-сеть (партнёрка) ← Казино (рекламодатель)</div>
+<p>Ты работаешь через партнёрку. Она даёт ссылку на оффер и платит за регистрации/депозиты.</p>
+
+<h3>Модели оплаты</h3>
+<table>
+  <tr><th>Модель</th><th>Что это</th><th>Для кого</th></tr>
+  <tr><td><strong>CPA</strong></td><td>Платят за регистрацию ($5-60)</td><td><span class="tag tag-green">Новичкам</span></td></tr>
+  <tr><td><strong>RevShare</strong></td><td>% от проигрыша игрока (25-50%)</td><td>Профи</td></tr>
+  <tr><td><strong>Hybrid</strong></td><td>CPA + RevShare</td><td>Компромисс</td></tr>
+  <tr><td><strong>CPL</strong></td><td>За заполнение формы ($1-10)</td><td>Новичкам</td></tr>
+</table>
+
+<h3>ГЕО — куда лить</h3>
+<table>
+  <tr><th>ГЕО</th><th>CPA</th><th>Сложность</th></tr>
+  <tr><td>Tier-1 (USA, UK, CA)</td><td>$40-80</td><td>Высокая</td></tr>
+  <tr><td>Tier-2 (EU)</td><td>$20-50</td><td>Средняя</td></tr>
+  <tr><td>LATAM (BR, MX, AR)</td><td>$15-30</td><td>Низкая</td></tr>
+  <tr><td>Азия (TH, ID, PH)</td><td>$5-15</td><td>Низкая</td></tr>
+</table>
+
+<h3>Проверенные партнёрки (гемблинг)</h3>
+<p><strong>Международные:</strong> ClickDealer, Gap777, LemonAds, GoldenGoose</p>
+<p><strong>Русскоязычные:</strong> Leads.su, M1-Shop, Affiliate.bet</p>
+
+<h3>CRG</h3>
+<p><strong>CRG (Capping Revenue Goal)</strong> — платят CPA не за 100% регистраций, а только если игрок сделал депозит. Пример: CPA $30, CRG 1:3 — платят за каждую 3-ю регистрацию с депозитом.</p>
+</div>
+
+<!-- ======== 7 ======== -->
+<div class="section page-break" id="s7">
+<h2>7. Связка Facebook → Keitaro → Оффер</h2>
+
+<h3>Полная схема</h3>
+<div class="diagram">Пользователь в Facebook → видит объявление → кликает
+  ↓
+[твой-домен.xyz/click?id=123&camp=test1]
+  ↓
+KEITARO: записывает клик, страну, ОС, креатив → редиректит
+  ↓
+[ссылка партнёрки / оффер казино]
+  ↓
+ЛЕНДИНГ КАЗИНО → регистрация / депозит
+  ↓
+ПАРТНЁРКА → Postback → KEITARO
+  ↓
+ТЫ: потратил $100 → 10 конверсий → заработал $300</div>
+
+<h3>Настройка оффера в Keitaro</h3>
+<ol>
+  <li><strong>Offers → Add Offer:</strong> Name, Offer URL (ссылка партнёрки + <code>{clickid}</code>)</li>
+  <li><strong>Action Type:</strong> 302 Redirect</li>
+  <li><strong>Parameters:</strong> Target URL, Country</li>
+</ol>
+
+<h3>Настройка потока (Stream)</h3>
+<ol>
+  <li><strong>Streams → Add Stream:</strong> Name, Offer ID, Traffic Source, Countries</li>
+  <li>Traffic Distribution: 100%</li>
+</ol>
+
+<h3>Настройка кампании в Keitaro</h3>
+<ol>
+  <li><strong>Campaigns → Add Campaign:</strong> Name, Stream ID</li>
+  <li><strong>Unique Visits:</strong> 72 hours</li>
+  <li>После сохранения получить <strong>Campaign URL</strong> — его вставляешь в Facebook</li>
+</ol>
+
+<h3>Postback (самое важное)</h3>
+<p><strong>Postback</strong> — сигнал от партнёрки в Keitaro: «клик номер 123 дал конверсию». Без него Keitaro видит только клики, не зная кто конвертился.</p>
+<ol>
+  <li>Keitaro → Offers → твой оффер → Postback URL</li>
+  <li>Вставляешь URL в партнёрке (в настройках оффера)</li>
+  <li>Партнёрка шлёт макросы: <code>{clickid}</code>, <code>{payout}</code></li>
+</ol>
+
+<h3>Создание кампании в Facebook</h3>
+<ol>
+  <li>Ads Manager → Create → Campaign</li>
+  <li><strong>Цель:</strong> Traffic или Conversions</li>
+  <li><strong>Ad Set:</strong> Targeting по ГЕО, Budget $10-20/день</li>
+  <li><strong>Ad:</strong> В поле Website URL — ссылка из Keitaro, Display Link — безобидный домен</li>
+</ol>
+
+<h3>Метрики в Keitaro</h3>
+<table>
+  <tr><th>Метрика</th><th>Норма</th><th>Проблема</th></tr>
+  <tr><td><strong>Clicks</strong></td><td>—</td><td>—</td></tr>
+  <tr><td><strong>CR (Conversion Rate)</strong></td><td>10-30%</td><td>&lt;5% — проблема с лендингом</td></tr>
+  <tr><td><strong>CPC</strong></td><td>$0.05-0.30 (Tier-3)</td><td>&gt;$0.50 — дорого</td></tr>
+  <tr><td><strong>CPA (факт)</strong></td><td>&lt; выплаты</td><td>&gt; выплаты — убыток</td></tr>
+  <tr><td><strong>ROI</strong></td><td>&gt;100%</td><td>&lt;0% — слив денег</td></tr>
+  <tr><td><strong>EPC</strong></td><td>Чем выше тем лучше</td><td>Низкий — плохой креатив</td></tr>
+</table>
+</div>
+
+<!-- ======== 8 ======== -->
+<div class="section page-break" id="s8">
+<h2>8. Креативы — полный разбор</h2>
+
+<p><strong>Креатив</strong> — то, что видит пользователь в ленте: картинка/видео + текст + заголовок + кнопка.</p>
+
+<h3 id="s8.1">8.1 Форматы</h3>
+<table>
+  <tr><th>Формат</th><th>Описание</th><th>Для старта?</th></tr>
+  <tr><td>Single Image</td><td>Одна картинка</td><td><span class="tag tag-green">✅ Да</span></td></tr>
+  <tr><td>Single Video</td><td>Видео до 60 сек</td><td><span class="tag tag-orange">Сложнее</span></td></tr>
+  <tr><td>Carousel</td><td>2-10 карточек</td><td>Профи</td></tr>
+  <tr><td>Collection</td><td>Карусель + видео</td><td>Профи</td></tr>
+</table>
+
+<h3 id="s8.2">8.2 Стоп-слова и триггеры (банятся сразу)</h3>
+<div class="hl-red">
+  <strong>Стоп-слова:</strong> casino, gambling, bet, slot, poker, roulette, jackpot, win money, get rich, deposit, bonus, free spins, real money, cashout, make money fast, passive income, financial freedom.<br>
+  <strong>Стоп-эмодзи:</strong> 🎰💰🎲♠️♥️♦️♣️<br>
+  <strong>Стоп-картинки:</strong> игровые автоматы, рулетка, карты, фишки, деньги, Lamborghini, яхты, золото, графики роста доходов
+</div>
+
+<h3 id="s8.3">8.3 Нативная подача (что показывать вместо казино)</h3>
+
+<table>
+  <tr><th>Подача</th><th>Пример текста</th></tr>
+  <tr><td><strong>Финансы / инвестиции</strong></td><td>«Новая стратегия трейдинга показала +37% за месяц. Доступ открыт всем желающим»</td></tr>
+  <tr><td><strong>Тест / Квиз</strong></td><td>«Пройти тест: какая стратегия инвестиций подходит тебе?»</td></tr>
+  <tr><td><strong>Лайфстайл</strong></td><td>«Как я изменил свою жизнь за 3 месяца — честный опыт»</td></tr>
+  <tr><td><strong>Игра / стратегия</strong></td><td>«Топ-5 ошибок новичков — проверь себя»</td></tr>
+  <tr><td><strong>Новости / обзор</strong></td><td>«Сегодня вышел обзор новой платформы для аналитики»</td></tr>
+</table>
+
+<h3 id="s8.4">8.4 Психологические триггеры (безопасные)</h3>
+<table>
+  <tr><th>Триггер</th><th>Как работает</th></tr>
+  <tr><td><strong>Любопытство</strong></td><td>«Думал, это развод — оказалось...» — недоговорённость, тайна</td></tr>
+  <tr><td><strong>Социальное доказательство</strong></td><td>«Мои подписчики спрашивают, как у меня это получается...»</td></tr>
+  <tr><td><strong>FOMO</strong></td><td>«Осталось всего 24 часа на тестовый доступ»</td></tr>
+  <tr><td><strong>Авторитет</strong></td><td>«Как трейдер с 5-летним стажем, перепробовал десятки платформ...»</td></tr>
+</table>
+
+<div class="hl-red">
+  <strong>НЕ работают и банят:</strong> жадность («заработай $5000/день»), страх («ты теряешь деньги»), лень («работай 2 часа в день»).
+</div>
+
+<h3 id="s8.5">8.5 Структура креатива</h3>
+
+<p><strong>Primary Text (основной текст):</strong></p>
+<div class="cols">
+  <div class="col-card">
+    <h4>❌ Плохо</h4>
+    <p style="color:var(--red);font-size:0.9em;">«Получи 100% бонус на первый депозит в казино X! Самые популярные слоты!»</p>
+  </div>
+  <div class="col-card">
+    <h4>✅ Хорошо</h4>
+    <p style="color:var(--green);font-size:0.9em;">«Недавно наткнулся на одну интересную платформу для аналитики. Решил протестировать — результаты удивили. Если интересно — пиши в личку, скину ссылку.»</p>
+  </div>
+</div>
+
+<p><strong>Headline (заголовок, до 40 символов):</strong></p>
+<ul>
+  <li>❌ «Casino — лучшие слоты и бонусы»</li>
+  <li>✅ «Неожиданный результат за 2 недели»</li>
+  <li>✅ «Проверено на себе — делюсь опытом»</li>
+</ul>
+
+<p><strong>CTA (кнопка):</strong> Используй <strong>Learn More</strong> или <strong>Subscribe</strong>. Никогда <strong>Sign Up / Get Offer / Book Now</strong>.</p>
+
+<p><strong>Display Link:</strong> показывай безобидный домен (например <code>plylg.xyz/trading-strategy</code>), не <code>plylg.xyz/casino</code>.</p>
+
+<h4>Картинки: технические требования</h4>
+<ul>
+  <li>Минимум 1080×1080 px (квадрат) или 1200×628 px</li>
+  <li>Текст на картинке — не больше 20% площади</li>
+  <li>Формат: JPG или PNG</li>
+  <li><strong>Соотношения:</strong> 1:1 (квадрат) для старта, 4:5 (портрет) — выше CTR</li>
+</ul>
+
+<h4>Шрифты на картинке</h4>
+<ul>
+  <li><strong>Используй:</strong> Helvetica, Arial, Montserrat, Inter, SF Pro</li>
+  <li><strong>Не используй:</strong> Comic Sans, Papyrus, рукописные</li>
+  <li>Размер: не меньше 24pt на исходнике 1080×1080</li>
+  <li>Цвет: белый с тенью или из палитры картинки</li>
+</ul>
+
+<h4>Цветовая палитра</h4>
+<table>
+  <tr><th>Цвет</th><th>Ассоциация</th><th>Применение</th></tr>
+  <tr><td><span style="color:var(--green);">Зелёный</span></td><td>Деньги, рост</td><td>Графики, цифры (+7%) — осторожно</td></tr>
+  <tr><td><span style="color:var(--accent);">Синий</span></td><td>Доверие, надёжность</td><td><span class="tag tag-green">Самый безопасный</span></td></tr>
+  <tr><td><span style="color:var(--red);">Красный</span></td><td>Опасность, азарт</td><td>Только акценты</td></tr>
+  <tr><td><span style="color:#fff;">Чёрный/Белый</span></td><td>Премиум</td><td>Фоны</td></tr>
+</table>
+
+<div class="hl">Избегай комбинации <strong>красный + золотой + чёрный</strong> — это классический «казино-стиль», AI-модерация считывает.</div>
+
+<h3 id="s8.6">8.6 Видео-креативы</h3>
+<p>Видео конвертит лучше картинок: CTR выше на 30-50%, CPC ниже на 20-40%.</p>
+
+<p><strong>Правило 3 секунд:</strong> первые 3 секунды решают, досмотрят ли видео.</p>
+<ul>
+  <li>Резкое движение, смена кадра, текст-интрига</li>
+  <li>Оптимальная длина: 15-30 секунд</li>
+  <li>Без звука (большинство смотрит без звука) — обязательны субтитры</li>
+  <li>Формат: квадрат 1:1 или портрет 4:5</li>
+</ul>
+
+<p><strong>Варианты видео для гемблинга:</strong></p>
+<table>
+  <tr><th>Тип</th><th>Описание</th><th>Сложность</th></tr>
+  <tr><td><strong>Слайд-шоу</strong></td><td>3-5 картинок, текстовая озвучка</td><td>🟢 Просто (CapCut)</td></tr>
+  <tr><td><strong>Экранная запись</strong></td><td>Screen record приложения/сайта</td><td>🟡 Средне</td></tr>
+  <tr><td><strong>AI-видео</strong></td><td>Сгенерировано Runway/Kling</td><td>🟡 Средне</td></tr>
+</table>
+
+<h4>Субтитры (обязательно):</h4>
+<ul>
+  <li>Белый текст с чёрной обводкой</li>
+  <li>2-3 слова на кадр</li>
+  <li>Шрифт: без засечек (Helvetica, Arial)</li>
+</ul>
+
+<h3 id="s8.7">8.7 Тестирование креативов</h3>
+
+<p><strong>Сплит-тест:</strong> 5-10 вариантов одновременно с минимальным бюджетом.</p>
+
+<ol>
+  <li>Взять 1 ГЕО + 1 оффер</li>
+  <li>Сделать 3-5 разных визуалов</li>
+  <li>К каждому — 2-3 варианта текста</li>
+  <li>Запустить все комбинации с $5-10 на связку в день</li>
+  <li>Через 24-48 часов проанализировать</li>
+</ol>
+
+<table>
+  <tr><th>Показатель</th><th>Норма</th></tr>
+  <tr><td><strong>CTR</strong></td><td>1-3%</td></tr>
+  <tr><td><strong>CPC</strong></td><td>Зависит от ГЕО</td></tr>
+  <tr><td><strong>CR</strong></td><td>5-20%</td></tr>
+  <tr><td><strong>EPC</strong></td><td>Самый важный показатель</td></tr>
+</table>
+
+<p><strong>Когда отключать:</strong></p>
+<ul>
+  <li>0 конверсий при 50+ кликах → отключить</li>
+  <li>CPA &gt; payout × 2 → отключить</li>
+  <li>CTR &lt; 0.5% → отключить</li>
+  <li>CR &lt; 3% → проблема с лендингом</li>
+</ul>
+
+<p><strong>Стратегия «Ленивого теста» (10 креативов за $50):</strong></p>
+<table>
+  <tr><th>День</th><th>Действие</th><th>Бюджет</th></tr>
+  <tr><td>1</td><td>5 креативов (разные углы), $5 на каждый, ничего не трогать</td><td>$25</td></tr>
+  <tr><td>2</td><td>Отключить слабые (CTR &lt;0.5% / 0 конв), запустить 5 вариаций лучшего</td><td>$25</td></tr>
+  <tr><td>3</td><td>Масштабировать топ-1 до $20-30/день</td><td>$25-30</td></tr>
+</table>
+
+<h3 id="s8.8">8.8 Продвинутые приёмы</h3>
+
+<p><strong>Углы подачи (Angles):</strong></p>
+<table>
+  <tr><th>Угол</th><th>Текст</th><th>Визуал</th></tr>
+  <tr><td><strong>Технология</strong></td><td>«Новый алгоритм аналитики точнее на 87%»</td><td>Графики, интерфейсы</td></tr>
+  <tr><td><strong>Сообщество</strong></td><td>«Закрытый клуб инвесторов — 15 человек»</td><td>Фото встречи / чата</td></tr>
+  <tr><td><strong>Вызов</strong></td><td>«Я поставил цель: +50% за месяц. День 14»</td><td>Человек с ноутбуком</td></tr>
+  <tr><td><strong>Скептик</strong></td><td>«Думал, развод — решил проверить»</td><td>Сравнение «было/стало»</td></tr>
+  <tr><td><strong>Инсайдер</strong></td><td>«Мой друг работает в этой сфере — показал кое-что»</td><td>Размытое фото «утечки»</td></tr>
+</table>
+
+<p><strong>Эмуляция UGC (User Generated Content):</strong></p>
+<ul>
+  <li>Картинка: необработанная, как снято на телефон</li>
+  <li>Текст: разговорный стиль, с лёгкими ошибками</li>
+  <li>Без логотипов и брендирования</li>
+  <li>Без стоковых фото — используй AI-генерацию с «небрежностью»</li>
+</ul>
+
+<p><strong>«Разогрев» аккаунта:</strong> Первые 2-3 дня лей на абсолютно белую тему (коты, новости, лайфстайл). Потрать $10-20 на «белую» историю. Только потом запускай гемблинг.</p>
+
+<p><strong>Frequency:</strong> Если &gt;3 — меняй креатив или аудиторию, иначе negative feedback и рост CPC.</p>
+</div>
+
+<!-- ======== 9 ======== -->
+<div class="section page-break" id="s9">
+<h2>9. Генерация картинок (Midjourney / DALL-E)</h2>
+
+<h3>Midjourney — структура промпта</h3>
+<pre><code>/imagine prompt: [субъект] + [контекст] + [стиль] + [технические параметры]</code></pre>
+
+<p><strong>Готовый промпт (человек с эмоцией):</strong></p>
+<pre><code>/imagine prompt: A man in his early 30s sitting at a wooden desk, looking at his smartphone with a surprised and happy expression, warm lighting, casual clothes, modern apartment background, photorealistic, natural skin texture, soft focus background, shot from slightly above, cinematic lighting --ar 1:1 --v 6.1 --s 300</code></pre>
+
+<p><strong>Вариации:</strong> поменяй <code>man</code> → <code>woman</code>, <code>early 30s</code> → <code>mid 40s</code>, <code>surprised</code> → <code>thoughtful/curious/focused</code></p>
+
+<p><strong>Промпт (графики/аналитика):</strong></p>
+<pre><code>/imagine prompt: A close-up of a tablet showing colorful financial charts and graphs, stock market data visualization, green and blue lines going up, blurred background with a person pointing at the screen, modern minimalistic office, natural lighting, depth of field, ultra realistic --ar 1:1 --v 6.1</code></pre>
+
+<p><strong>Промпт (лайфстайл):</strong></p>
+<pre><code>/imagine prompt: A man drinking coffee and smiling while checking something on his laptop, cozy morning atmosphere, sunlight coming through window, warm tones, shallow depth of field, photorealistic, relaxed lifestyle vibe, unposed, as if taken by a friend --ar 1:1 --v 6.1</code></pre>
+
+<p><strong>Ключевой параметр:</strong> <code>as if taken by a friend</code> — делает фото похожим на любительское, не стоковое.</p>
+
+<h3>Параметры Midjourney</h3>
+<table>
+  <tr><th>Параметр</th><th>Что делает</th><th>Рекомендация</th></tr>
+  <tr><td><code>--ar 1:1</code></td><td>Квадрат (лента Facebook)</td><td>Для старта</td></tr>
+  <tr><td><code>--ar 4:5</code></td><td>Вертикальный (мобильные)</td><td>Выше CTR</td></tr>
+  <tr><td><code>--v 6.1</code></td><td>Версия модели</td><td>Последняя</td></tr>
+  <tr><td><code>--s 300</code></td><td>Stylize (0-1000)</td><td>Золотая середина</td></tr>
+  <tr><td><code>--seed N</code></td><td>Рандомизация</td><td>Меняй для разнообразия</td></tr>
+</table>
+
+<h3>DALL-E 3 промпты</h3>
+<pre><code>A photorealistic image of a man in his 30s sitting at a home office desk, looking thoughtfully at his laptop screen, a cup of coffee next to him, natural lighting from a window, casual clothing, the image should look like a candid photo taken by a friend, not a professional stock photo, aspect ratio 1:1</code></pre>
+</div>
+
+<!-- ======== 10 ======== -->
+<div class="section page-break" id="s10">
+<h2>10. CapCut — видеокреативы</h2>
+
+<h3>Слайд-шоу за 5 минут</h3>
+<ol>
+  <li>Загрузить 3-5 картинок</li>
+  <li>Добавить переходы (Slide/Fade, 0.3-0.5 сек)</li>
+  <li>Текст на каждый кадр (белый, чёрная обводка, по центру)</li>
+  <li>Фоновая музыка (громкость 15-20%)</li>
+  <li>Соотношение: 1:1 или 4:5</li>
+  <li>Экспорт: 1080p, 30 fps, качество Higher/Best</li>
+</ol>
+
+<p><strong>Структура текстовых кадров (12 секунд):</strong></p>
+<table>
+  <tr><th>Кадр</th><th>Текст</th></tr>
+  <tr><td>1 (0-3 сек)</td><td>«Я тестировал эту платформу 3 недели»</td></tr>
+  <tr><td>2 (3-6 сек)</td><td>«Результат: +31% за это время»</td></tr>
+  <tr><td>3 (6-9 сек)</td><td>«Друзья попросили сделать обзор»</td></tr>
+  <tr><td>4 (9-12 сек)</td><td>«Ссылка в описании — проверь сам»</td></tr>
+</table>
+
+<h3>Экранная запись</h3>
+<ol>
+  <li>Открыть приложение с графиками (TradingView и т.п.)</li>
+  <li>Записать 15-20 сек экрана</li>
+  <li>Наложить голос: «Решил протестировать новую платформу... результаты меня удивили...»</li>
+</ol>
+
+<h3>Фишки CapCut</h3>
+<ul>
+  <li><strong>Keyframe анимация:</strong> Scale 100% → 110% — плавное приближение (Ken Burns)</li>
+  <li><strong>Цветокоррекция:</strong> Contrast +10-15, Saturation +5-10, Sharp +15-20</li>
+  <li><strong>Скорость:</strong> 2-3 сек на слайд</li>
+</ul>
+</div>
+
+<!-- ======== 11 ======== -->
+<div class="section page-break" id="s11">
+<h2>11. Как избегать бана по креативам</h2>
+
+<h3>Многоуровневая система модерации Facebook</h3>
+<table>
+  <tr><th>Этап</th><th>Что проверяет</th><th>Как обходить</th></tr>
+  <tr><td><strong>Pre-check (AI)</strong></td><td>Текст + картинку до запуска</td><td>Убрать триггер-слова и элементы казино</td></tr>
+  <tr><td><strong>Learning phase (AI)</strong></td><td>Первые 24-48ч: CTR, негатив</td><td>Не дёргать кампанию</td></tr>
+  <tr><td><strong>User feedback</strong></td><td>Жалобы: «Show less», «Report»</td><td>Не обманывать ожидания</td></tr>
+  <tr><td><strong>Manual review</strong></td><td>Ручная проверка случайных</td><td>Здесь ловят чаще всего</td></tr>
+</table>
+
+<h3>Стратегия «Слоёный пирог»</h3>
+<p><strong>Слой 1 — Визуальная маскировка:</strong> Рамка, эффект «грязного стекла», неестественные цвета (фильтр).</p>
+<p><strong>Слой 2 — Текстовая маскировка:</strong></p>
+<table>
+  <tr><th>Стоп-слово</th><th>Замена</th></tr>
+  <tr><td>заработать / make money</td><td>получить результат / профит / ROI</td></tr>
+  <tr><td>казино / casino</td><td>платформа / игра / проект / площадка</td></tr>
+  <tr><td>деньги / money</td><td>ресурсы / капитал / результат</td></tr>
+  <tr><td>бесплатно / free</td><td>в подарок / тестовый доступ</td></tr>
+  <tr><td>выигрыш / win</td><td>успех / достижение / прогресс</td></tr>
+  <tr><td>регистрация / sign up</td><td>попробовать / тест / доступ</td></tr>
+</table>
+
+<p><strong>Слой 3 — Поведенческая маскировка:</strong> 1-2 кампании с аккаунта, не менять креативы каждый час, паузы между запусками.</p>
+<p><strong>Слой 4 — Техническая маскировка:</strong> User-Agent (Chrome 120+), WebRTC off, cookies не синхронизированы, прокси уникальные.</p>
+
+<h3>Что делать, если креатив отклонили</h3>
+<div class="hl-red">
+  <strong>НЕ делай:</strong> не перезапускай тот же креатив с min-изменениями, не подавай апелляцию.
+</div>
+<p><strong>Сделай:</strong> создай полностью другой креатив (другой угол, другой визуал), запусти на другом аккаунте, подожди 1-2 дня.</p>
+</div>
+
+<!-- ======== 12 ======== -->
+<div class="section page-break" id="s12">
+<h2>12. Диагностика: креатив не взлетел</h2>
+
+<h3>Пошаговый разбор</h3>
+
+<p><strong>Шаг 0:</strong> Собери данные. Для значимого результата нужно: 500+ показов (CTR), 50+ кликов (CPC), 100+ кликов (CR).</p>
+
+<p><strong>Шаг 1 — CTR &lt; 0.5%:</strong></p>
+<ul>
+  <li>Скучная картинка → смени визуал</li>
+  <li>Текст нечитаем на картинке → увеличь шрифт</li>
+  <li>Непонятно о чём объявление → упрости месседж</li>
+  <li>Слишком рекламно → пиши как человек</li>
+  <li>Frequency &gt; 3 → смени креатив/аудиторию</li>
+</ul>
+
+<p><strong>Шаг 2 — CPC выше среднего:</strong></p>
+<ul>
+  <li>Высокая конкуренция → сузь таргетинг</li>
+  <li>Relevance Score &lt; 6 → смени креатив</li>
+  <li>Дорогой placement → отключи Audience Network</li>
+</ul>
+
+<p><strong>Шаг 3 — Клики есть, конверсий 0:</strong></p>
+<ul>
+  <li>Сломана цепочка Keitaro → проверь редирект</li>
+  <li>Обманутые ожидания → согласуй креатив с лендингом</li>
+  <li>Лендинг не грузится на мобильных → проверь</li>
+  <li>Лендинг не на том языке → проверь ГЕО</li>
+  <li>Партнёрка не шлёт постбэк → проверь настройки</li>
+</ul>
+
+<h3>Диагностическая таблица</h3>
+<table>
+  <tr><th>Симптом</th><th>Проблема</th><th>Что менять</th></tr>
+  <tr><td>Много показов, мало кликов (CTR &lt;0.5%)</td><td>Креатив не цепляет</td><td>Картинку + текст</td></tr>
+  <tr><td>Клики есть, конверсий 0</td><td>Цепочка</td><td>Keitaro / лендинг / оффер</td></tr>
+  <tr><td>Клики дорогие (CPC выше рынка)</td><td>Таргетинг / Relevance</td><td>Аудиторию или креатив</td></tr>
+  <tr><td>Конверсии были, потом резко встали</td><td>Сгорел креатив</td><td>Сменить креатив</td></tr>
+  <tr><td>Аккаунт заблокировали</td><td>Маскировка</td><td>Новый акк + другие крео</td></tr>
+</table>
+
+<h3>Жёсткие критерии отключения</h3>
+<div class="hl-red">
+  <ol>
+    <li>Потрачено $50 — 0 конверсий → отключай</li>
+    <li>CTR &lt; 0.3% при 2000+ показов → отключай</li>
+    <li>CPA &gt; payout × 3 → отключай</li>
+    <li>Frequency &gt; 5 при 0 конверсиях → отключай</li>
+    <li>Креатив отклонён модерацией → не перезапускай</li>
+  </ol>
+</div>
+
+<h3>Если всё отключил — что дальше?</h3>
+<ol>
+  <li>Смени угол подачи (было «инвестиции» → стало «тест/квиз»)</li>
+  <li>Смени визуал (было лицо → стало графика/аналитика)</li>
+  <li>Смени текстовую маскировку</li>
+  <li>Смени аккаунт (если старый получил страйки)</li>
+  <li>Если и это не работает — смени ГЕО или оффер</li>
+</ol>
+</div>
+
+<!-- ======== 13 ======== -->
+<div class="section page-break" id="s13">
+<h2>13. Фабрика креативов на n8n</h2>
+
+<h3 id="s13.1">13.1 Что такое n8n и установка</h3>
+
+<p><strong>n8n</strong> — open-source платформа оркестрации workflow. Визуальный редактор, где соединяешь ноды. Self-hosted — все данные на твоём сервере.</p>
+
+<p><strong>Почему n8n, а не Make.com/Zapier:</strong></p>
+<ul>
+  <li>Self-hosted — данные не утекают</li>
+  <li>Бесплатный (нет лимита на задачи)</li>
+  <li>Любые HTTP-запросы</li>
+  <li>Работает с файлами (картинки, видео)</li>
+  <li>Можно писать JavaScript внутри нод</li>
+</ul>
+
+<h4>Установка на VPS (Hetzner CX22, €7/мес)</h4>
+<pre><code># 1. Подключиться
+ssh root@IP-сервера
+
+# 2. Установить Docker
+curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh
+apt install docker-compose-plugin -y
+
+# 3. Создать docker-compose.yml
+mkdir ~/n8n && cd ~/n8n
+nano docker-compose.yml</code></pre>
+
+<pre><code># docker-compose.yml
+version: '3.8'
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=твой_пароль
+      - N8N_HOST=IP-сервера:5678
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=168
+    volumes:
+      - ./data:/home/node/.n8n
+      - ./assets:/assets</code></pre>
+
+<pre><code># 4. Запустить
+docker compose up -d
+
+# 5. Проверить
+docker compose logs -f</code></pre>
+
+<p>После установки зайти: <code>http://IP-сервера:5678</code></p>
+
+<h3 id="s13.2">13.2 Все ноды с реальным кодом</h3>
+
+<h4>1. Schedule Trigger</h4>
+<pre><code>Trigger Times: Every Hour (0 */4 * * * для каждых 4ч)
+Timezone: Europe/Moscow</code></pre>
+
+<h4>2. Code: Стратег</h4>
+<pre><code>// Выбирает ГЕО, угол, оффер для текущего батча
+const crypto = require('crypto');
+
+const GEO_DB = [
+  { geo: 'BR', lang: 'pt-BR', name: 'Бразилия' },
+  { geo: 'TH', lang: 'th', name: 'Таиланд' },
+  { geo: 'MX', lang: 'es-MX', name: 'Мексика' },
+  { geo: 'ID', lang: 'id', name: 'Индонезия' },
+  { geo: 'PH', lang: 'tl', name: 'Филиппины' },
+  { geo: 'DE', lang: 'de', name: 'Германия' },
+];
+
+const ANGLES = [
+  { id: 'investment', name: 'Инвестиции' },
+  { id: 'lifestyle', name: 'Лайфстайл' },
+  { id: 'curiosity', name: 'Любопытство' },
+  { id: 'tech', name: 'Технология' },
+  { id: 'test', name: 'Тест/Квиз' },
+  { id: 'community', name: 'Сообщество' },
+  { id: 'news', name: 'Новости' },
+];
+
+const OFFERS = [
+  { id: 'casino_br_1', name: 'Casino BR #1', geo: 'BR', payout: 25 },
+  { id: 'casino_th_1', name: 'Casino TH #1', geo: 'TH', payout: 12 },
+  { id: 'bett_mx_1', name: 'Betting MX', geo: 'MX', payout: 18 },
+];
+
+// Простая эвристика: выбираем случайно
+const chosenGeo = GEO_DB[Math.floor(Math.random() * GEO_DB.length)];
+const angle = ANGLES[Math.floor(Math.random() * ANGLES.length)];
+const geoOffers = OFFERS.filter(o => o.geo === chosenGeo.geo);
+const offer = geoOffers.length > 0
+  ? geoOffers[Math.floor(Math.random() * geoOffers.length)]
+  : OFFERS[Math.floor(Math.random() * OFFERS.length)];
+
+return {
+  geo: chosenGeo.geo,
+  lang: chosenGeo.lang,
+  angle_id: angle.id,
+  angle_name: angle.name,
+  offer_id: offer.id,
+  offer_name: offer.name,
+  payout: offer.payout,
+  count: 5,
+  batch_id: `batch_${Date.now()}_${crypto.randomBytes(4).toString('hex')}`
+};</code></pre>
+
+<h4>3. Loop Over Items</h4>
+<pre><code>Type: Loop Over Items
+Loop: {{ $json.count }}     // 5 итераций
+Mode: parallel (для скорости)</code></pre>
+
+<h4>4. HTTP Request: OpenAI (Копирайтер)</h4>
+<pre><code>Method: POST
+URL: https://api.openai.com/v1/chat/completions
+Headers: Authorization: Bearer {{ $env.OPENAI_API_KEY }}
+Timeout: 30000
+Retry: 3 (5 сек между)
+
+Body (JSON):
+{
+  "model": "gpt-4o-mini",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an expert Facebook ad copywriter. Return ONLY valid JSON."
+    },
+    {
+      "role": "user",
+      "content": "Generate {{ $json.count }} variants of Facebook ad copy.\nГЕО: {{ $json.geo }}\nAngle: {{ $json.angle_name }}\nOffer: {{ $json.offer_name }}"
+    }
+  ],
+  "temperature": 0.9,
+  "response_format": { "type": "json_object" }
+}</code></pre>
+
+<h4>5. Code: Промпт-инженер (готовит промпт для Flux/MJ)</h4>
+<pre><code>const VISUAL_TEMPLATES = {
+  'investment': {
+    scene: [
+      'A person in their 30s looking at a tablet with colorful financial charts, warm lighting, home office background, natural expression of pleasant surprise, candid photography style, soft bokeh',
+      'Close-up of hands typing on a laptop with glowing stock chart on screen, morning light, professional atmosphere'
+    ],
+    composition: 'shot from slightly above eye level',
+    colors: 'warm tones, blue and green accents',
+    vibe: 'confident, optimistic'
+  },
+  'curiosity': {
+    scene: [
+      'A person with a surprised expression looking at a laptop screen, dark room with screen light illuminating face, dramatic lighting, cinematic quality',
+      'Close-up portrait with raised eyebrows looking at smartphone, intense expression of discovery'
+    ],
+    composition: 'tight portrait, emphasis on expression',
+    colors: 'high contrast, cool screen-light',
+    vibe: 'intriguing, discovery'
+  },
+  'lifestyle': {
+    scene: [
+      'A relaxed person in a cozy café with a laptop, genuine smile, morning sun, candid unposed moment',
+      'Young professional walking in city street, looking at smartphone with slight smile, natural lighting'
+    ],
+    composition: 'eye-level, subject with environment',
+    colors: 'warm golden tones, natural greens',
+    vibe: 'aspirational, relaxed'
+  }
+};
+
+const template = VISUAL_TEMPLATES[$json.angle_id] || VISUAL_TEMPLATES['curiosity'];
+const sceneIndex = Math.floor(Math.random() * template.scene.length);
+
+const prompt = [
+  template.scene[sceneIndex],
+  template.composition,
+  `colors: ${template.colors}`,
+  `mood: ${template.vibe}`,
+  'photorealistic, ultra high quality, sharp focus, natural skin texture, cinematic lighting'
+].join(', ');
+
+return {
+  ...$json,
+  flux_prompt: prompt,
+  seed: Math.floor(Math.random() * 100000000),
+  negative_prompt: 'text, watermark, casino, gambling, chips, cards, money, deformed'
+};</code></pre>
+
+<h4>6. HTTP Request: Flux API (BFL) — генерация картинки</h4>
+<pre><code>Method: POST
+URL: https://api.us1.bfl.ai/v1/flux-pro-1.1
+Headers: x-key: {{ $env.BFL_API_KEY }}
+Timeout: 120000
+Retry: 3, задержка 10 сек
+
+Body:
+{
+  "prompt": "{{ $json.flux_prompt }}",
+  "width": 1024,
+  "height": 1024,
+  "steps": 25,
+  "guidance": 4,
+  "safety_tolerance": 6,
+  "seed": {{ $json.seed }}
+}</code></pre>
+
+<h4>7. HTTP Request: Скачать картинку</h4>
+<pre><code>Method: GET
+URL: {{ $json.image_url }}
+Response Format: File
+Binary Property: data
+(Включить Always Return Binary Data)</code></pre>
+
+<h4>8. HTTP Request: Python-микросервис (текст на картинку)</h4>
+<pre><code>Method: POST
+URL: http://localhost:5000/overlay
+Body Type: Form-Data
+Timeout: 30000
+
+Form-Data поля:
+  image_url: {{ $json.image_url }}
+  text_line1: {{ $json.primary_text.substring(0, 60) }}
+  text_line2: {{ $json.headline }}
+  position: bottom
+  font_size: 36</code></pre>
+
+<h4>9. HTTP Request: OpenAI Vision (Vibe Check — проверка на триггеры)</h4>
+<pre><code>Method: POST
+URL: https://api.openai.com/v1/chat/completions
+Headers: Authorization: Bearer {{ $env.OPENAI_API_KEY }}
+
+Body:
+{
+  "model": "gpt-4o-mini",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a Facebook ad validator. Check image for policy violations. Return JSON only.\n\nFLAGGED: gambling symbols, money, luxury cars, nudity, earning claims.\nPASS: financial charts, people on phones, lifestyle, coffee, workspaces."
+    },
+    {
+      "role": "user",
+      "content": [
+        { "type": "image_url", "image_url": { "url": "data:image/jpeg;base64,{{ $binary.data.base64 }}", "detail": "low" } }
+      ]
+    }
+  ],
+  "temperature": 0,
+  "response_format": { "type": "json_object" }
+}</code></pre>
+
+<h4>10. IF: ветвление</h4>
+<pre><code>Condition: {{ $json.vibe_approved === true && $json.vibe_confidence > 70 }}
+
+True → Write Binary File (сохранить)
+False → Log reject (отбраковать)</code></pre>
+
+<h4>11. Write Binary File</h4>
+<pre><code>Binary Property: data
+File Name: {{ $json.geo }}_{{ $json.angle_id }}_{{ $json.batch_id }}_{{ $json.index }}.jpg
+Path: /assets/creatives/{{ $json.geo }}/{{ $json.batch_id }}/
+Create Directories: ON</code></pre>
+
+<h4>12. Telegram: финальный отчёт</h4>
+<pre><code>🏭 Фабрика креативов | Batch завершён
+
+🌍 ГЕО: {{ $json.geo }}
+🎯 Угол: {{ $json.angle }}
+🆔 Батч: {{ $json.batch_id }}
+
+✅ Одобрено: {{ $json.approved }}/{{ $json.total }}
+❌ Отбраковано: {{ $json.rejected }}
+📊 Процент прохождения: {{ $json.approval_rate }}%
+
+📂 Путь: /assets/creatives/{{ $json.geo }}/{{ $json.batch_id }}/</code></pre>
+
+<h3 id="s13.3">13.3 Полная схема workflow</h3>
+
+<div class="diagram">[Schedule Trigger] (каждые 4ч)
+    ↓
+[Code: Стратег] → выбирает ГЕО/угол/оффер
+    ↓
+[Loop Over Items] × 5 (параллельно)
+    ↓
+┌───────────────────────────────────────┐
+│  [OpenAI: Копирайтер] → 3 текста      │
+│  [Code: Промпт-инженер] → промпт MJ   │
+│  [HTTP: Flux API] → картинка          │
+│  [Python overlay] → текст на картинку │
+│  [OpenAI Vision] → Vibe Check         │
+│  [IF: OK?] → Save / Reject           │
+└───────────────────────────────────────┘
+    ↓
+[Merge: собрать 5 результатов]
+    ↓
+[Telegram: финальный отчёт]
+</div>
+
+<h4>Установка Python-микросервиса на VPS</h4>
+<pre><code>apt install -y python3-pip
+pip install flask pillow requests
+
+# Создать файл /root/overlay_server.py (код в основной части гайда)
+
+python3 /root/overlay_server.py &
+
+# Автозапуск
+(crontab -l 2>/dev/null; echo "@reboot python3 /root/overlay_server.py &") | crontab -</code></pre>
+</div>
+
+<!-- ======== 14 ======== -->
+<div class="section page-break" id="s14">
+<h2>14. ComfyUI + Flux локально</h2>
+
+<h3>Зачем</h3>
+<p>ComfyUI + Flux на своём GPU — <strong>себестоимость картинки ≈ $0.001</strong> (электричество), нет лимитов API, полный контроль.</p>
+
+<h3>Требования к GPU</h3>
+<table>
+  <tr><th>GPU</th><th>VRAM</th><th>Скорость (1024×1024)</th></tr>
+  <tr><td>RTX 3060</td><td>12 GB</td><td>35-45 сек</td></tr>
+  <tr><td>RTX 4070</td><td>12 GB</td><td>20-30 сек</td></tr>
+  <tr><td>RTX 4090</td><td>24 GB</td><td>8-12 сек</td></tr>
+  <tr><td>RTX 3090</td><td>24 GB</td><td>12-18 сек</td></tr>
+</table>
+
+<h3>Установка (Windows)</h3>
+<pre><code>cd C:\
+git clone https://github.com/comfyanonymous/ComfyUI.git
+cd ComfyUI
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+
+# Скачать модель Flux Dev FP8 (с HuggingFace)
+# flux1-dev-fp8.safetensors (~7 GB) в models/checkpoints/
+
+# Запуск с API-режимом
+python main.py --listen 0.0.0.0 --port 8188 --enable-cors-header</code></pre>
+
+<h3>Подключение к n8n через VPN-туннель</h3>
+<p><strong>Cloudflare Tunnel (проще всего):</strong></p>
+<pre><code># На домашнем ПК
+winget install cloudflare.cloudflared
+cloudflared tunnel login
+cloudflared tunnel create comfyui-tunnel
+cloudflared tunnel run --url http://localhost:8188</code></pre>
+<p>Получаешь URL вида <code>https://comfyui-tunnel.cfargotunnel.com</code> — его вставляешь в n8n.</p>
+
+<h3>HTTP Request в n8n для ComfyUI</h3>
+<pre><code>Method: POST
+URL: https://comfyui-tunnel.cfargotunnel.com/prompt
+Body:
+{
+  "prompt": {
+    "3": {
+      "class_type": "KSampler",
+      "inputs": {
+        "seed": {{ $json.seed }},
+        "steps": 25,
+        "cfg": 4.0,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1,
+        "model": ["4", 0],
+        "positive": ["6", 0],
+        "negative": ["7", 0],
+        "latent_image": ["5", 0]
+      }
+    },
+    "4": { "class_type": "CheckpointLoaderSimple", "inputs": { "ckpt_name": "flux1-dev-fp8.safetensors" } },
+    "5": { "class_type": "EmptyLatentImage", "inputs": { "width": 1024, "height": 1024, "batch_size": 1 } },
+    "6": { "class_type": "CLIPTextEncode", "inputs": { "text": "{{ $json.flux_prompt }}", "clip": ["4", 1] } },
+    "7": { "class_type": "CLIPTextEncode", "inputs": { "text": "{{ $json.negative_prompt }}", "clip": ["4", 1] } },
+    "8": { "class_type": "VAEDecode", "inputs": { "samples": ["3", 0], "vae": ["4", 2] } },
+    "9": { "class_type": "SaveImage", "inputs": { "filename_prefix": "fabrika_", "images": ["8", 0] } }
+  }
+}</code></pre>
+
+<h3>Polling результата</h3>
+<pre><code>Method: GET
+URL: https://comfyui-tunnel.cfargotunnel.com/history/{{ prompt_id }}
+
+Когда status === "success" → скачать картинку:
+GET https://comfyui-tunnel.cfargotunnel.com/view?filename=fabrika_0001.png&type=output
+Response Format: File</code></pre>
+</div>
+
+<!-- ======== 15 ======== -->
+<div class="section page-break" id="s15">
+<h2>15. Видео-генерация (Runway / Kling)</h2>
+
+<h3>Runway Gen-3 API</h3>
+<pre><code>Method: POST
+URL: https://api.runwayml.com/v1/generations
+Headers: Authorization: Bearer {{ $env.RUNWAY_API_KEY }}
+Timeout: 180000
+
+Body:
+{
+  "model": "gen3_alpha_turbo",
+  "prompt": "A cinematic shot of {{ $json.flux_prompt.split(',')[0] }}, smooth gentle camera movement, warm atmosphere, slow motion, 4k",
+  "image": "{{ $binary.data.base64 }}",
+  "duration": 5,
+  "frame_rate": 24,
+  "motion_scale": 0.8,
+  "seed": {{ $json.seed }}
+}
+
+// Ответ: { id: "gen_...", status: "pending" }
+
+// Получение результата:
+GET https://api.runwayml.com/v1/generations/gen_...
+
+// Когда готов: status: "completed", output.url: "https://..."
+</code></pre>
+
+<h3>Kling AI API</h3>
+<p>Kling даёт более естественные движения людей.</p>
+
+<h4>Подготовка заголовков (Code Node):</h4>
+<pre><code>const crypto = require('crypto');
+const secretKey = process.env.KLING_SECRET_KEY;
+const accessKey = process.env.KLING_ACCESS_KEY;
+const timestamp = Math.floor(Date.now() / 1000);
+const signature = crypto.createHmac('sha256', secretKey)
+  .update(accessKey + timestamp).digest('hex');
+
+return {
+  ...$json,
+  kling_headers: {
+    'access-key': accessKey,
+    'signature': signature,
+    'timestamp': timestamp.toString()
+  }
+};</code></pre>
+
+<pre><code>// POST https://api.klingai.com/v1/images/image2video
+// multipart/form-data
+// Поля: file (картинка), prompt_text, cfg_scale: 0.5, duration: 5
+
+// Ответ: { data: { task_id: "...", status: "processing" } }
+
+// Проверка:
+GET https://api.klingai.com/v1/tasks/{{ task_id }}
+// Когда готов: data.video.url</code></pre>
+
+<h3>FFmpeg — склейка видео</h3>
+<p>Установка на VPS:</p>
+<pre><code>apt install ffmpeg -y</code></pre>
+
+<p>Python-микросервис (video_merger.py):</p>
+<pre><code>from flask import Flask, request, send_file
+import subprocess, os, json, requests, io, time
+
+app = Flask(__name__)
+
+@app.route('/merge', methods=['POST'])
+def merge_videos():
+    data = request.json
+    video_urls = data.get('video_urls', [])
+    output_name = data.get('output_name', 'merged.mp4')
+
+    with open('/tmp/urls.txt', 'w') as f:
+        for url in video_urls:
+            f.write(f"file '{url}'\n")
+
+    cmd = ['ffmpeg', '-y', '-f', 'concat', '-safe', '0', '-i', '/tmp/urls.txt',
+           '-c:v', 'libx264', '-preset', 'fast', '-crf', '23', f'/tmp/{output_name}']
+    subprocess.run(cmd, check=True, capture_output=True)
+    return send_file(f'/tmp/{output_name}', mimetype='video/mp4')
+
+@app.route('/add_text', methods=['POST'])
+def add_text():
+    video_url = request.form['video_url']
+    text = request.form['text']
+    output = f"/tmp/text_{int(time.time())}.mp4"
+
+    cmd = ['ffmpeg', '-y', '-i', video_url,
+           '-vf', f"drawtext=text='{text}':fontcolor=white:fontsize=36:x=(w-text_w)/2:y=h-100:shadowcolor=black:shadowx=2:shadowy=2",
+           '-c:v', 'libx264', '-preset', 'fast', '-crf', '23', output]
+    subprocess.run(cmd, check=True, capture_output=True)
+    return send_file(output, mimetype='video/mp4')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5001)</code></pre>
+
+<h3>Полный виде-workflow</h3>
+<div class="diagram">[Триггер] → [Стратег] → [Копирайтер] → [Промпт-инженер]
+    ↓
+[HTTP: Flux] → картинка
+    ↓
+Параллельно:
+  [HTTP: Runway] → 5 сек видео
+  [HTTP: Kling] → 5 сек видео (лицо)
+    ↓
+[FFmpeg merge] → 15 сек видео (склейка 3 клипов)
+    ↓
+[FFmpeg add_text] → текст поверх видео
+    ↓
+[OpenAI Vision] → Vibe Check (на кадры видео)
+    ↓
+[IF: OK?] → Save → Telegram</div>
+</div>
+
+<!-- ======== 16 ======== -->
+<div class="section page-break" id="s16">
+<h2>16. Claude-стратег с аналитикой</h2>
+
+<h3>Архитектура</h3>
+<div class="diagram">Facebook Marketing API → Python fb_stats.py → n8n (контекст)
+  → Claude API (анализ + решение)
+  → Фабрика генерирует креативы по новой стратегии
+  → Через 24ч — новый цикл</div>
+
+<h4>Python-скрипт выгрузки статистики (fb_stats.py)</h4>
+<pre><code>#!/usr/bin/env python3
+import requests, json, os
+from datetime import datetime, timedelta
+
+ACCESS_TOKEN = os.getenv('FB_ACCESS_TOKEN')
+AD_ACCOUNT_ID = os.getenv('FB_AD_ACCOUNT_ID')
+OUTPUT_FILE = '/assets/analytics/fb_stats.json'
+
+yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
+today = datetime.now().strftime('%Y-%m-%d')
+
+url = f'https://graph.facebook.com/v18.0/act_{AD_ACCOUNT_ID}/insights'
+params = {
+    'fields': 'campaign_name,ad_name,impressions,clicks,spend,ctr,cpc,actions',
+    'level': 'ad',
+    'time_range': json.dumps({'since': yesterday, 'until': today}),
+    'access_token': ACCESS_TOKEN,
+}
+data = requests.get(url, params=params).json()
+
+campaigns = []
+for ad in data.get('data', []):
+    conversions = sum(int(a.get('value', 0)) for a in ad.get('actions', []) if a.get('action_type') == 'registration')
+    campaigns.append({
+        'ad_name': ad.get('ad_name', ''),
+        'impressions': int(ad.get('impressions', 0)),
+        'clicks': int(ad.get('clicks', 0)),
+        'spend': float(ad.get('spend', 0)),
+        'ctr': float(ad.get('ctr', 0)),
+        'cpc': float(ad.get('cpc', 0)),
+        'conversions': conversions,
+        'cpa': round(float(ad.get('spend', 0)) / conversions, 2) if conversions > 0 else None
+    })
+
+with open(OUTPUT_FILE, 'w') as f:
+    json.dump(campaigns, f, indent=2)</code></pre>
+
+<h4>HTTP Request: Claude API (Стратег)</h4>
+<pre><code>Method: POST
+URL: https://api.anthropic.com/v1/messages
+Headers:
+  x-api-key: {{ $env.CLAUDE_API_KEY }}
+  anthropic-version: 2023-06-01
+Timeout: 60000
+
+Body:
+{
+  "model": "claude-opus-4-8",
+  "max_tokens": 2000,
+  "temperature": 0.2,
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are a strategic media buyer. Based on stats below, decide what to generate TODAY.\n\nSTATS:\n{{ JSON.stringify($json.stats_summary, null, 2) }}\n\nWORKING: {{ JSON.stringify($json.working, null, 2) }}\n\nFAILING: {{ JSON.stringify($json.failing, null, 2) }}\n\nDecide: 1) GEO, 2) angle, 3) image/video, 4) how aggressive\n\nAvailable: GEOs [BR,TH,MX,ID,PH,DE,FR], angles [investment,lifestyle,curiosity,tech,test,community,news]\n\nReturn ONLY JSON:\n{\n  \"strategy\": { \"geo\": \"BR\", \"angle\": \"curiosity\", \"creative_type\": \"image\", \"mood\": \"test\", \"count\": 5 },\n  \"analysis\": { \"best_angle\": \"investment\", \"worst_angle\": \"tech\", \"trend\": \"...\", \"recommendation\": \"...\" }\n}"
+    }
+  ]
+}</code></pre>
+
+<h4>Обработка ответа Claude</h4>
+<pre><code>const content = JSON.parse($json.body.content[0].text);
+return {
+  ...$json,
+  geo: content.strategy.geo,
+  angle_id: content.strategy.angle,
+  mood: content.strategy.mood,
+  count: content.strategy.count,
+  creative_type: content.strategy.creative_type,
+  claude_analysis: content.analysis
+};</code></pre>
+
+<h4>Замыкание цикла</h4>
+<div class="diagram">День 1, 09:00 → Стратег (Claude) анализирует статистику
+  → Решает: ГЕО, угол, N креативов
+  → Фабрика генерирует креативы
+  → Ты запускаешь в Facebook
+День 2, 09:00 → fb_stats.py выгружает статистику
+  → Стратег видит: «Бразилия CPA $8, лучший угол — любопытство»
+  → Решает: «Сегодня Таиланд, инвестиции, 7 крео»
+  → Фабрика генерирует снова</div>
+
+<h4>Расписание в n8n</h4>
+<pre><code>Schedule Trigger: 00 09 * * * (каждый день в 9:00)
+  → Python fb_stats.py
+  → Сборка контекста
+  → Claude API (Стратег)
+  → Фабрика креативов
+  → Telegram: отчёт</code></pre>
+</div>
+
+<!-- ======== 17 ======== -->
+<div class="section page-break" id="s17">
+<h2>17. Чек-лист: всё для запуска</h2>
+
+<h3>Инфраструктура</h3>
+<ul class="checklist">
+  <li>Антидетект-браузер (Dolphin/Indigo/GoLogin)</li>
+  <li>Residential прокси (2-3 шт от proxy6.net)</li>
+  <li>Keitaro на VPS или облачный хостинг</li>
+  <li>Домен для трекинга (минимум 1, лучше 3-5)</li>
+  <li>SSL-сертификат на домене</li>
+</ul>
+
+<h3>Facebook</h3>
+<ul class="checklist">
+  <li>Business Manager (BM)</li>
+  <li>2-3 фармленных Facebook-аккаунта</li>
+  <li>2-3 рекламных кабинета (РК) внутри BM</li>
+  <li>1-2 страницы (Page) с минимальным наполнением</li>
+  <li>Пиксель (Pixel)</li>
+  <li>Платёжные карты (Capitalist/VCC, 2-3 шт)</li>
+</ul>
+
+<h3>Партнёрки</h3>
+<ul class="checklist">
+  <li>Регистрация в 1-2 партнёрках (ClickDealer, Gap777, Leads.su)</li>
+  <li>Получен оффер (CPA/CPL) по нужному ГЕО</li>
+  <li>Ссылка на оффер получена</li>
+  <li>Postback настроен между партнёркой и Keitaro</li>
+</ul>
+
+<h3>Связка</h3>
+<ul class="checklist">
+  <li>Оффер создан в Keitaro</li>
+  <li>Поток (Stream) создан</li>
+  <li>Кампания в Keitaro создана, Campaign URL получен</li>
+  <li>Postback настроен (партнёрка → Keitaro)</li>
+</ul>
+
+<h3>Первый запуск</h3>
+<ul class="checklist">
+  <li>Создан креатив (нейтральный, без триггеров)</li>
+  <li>Кампания в Facebook Ads Manager создана</li>
+  <li>Бюджет $10-20/день на тест</li>
+  <li>В поле Website URL — ссылка из Keitaro</li>
+  <li>CTA — Learn More</li>
+  <li>Frequency &lt; 3</li>
+</ul>
+
+<h3>Фабрика n8n</h3>
+<ul class="checklist">
+  <li>VPS арендован (Hetzner CX22)</li>
+  <li>Docker + n8n установлены</li>
+  <li>OpenAI API ключ подключён</li>
+  <li>Flux/MJ API ключ подключён</li>
+  <li>Python-микросервис для overlay запущен</li>
+  <li>Telegram-бот создан</li>
+  <li>Workflow «Стратег → Копирайтер → Промпт-инженер» работает</li>
+  <li>Workflow «Flux → Overlay → Vision → Save» работает</li>
+  <li>Schedule Trigger настроен (каждые 4ч)</li>
+  <li>Telegram-уведомления приходят</li>
+  <li>% брака &lt; 30%</li>
+  <li>Скорость &gt; 30 креативов/день</li>
+</ul>
+
+<h3>По желанию</h3>
+<ul class="checklist">
+  <li>ComfyUI + Flux на своём GPU</li>
+  <li>Cloudflare Tunnel для доступа к ComfyUI</li>
+  <li>Видео-генерация через Runway/Kling</li>
+  <li>Claude-стратег с FB API</li>
+  <li>Полный цикл: статистика → стратег → фабрика → запуск</li>
+</ul>
+</div>
+
+<!-- ======== 18 ======== -->
+<div class="section page-break" id="s18">
+<h2>18. Бюджет и калькуляция</h2>
+
+<h3>Стартовый набор (всё руками)</h3>
+<table>
+  <tr><th>Позиция</th><th>Разово</th><th>В месяц</th></tr>
+  <tr><td>Антидетект-браузер</td><td>$0-30</td><td>$0</td></tr>
+  <tr><td>Residential прокси (2-3 шт)</td><td>—</td><td>$3-9</td></tr>
+  <tr><td>Keitaro (облачный хостинг)</td><td>—</td><td>$15-30</td></tr>
+  <tr><td>Домены (3-5 шт на год)</td><td>$5-15</td><td>—</td></tr>
+  <tr><td>Facebook-аккаунты (2-3 шт)</td><td>$6-30</td><td>—</td></tr>
+  <tr><td>Виртуальные карты</td><td>$5-10</td><td>—</td></tr>
+  <tr><td><strong>Итого:</strong></td><td><strong>$16-85</strong></td><td><strong>$18-39</strong></td></tr>
+</table>
+
+<h3>Фабрика креативов (n8n + API)</h3>
+<table>
+  <tr><th>Компонент</th><th>Цена/мес</th></tr>
+  <tr><td>VPS (Hetzner CX22)</td><td>€7 (~$7.50)</td></tr>
+  <tr><td>n8n (self-hosted)</td><td>$0</td></tr>
+  <tr><td>OpenAI API (тексты + Vision)</td><td>~$15</td></tr>
+  <tr><td>Flux / MJ API (картинки)</td><td>~$30-60</td></tr>
+  <tr><td>Telegram Bot</td><td>$0</td></tr>
+  <tr><td><strong>Итого:</strong></td><td><strong>~$52-82/мес</strong></td></tr>
+  <tr><td colspan="2">На выходе: 30-40 креативов/день</td></tr>
+</table>
+
+<h3>Фабрика на своём GPU (ComfyUI + Flux)</h3>
+<table>
+  <tr><th>Компонент</th><th>Цена/мес</th></tr>
+  <tr><td>n8n (на своём ПК)</td><td>$0</td></tr>
+  <tr><td>ComfyUI + Flux</td><td>$0 (эл-во ~$10)</td></tr>
+  <tr><td>OpenAI API (тексты + Vision)</td><td>~$15</td></tr>
+  <tr><td><strong>Итого:</strong></td><td><strong>~$25/мес</strong></td></tr>
+  <tr><td colspan="2">На выходе: 100+ креативов/день (без лимитов)</td></tr>
+</table>
+
+<h3>Себестоимость одного креатива</h3>
+<table>
+  <tr><th>Способ</th><th>Время</th><th>Стоимость</th></tr>
+  <tr><td>Ручная генерация (MJ + ChatGPT)</td><td>~8-10 часов на 100 шт</td><td>$0 (твой труд)</td></tr>
+  <tr><td>n8n + Flux API</td><td>~15-20 мин на 100 шт</td><td>~$1-2</td></tr>
+  <tr><td>ComfyUI + Flux (свой GPU)</td><td>~10 мин на 100 шт</td><td>~$0.30</td></tr>
+</table>
+
+<h3>Окупаемость</h3>
+<p>Если ты льёшь $50/день на рекламу с ROI +50%:</p>
+<ul>
+  <li>Доход в месяц: $50 × 30 × 0.5 = <strong>$750 профита</strong></li>
+  <li>Фабрика креативов: $52-82/мес</li>
+  <li>Чистый доход: <strong>$668-698/мес</strong></li>
+</ul>
+
+<p>Фабрика окупается, если ты тратишь на рекламу от $10-20/день.</p>
+</div>
+
+<!-- ======== FOOTER ======== -->
+<div class="footer">
+  <p>Media Buying — Полный гайд • 14 июля 2026 • Для личного использования</p>
+  <p style="margin-top:6px;font-size:0.85em">Стек: Facebook (Meta Ads) + Keitaro + n8n + Flux/ComfyUI + Claude/OpenAI</p>
+</div>
+
+</div><!-- /container -->
+
+</body>
+</html>

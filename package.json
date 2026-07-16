@@ -1,0 +1,20 @@
+{
+  "name": "cloude",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:pdf": "node scripts/make-pdf.js",
+    "build:pdf:sha": "node scripts/make-sha-pdf.js",
+    "build:font": "node scripts/generate-sharuu-font.js",
+    "build:md": "powershell -File xharuun/scripts/build-encyclopedia.ps1",
+    "validate": "powershell -File xharuun/scripts/validate-refs.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "md-to-pdf": "^5.2.5"
+  }
+}

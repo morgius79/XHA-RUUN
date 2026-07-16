@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Local settings
+.claude/settings.local.json
+
+# Xha'Ruun build outputs
+xharuun/build/
+xharuun/sharuun/

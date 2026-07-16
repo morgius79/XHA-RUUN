@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keitaro — гайд по установке и настройке</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --dim: #8b949e; --accent: #58a6ff;
+    --green: #3fb950; --red: #f85149; --orange: #d29922; --code-bg: #1c2128;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.7; padding: 0;
+  }
+  @media print {
+    body { background: white; color: #1f2328; font-size: 11px; line-height: 1.5; }
+    .no-print { display: none !important; }
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #d0d7de !important; }
+    .section, .box { break-inside: avoid; }
+    .header { background: white !important; border-bottom: 2px solid #1f2328 !important; }
+    .header h1 { -webkit-text-fill-color: #1f2328 !important; color: #1f2328 !important; background: none !important; }
+    .box { border: 1px solid #d0d7de !important; }
+    .tag { border: 1px solid #d0d7de !important; }
+    pre { background: #f6f8fa !important; border: 1px solid #d0d7de !important; }
+    .flow { border: 1px solid #1f2328 !important; }
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 16px 20px; }
+  .header {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border-bottom: 1px solid var(--border); text-align: center;
+    padding: 28px 0 20px;
+  }
+  .header h1 {
+    font-size: 1.6em; margin-bottom: 6px;
+    background: linear-gradient(135deg, #f0883e, #58a6ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .header p { color: var(--dim); font-size: 0.9em; }
+  .header .meta { color: var(--dim); font-size: 0.75em; margin-top: 6px; }
+  .section { margin: 20px 0; page-break-inside: avoid; }
+  .section h2 {
+    font-size: 1.25em; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+    margin-bottom: 12px; color: var(--accent);
+  }
+  @media print { .section h2 { color: #1f2328; border-bottom-color: #1f2328; } }
+  .section h3 { font-size: 1.05em; margin: 14px 0 6px; }
+  .section h4 { font-size: 0.95em; margin: 12px 0 4px; color: var(--dim); font-weight: 600; }
+  .section p { margin: 6px 0; }
+  .box {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 12px 16px; margin: 8px 0; page-break-inside: avoid;
+  }
+  table {
+    width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.9em; page-break-inside: avoid;
+  }
+  th, td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; }
+  th { background: var(--surface); font-weight: 600; }
+  @media print { th { background: #f0f0f0; } }
+  code, pre {
+    background: var(--code-bg); border-radius: 4px;
+    font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace; font-size: 0.85em;
+  }
+  code { padding: 1px 5px; }
+  pre {
+    padding: 10px 14px; border: 1px solid var(--border); overflow-x: auto;
+    margin: 8px 0; page-break-inside: avoid; line-height: 1.4;
+  }
+  pre code { background: none; padding: 0; border: none; }
+  .tag {
+    display: inline-block; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; font-weight: 600; margin: 2px;
+  }
+  .tag-green { background: #1a3a2a; color: #3fb950; }
+  .tag-yellow { background: #3a2e1a; color: #d29922; }
+  .tag-red { background: #3a1a1a; color: #f85149; }
+  .tag-blue { background: #1a2a3a; color: #58a6ff; }
+  @media print {
+    .tag-green { background: #d4edda; color: #155724; border: 1px solid #155724; }
+    .tag-yellow { background: #fff3cd; color: #856404; border: 1px solid #856404; }
+    .tag-red { background: #f8d7da; color: #721c24; border: 1px solid #721c24; }
+    .tag-blue { background: #e6eefd; color: #1a3a8a; border: 1px solid #1a3a8a; }
+  }
+  hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+  ul, ol { margin: 4px 0 8px 20px; }
+  li { margin: 2px 0; }
+
+  .flow {
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; margin: 12px 0; text-align: center;
+    page-break-inside: avoid;
+  }
+  .flow-step {
+    display: inline-block; padding: 8px 14px; border-radius: 6px;
+    margin: 4px; font-weight: 600; font-size: 0.9em;
+  }
+  .flow-arrow { font-size: 1.2em; color: var(--dim); margin: 0 4px; }
+
+  .print-btn {
+    display: inline-block; padding: 10px 24px; background: var(--accent); color: white;
+    border: none; border-radius: 6px; cursor: pointer;
+    font-size: 0.95em; font-weight: 600; margin: 8px 0;
+  }
+  @media print { .print-btn { display: none !important; } }
+  .footer { text-align: center; padding: 20px 0; color: var(--dim); font-size: 0.75em; border-top: 1px solid var(--border); margin-top: 20px; }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 5px 0 5px 28px; border-bottom: 1px solid var(--border); position: relative; }
+  .checklist li::before { content: "☐"; position: absolute; left: 4px; font-size: 1.1em; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📡 Keitaro — установка и настройка</h1>
+  <p>Трекер для баинга: VPS, установка, офферы, потоки, postback, связка с Meta</p>
+  <p class="meta">Meta Ads → Keitaro → Преленд → Оффер</p>
+  <button class="print-btn no-print" onclick="window.print()">🖨 Распечатать / PDF</button>
+</div>
+
+<div class="container">
+
+<!-- 1. ЧТО ТАКОЕ -->
+<div class="section">
+<h2>1. Что такое Keitaro и зачем он нужен</h2>
+
+<div class="flow">
+  <span class="flow-step" style="background:#1a2a3a;color:#58a6ff;">Meta (креатив)</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-step" style="background:#2a2a1a;color:#d29922;">Keitaro</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-step" style="background:#1a3a2a;color:#3fb950;">Преленд</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-step" style="background:#3a1a1a;color:#f85149;">Оффер</span>
+  <br><br>
+  <span style="color:var(--dim);font-size:0.85em;">⬇ Сбор статистики: клики, конверсии, ГЕО, устройство, источник</span>
+</div>
+
+<p><strong>Зачем:</strong></p>
+<ol>
+  <li><strong>Маскировка ссылки</strong> — Meta не видит, куда ведёшь</li>
+  <li><strong>Распределение трафика</strong> — разные офферы под разные условия</li>
+  <li><strong>Статистика</strong> — какой креатив/канал/ГЕО дают конверсии</li>
+  <li><strong>Anti-cheat</strong> — отсекает ботов</li>
+  <li><strong>Postback</strong> — передаёт конверсии обратно в Meta</li>
+</ol>
+</div>
+
+<!-- 2. ТРЕБОВАНИЯ -->
+<div class="section">
+<h2>2. Требования к серверу</h2>
+<table>
+  <tr><th>Параметр</th><th>Минимум</th><th>Рекомендуется</th></tr>
+  <tr><td>CPU</td><td>1 ядро</td><td>2+ ядра</td></tr>
+  <tr><td>RAM</td><td>1 GB</td><td>2–4 GB</td></tr>
+  <tr><td>Диск</td><td>10 GB SSD</td><td>20+ GB SSD</td></tr>
+  <tr><td>ОС</td><td>Ubuntu 20.04</td><td>Ubuntu 22.04</td></tr>
+</table>
+<p><strong>Где брать:</strong> DigitalOcean ($6/мес), Vultr ($6/мес), Hetzner (от $4/мес). IP не должен быть забанен в Meta.</p>
+</div>
+
+<!-- 3. УСТАНОВКА -->
+<div class="section">
+<h2>3. Установка</h2>
+
+<h3>Быстрая (рекомендуется)</h3>
+<pre><code>ssh root@твой-сервер
+cd /opt
+wget https://keitaro.io/download/keitaro-latest.zip
+unzip keitaro-latest.zip -d keitaro
+cd keitaro
+chmod +x install.sh
+./install.sh</code></pre>
+
+<h3>Ручная (если авто не сработал)</h3>
+<pre><code>apt update
+apt install -y nginx mysql-server php8.2-fpm php8.2-mysql php8.2-curl \
+  php8.2-xml php8.2-mbstring php8.2-zip php8.2-gd php8.2-bcmath unzip wget
+
+cd /var/www
+wget https://keitaro.io/download/keitaro-latest.zip
+unzip keitaro-latest.zip
+mv keitaro tracker
+chown -R www-data:www-data tracker
+
+# Создать БД
+mysql -u root -p
+CREATE DATABASE keitaro;
+CREATE USER 'keitaro_user'@'localhost' IDENTIFIED BY 'твой_пароль';
+GRANT ALL PRIVILEGES ON keitaro.* TO 'keitaro_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+# Настроить Nginx (см. полный конфиг в md-файле)</code></pre>
+
+<h3>После установки</h3>
+<ul>
+  <li>Открой <code>http://tracker.mydomain.com/admin</code></li>
+  <li>Смени пароль админа</li>
+  <li>Настрой часовой пояс под ГЕО</li>
+  <li><strong>Закрой панель от чужих</strong> — добавь HTTP-авторизацию</li>
+</ul>
+</div>
+
+<!-- 4. ПОНЯТИЯ -->
+<div class="section">
+<h2>4. Основные понятия</h2>
+<div class="box">
+<strong>OFFER (Оффер)</strong> — ссылка на ленд партнёрки<br>
+<strong>STREAM (Поток)</strong> — правила распределения трафика<br>
+<strong>CAMPAIGN (Кампания)</strong> — твоя кампания в Meta (ссылка из Keitaro)<br>
+<strong>STATS (Статистика)</strong> — клики, конверсии, доход, расход
+</div>
+</div>
+
+<!-- 5. ОФФЕР -->
+<div class="section">
+<h2>5. Настройка оффера</h2>
+<p><strong>Offers → Add Offer</strong></p>
+<table>
+  <tr><th>Поле</th><th>Что вводить</th></tr>
+  <tr><td>Name</td><td>Casino ID (внутреннее название)</td></tr>
+  <tr><td>Offer URL</td><td><code>https://partner.casino.com/click?subid={clickid}&campaign=123</code></td></tr>
+  <tr><td>Payout</td><td>Выплата партнёрки</td></tr>
+  <tr><td>Country</td><td>ГЕО оффера</td></tr>
+</table>
+<p><strong>Важно:</strong> <code>{clickid}</code> — ID клика в Keitaro. Партнёрка вернёт его при конверсии.</p>
+</div>
+
+<!-- 6. ПОТОК -->
+<div class="section">
+<h2>6. Настройка потока (Stream)</h2>
+<p><strong>Streams → Add Stream</strong></p>
+<table>
+  <tr><th>Поле</th><th>Что вводить</th></tr>
+  <tr><td>Name</td><td>FB → Casino ID → Преленд</td></tr>
+  <tr><td>Offer</td><td>Выбери созданный оффер</td></tr>
+  <tr><td>Landings</td><td>Добавь URL преленда</td></tr>
+</table>
+<p><strong>Результат:</strong> получишь ссылку <code>http://tracker.mydomain.com/click/XXXXX</code> — вставляешь в объявление Meta.</p>
+</div>
+
+<!-- 7. КАМПАНИЯ -->
+<div class="section">
+<h2>7. Настройка кампании в Keitaro</h2>
+<p><strong>Campaigns → Add Campaign</strong></p>
+<table>
+  <tr><th>Поле</th><th>Что вводить</th></tr>
+  <tr><td>Name</td><td>ID кампании из Meta</td></tr>
+  <tr><td>Campaign URL</td><td>Ссылка из потока</td></tr>
+  <tr><td>Traffic Source</td><td>Facebook</td></tr>
+  <tr><td>Stream</td><td>Выбери поток</td></tr>
+</table>
+</div>
+
+<!-- 8. POSTBACK -->
+<div class="section">
+<h2>8. Postback — самое важное</h2>
+
+<div class="flow">
+  <span class="flow-step" style="background:#1a2a3a;color:#58a6ff;">Meta</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-step" style="background:#2a2a1a;color:#d29922;">Keitaro</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-step" style="background:#3a1a1a;color:#f85149;">Оффер</span>
+  <span class="flow-arrow">→</span>
+  депозит
+  <br>
+  <span style="color:var(--dim);font-size:0.85em;">
+  Партнёрка → callback с clickid → Keitaro → конверсия в Meta
+  </span>
+</div>
+
+<p><strong>Настройка postback в Keitaro:</strong></p>
+<ol>
+  <li><strong>Offers → выбери оффер → Postback</strong></li>
+  <li>Добавь URL от партнёрки: <code>https://partner.casino.com/postback?clickid={clickid}&payout={payout}</code></li>
+  <li>Параметры: Click ID = <code>{clickid}</code>, Payout = <code>{payout}</code></li>
+</ol>
+
+<p><strong>Чтобы конверсии доходили до Meta:</strong></p>
+<table>
+  <tr><th>Способ</th><th>Как настроить</th><th>Надёжность</th></tr>
+  <tr><td>FB Pixel</td><td>Код пикселя на преленде</td><td>🟡 Средняя</td></tr>
+  <tr><td>CAPI Server</td><td>Pixel ID + Access Token в Keitaro</td><td>🟢 Высокая</td></tr>
+</table>
+</div>
+
+<!-- 9. СВЯЗКА -->
+<div class="section">
+<h2>9. Полная схема Meta → Keitaro → Оффер</h2>
+
+<div class="box">
+  <strong>1.</strong> Создаёшь поток в Keitaro → получаешь ссылку click/XXXXX<br>
+  <strong>2.</strong> Вставляешь ссылку в объявление Meta<br>
+  <strong>3.</strong> Настраиваешь postback (партнёрка → Keitaro → Meta)<br><br>
+
+  <strong>Как работает:</strong><br>
+  Meta показывает креатив → Петя кликает → Meta записывает click_id<br>
+  → Петя в Keitaro → click_id сохраняется → преленд → оффер<br>
+  → Петя регится и делает депозит<br>
+  → Партнёрка шлёт callback в Keitaro<br>
+  → Keitaro шлёт конверсию в Meta<br>
+  → Meta оптимизирует показы под таких как Петя
+</div>
+</div>
+
+<!-- 10. СТАТИСТИКА -->
+<div class="section">
+<h2>10. Статистика в Keitaro</h2>
+
+<table>
+  <tr><th>Колонка</th><th>Что показывает</th></tr>
+  <tr><td>Impressions</td><td>Показы</td></tr>
+  <tr><td>Clicks</td><td>Клики</td></tr>
+  <tr><td>CTR</td><td>Кликабельность</td></tr>
+  <tr><td>CR %</td><td>Конверсия от кликов</td></tr>
+  <tr><td>CPA</td><td>Цена конверсии</td></tr>
+  <tr><td>CPC</td><td>Цена клика</td></tr>
+  <tr><td>EPC</td><td>Доход с клика</td></tr>
+  <tr><td>ROI %</td><td>Окупаемость</td></tr>
+</table>
+
+<p><strong>Отчёты:</strong> By Campaign / By Offer / By Landing / By Source / By Country</p>
+
+<p><strong>Загрузка расходов:</strong> Чтобы Keitaro считал ROI, загрузи CSV из Meta Ads Manager: Reports → Cost Import. И подключи интеграцию: Settings → Integrations → Facebook.</p>
+</div>
+
+<!-- 11. ПРОБЛЕМЫ -->
+<div class="section">
+<h2>11. Типичные проблемы</h2>
+
+<table>
+  <tr><th>Проблема</th><th>Причина</th><th>Решение</th></tr>
+  <tr><td>Meta не принимает ссылку</td><td>Домен не верифицирован / забанен</td><td>SSL (Let's Encrypt), чистый домен</td></tr>
+  <tr><td>Postback не работает</td><td>Не совпадает clickid</td><td>Проверь Offer URL и postback URL</td></tr>
+  <tr><td>Конверсии есть в Keitaro, нет в Meta</td><td>Не настроен FB Pixel / CAPI</td><td>Настрой CAPI Server</td></tr>
+  <tr><td>Keitaro тормозит</td><td>Мало RAM</td><td>2–4 GB, включи Redis</td></tr>
+</table>
+</div>
+
+<!-- 12. SSL -->
+<div class="section">
+<h2>12. SSL-сертификат</h2>
+<p>Meta требует HTTPS:</p>
+<pre><code>apt install certbot python3-certbot-nginx
+certbot --nginx -d tracker.mydomain.com</code></pre>
+</div>
+
+<!-- 13. ЧЕК-ЛИСТ -->
+<div class="section">
+<h2>13. Чек-лист настройки</h2>
+
+<h3>Установка</h3>
+<div class="box">
+<ul class="checklist">
+  <li>VPS арендован (2+ GB RAM)</li>
+  <li>Домен привязан к VPS</li>
+  <li>Keitaro установлен</li>
+  <li>SSL-сертификат (HTTPS)</li>
+  <li>Админ-панель закрыта паролем</li>
+</ul>
+</div>
+
+<h3>Офферы и потоки</h3>
+<div class="box">
+<ul class="checklist">
+  <li>Оффер создан, Offer URL содержит {clickid}</li>
+  <li>Выплата указана</li>
+  <li>Поток создан, преленд добавлен</li>
+  <li>Ссылка потока скопирована</li>
+</ul>
+</div>
+
+<h3>Meta и postback</h3>
+<div class="box">
+<ul class="checklist">
+  <li>Ссылка из Keitaro вставлена в объявление</li>
+  <li>FB Pixel стоит на преленде (или CAPI)</li>
+  <li>Postback URL от партнёрки добавлен</li>
+  <li>Тестовая конверсия прошла</li>
+  <li>Конверсии видны и в Keitaro, и в Meta</li>
+</ul>
+</div>
+</div>
+
+<!-- 14. БЕЗОПАСНОСТЬ -->
+<div class="section">
+<h2>14. Безопасность</h2>
+<ul>
+  <li><strong>Закрой admin-панель</strong> — HTTP-авторизация или по IP</li>
+  <li><strong>Обновляй Keitaro</strong> — новые версии закрывают уязвимости</li>
+  <li><strong>Поддомены:</strong> панель на одном, трек-ссылки на другом</li>
+  <li><strong>Бэкапы:</strong> дамп БД раз в неделю</li>
+</ul>
+<pre><code>mysqldump -u root keitaro > /backup/keitaro_$(date +%Y%m%d).sql</code></pre>
+</div>
+
+</div><!-- /container -->
+<div class="footer">
+  <p>Сгенерировано с Claude. Июль 2026.</p>
+  <p class="no-print"><button class="print-btn" onclick="window.print()">🖨 Распечатать / PDF</button></p>
+</div>
+</body>
+</html>

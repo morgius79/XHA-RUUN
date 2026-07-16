@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Метрики баинга — шпаргалка и гайд</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --dim: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --red: #f85149;
+    --orange: #d29922;
+    --code-bg: #1c2128;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 14px;
+    padding: 0;
+  }
+  @media print {
+    body { background: white; color: #1f2328; font-size: 11px; line-height: 1.5; }
+    .no-print { display: none !important; }
+    pre, code { background: #f6f8fa !important; border: 1px solid #d0d7de !important; }
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #d0d7de !important; }
+    .card, .section { break-inside: avoid; }
+    .header { background: white !important; border-bottom: 2px solid #1f2328 !important; }
+    .header h1 { -webkit-text-fill-color: #1f2328 !important; color: #1f2328 !important; background: none !important; }
+    .box { border: 1px solid #d0d7de !important; }
+    .tag { border: 1px solid #d0d7de !important; }
+    .matrix-box { border: 1px solid #1f2328 !important; }
+    .matrix-cell { border: 1px solid #1f2328 !important; }
+    .shpargalka { border: 2px solid #1f2328 !important; background: #f6f8fa !important; }
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 16px 20px; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 0 20px;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 1.6em; margin-bottom: 6px;
+    background: linear-gradient(135deg, #58a6ff, #3fb950);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header p { color: var(--dim); font-size: 0.9em; }
+  .header .meta { color: var(--dim); font-size: 0.75em; margin-top: 6px; }
+
+  /* Sections */
+  .section { margin: 20px 0; page-break-inside: avoid; }
+  .section h2 {
+    font-size: 1.25em; padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+  @media print { .section h2 { color: #1f2328; border-bottom-color: #1f2328; } }
+  .section h3 {
+    font-size: 1.05em; margin: 14px 0 6px;
+    color: var(--text);
+  }
+  .section h4 { font-size: 0.95em; margin: 12px 0 4px; color: var(--dim); font-weight: 600; }
+  .section p { margin: 6px 0; }
+
+  /* Box */
+  .box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    page-break-inside: avoid;
+  }
+
+  /* Tables */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 8px 0; font-size: 0.9em;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 6px 10px; text-align: left;
+  }
+  th { background: var(--surface); font-weight: 600; }
+  @media print { th { background: #f0f0f0; } }
+
+  /* Code */
+  code, pre {
+    background: var(--code-bg);
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.85em;
+  }
+  code { padding: 1px 5px; }
+  pre {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    overflow-x: auto;
+    line-height: 1.4;
+    margin: 8px 0;
+    page-break-inside: avoid;
+  }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 2px 10px; border-radius: 12px;
+    font-size: 0.8em; font-weight: 600;
+    margin: 2px;
+  }
+  .tag-green { background: #1a3a2a; color: #3fb950; }
+  .tag-yellow { background: #3a2e1a; color: #d29922; }
+  .tag-red { background: #3a1a1a; color: #f85149; }
+  .tag-blue { background: #1a2a3a; color: #58a6ff; }
+  @media print {
+    .tag-green { background: #e6f4e8; color: #1a5c2a; }
+    .tag-yellow { background: #fdf5e6; color: #7a5c1a; }
+    .tag-red { background: #fde6e6; color: #8a1a1a; }
+    .tag-blue { background: #e6eefd; color: #1a3a8a; }
+  }
+
+  /* Matrix */
+  .matrix-box {
+    border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px;
+    margin: 8px 0; font-size: 0.9em;
+    page-break-inside: avoid;
+  }
+  .matrix-table { width: 100%; border-collapse: collapse; }
+  .matrix-cell {
+    padding: 10px 12px; text-align: center;
+    border: 1px solid var(--border);
+    font-weight: 600; font-size: 0.9em;
+  }
+  .matrix-cell.green { background: linear-gradient(135deg, #1a3a2a, #0d2818); }
+  .matrix-cell.orange { background: linear-gradient(135deg, #3a2e1a, #2a200e); }
+  .matrix-cell.red { background: linear-gradient(135deg, #3a1a1a, #2a0e0e); }
+  @media print {
+    .matrix-cell.green { background: #d4edda; color: #155724; }
+    .matrix-cell.orange { background: #fff3cd; color: #856404; }
+    .matrix-cell.red { background: #f8d7da; color: #721c24; }
+  }
+  .matrix-label { padding: 6px 10px; font-weight: 600; font-size: 0.8em; }
+
+  /* Shpargalka */
+  .shpargalka {
+    border: 2px solid var(--green);
+    border-radius: 8px; padding: 14px 18px;
+    background: var(--surface);
+    margin: 12px 0;
+    page-break-inside: avoid;
+  }
+  .shpargalka h2 { border-bottom-color: var(--green); }
+
+  /* Footer */
+  .footer {
+    text-align: center; padding: 20px 0;
+    color: var(--dim); font-size: 0.75em;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+  }
+
+  /* Horizontal line */
+  hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+  /* Button */
+  .print-btn {
+    display: inline-block;
+    padding: 10px 24px; background: var(--accent); color: white;
+    border: none; border-radius: 6px; cursor: pointer;
+    font-size: 0.95em; font-weight: 600; text-decoration: none;
+    margin: 8px 0;
+  }
+  @media print { .print-btn { display: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📊 Метрики баинга</h1>
+  <p>Углублённый разбор для гемблинг / казино</p>
+  <p class="meta">Meta Ads → Keitaro → Оффер • Формулы, нормы, Kill & Scale, кейсы</p>
+  <button class="print-btn no-print" onclick="window.print()">🖨 Распечатать / PDF</button>
+</div>
+
+<div class="container">
+
+<!-- 1. CARTA -->
+<div class="section">
+<h2>1. Система метрик — карта</h2>
+<p>Все метрики делятся на 3 уровня. Понимание уровня определяет, <strong>какое решение</strong> ты принимаешь.</p>
+<pre>
+┌─────────────────────────────────────────────────┐
+│     УРОВЕНЬ 3 — БИЗНЕС-МЕТРИКИ                   │
+│  ROI, Net Profit, P&amp;L по кампаниям              │
+│  → Решение: стоит ли вообще вертикаль             │
+├─────────────────────────────────────────────────┤
+│     УРОВЕНЬ 2 — МЕТРИКИ ЭФФЕКТИВНОСТИ            │
+│  CPA, CR, EPC, Frequency, CPC                   │
+│  → Решение: оптимизировать или убить связку      │
+├─────────────────────────────────────────────────┤
+│     УРОВЕНЬ 1 — МЕТРИКИ ТРАФИКА                  │
+│  CPM, CTR, Coverage, Reach, Spend               │
+│  → Решение: работает ли креатив / таргет         │
+└─────────────────────────────────────────────────┘
+</pre>
+<p><strong>Главное правило:</strong> решения принимаются сверху вниз. Если ROI зелёный — не трогай ничего. Если красный — спускайся на уровень ниже и ищи, что сломалось.</p>
+</div>
+
+<!-- 2. TRAFFIC -->
+<div class="section">
+<h2>2. Уровень 1 — Метрики трафика</h2>
+
+<h3>CPM — цена за 1000 показов</h3>
+<p><strong>Формула:</strong> <code>(Spend / Impressions) × 1000</code></p>
+<p><strong>Норма для гемблинга (Meta Ads):</strong></p>
+<ul>
+  <li>Tier-1 (USA, UK, CA, AU): <strong>$15–40</strong></li>
+  <li>Tier-2 (EU, Asia): <strong>$5–15</strong></li>
+  <li>Tier-3 (LatAm, Africa, SE Asia): <strong>$2–8</strong></li>
+</ul>
+<p><strong>Высокий CPM:</strong> узкая аудитория, устал креатив, горячий рынок, проблема с прокси/акком.</p>
+<p><strong>Тревога:</strong> CPM выше среднего по ГЕО в 2+ раза при нулевом CTR → меняй креатив или таргетинг.</p>
+
+<br>
+
+<h3>CTR — кликабельность</h3>
+<p><strong>Формула:</strong> <code>(Clicks / Impressions) × 100%</code></p>
+<p><strong>Норма для гемблинга:</strong> Хороший 0.8–2.5% | Средний 0.4–0.8% | Плохой &lt;0.3%</p>
+<p><strong>Важно:</strong> Из-за стоп-слов Meta CTR в гемблинге <strong>всегда ниже</strong>, чем в беттинге или нутре. CTR >2% — отличный результат.</p>
+
+<table>
+  <tr><th>CTR</th><th>Что значит</th><th>Действие</th></tr>
+  <tr><td>&gt;1.5%</td><td>Креатив залетает</td><td>Масштабируй, делай похожие</td></tr>
+  <tr><td>0.5–1.5%</td><td>Рабочий креатив</td><td>Тестируй вариации</td></tr>
+  <tr><td>0.2–0.5%</td><td>Слабо</td><td>Меняй креатив или аудиторию</td></tr>
+  <tr><td>&lt;0.2%</td><td>Мёртвый</td><td>Выключай</td></tr>
+</table>
+
+<p><strong>Ложный высокий CTR:</strong> &gt;5–6% на холодную — случайные клики или ботовый трафик. Смотри на CR рядом.</p>
+
+<br>
+
+<h3>Frequency — частота показов</h3>
+<ul>
+  <li><strong>1–2</strong> — норма (холодная аудитория)</li>
+  <li><strong>3–5</strong> — начинает "выгорать" (CPM растёт, CTR падает)</li>
+  <li><strong>5+</strong> — креатив мёртв для этой аудитории</li>
+</ul>
+<p><strong>Правило:</strong> CTR упал на 30%+ относительно первого дня и frequency >3 → обновляй креатив.</p>
+
+<br>
+
+<h3>Coverage / Reach</h3>
+<p>Reach — уникальные люди. Impressions — сколько раз показали.</p>
+<p><strong>Сигнал:</strong> Если Reach растёт быстрее Spend — аудитория широкая. Если Spend растёт, а Reach нет — меняй аудиторию (frequency взлетает).</p>
+</div>
+
+<!-- 3. EFFICIENCY -->
+<div class="section">
+<h2>3. Уровень 2 — Метрики эффективности</h2>
+
+<h3>CPC — цена клика</h3>
+<p><strong>Формула:</strong> <code>Spend / Clicks</code></p>
+<p>CPC сам по себе ничего не говорит. Смотрится только в паре с CR и CPA.</p>
+
+<br>
+
+<h3>CR — конверсия в лид/депозит</h3>
+<p><strong>Формула:</strong> <code>(Conversions / Clicks) × 100%</code></p>
+<p><strong>Это главная метрика качества трафика.</strong></p>
+<p><strong>Норма для гемблинга:</strong></p>
+<ul>
+  <li>CR в лид (регистрация): <strong>15–40%</strong></li>
+  <li>CR в депозит (первый деп): <strong>3–10%</strong></li>
+  <li>CR в деп с преленда: <strong>5–15%</strong></li>
+</ul>
+
+<table>
+  <tr><th>CR</th><th>CTR</th><th>Диагноз</th></tr>
+  <tr><td>Низкий</td><td>Высокий</td><td>Проблема с лендом/оффером — люди кликают, но не конвертятся</td></tr>
+  <tr><td>Низкий</td><td>Низкий</td><td>Проблема с качеством трафика — не те люди</td></tr>
+  <tr><td>Высокий</td><td>Низкий</td><td>Аудитория горячая, креатив слабый — улучшай креатив</td></tr>
+</table>
+
+<br>
+
+<h3>EPC — доход с клика</h3>
+<p><strong>Формула:</strong> <code>(Выплата × Конверсии) / Клики</code></p>
+<p>Позволяет сравнить офферы: сколько в среднем приносит один клик.</p>
+<p><strong>Пример:</strong> Оффер $80, CR = 8%, EPC = $6.4. При CPC = $1 — связка зелёная.</p>
+
+<br>
+
+<h3>CPA — цена целевого действия</h3>
+<p><strong>Формула:</strong> <code>Spend / Conversions</code></p>
+<p><strong>Золотое правило:</strong> CPA должен быть <strong>максимум 50% от выплаты</strong> при запуске. Первые дни — тест.</p>
+<ul>
+  <li>CPA = выплата → ты в ноль (без учёта инфраструктуры — в минусе)</li>
+  <li>CPA &lt; выплаты × 0.7 → можно лить и масштабировать</li>
+</ul>
+</div>
+
+<!-- 4. BUSINESS -->
+<div class="section">
+<h2>4. Уровень 3 — Бизнес-метрики</h2>
+
+<h3>ROI / ROAS</h3>
+<p><strong>ROI:</strong> <code>(Доход − Расходы) / Расходы × 100%</code></p>
+<p><strong>ROAS:</strong> <code>Доход / Расходы</code> (в разах)</p>
+
+<p><strong>Что считать расходами:</strong></p>
+<ul>
+  <li>Медиа-бюджет (Meta)</li>
+  <li>Прокси ≈ $3–5/шт/мес</li>
+  <li>Аккаунты ≈ $20–100/шт</li>
+  <li>Креативы (дизайнер, AI-генерация)</li>
+  <li>Keitaro/VPS ≈ $10–30/мес</li>
+</ul>
+
+<table>
+  <tr><th>ROI</th><th>Статус</th></tr>
+  <tr><td>&gt;200%</td><td>Идеально — лей всё</td></tr>
+  <tr><td>50–200%</td><td>Хорошо — масштабируй</td></tr>
+  <tr><td>0–50%</td><td>Микроплюс — ищи улучшение</td></tr>
+  <tr><td>&lt;0%</td><td>Минус — выключай</td></tr>
+</table>
+
+<p><strong>Для гемблинга:</strong> ROI считай минимум за 3–7 дней (отложенная конверсия).</p>
+
+<br>
+
+<h3>Net Profit — чистая прибыль</h3>
+<pre>
+Чистая прибыль = Выплаты от партнёрки
+                  − Медиа-спенд
+                  − Инфраструктура (прокси, акки, софт)
+                  − Креативы (дизайнеры, AI)
+                  − Налоги / комиссии выводов
+</pre>
+<p>Не забудь учесть инфраструктуру — иначе можно думать, что ты в плюсе, а по факту в минусе.</p>
+</div>
+
+<!-- 5. DIAGNOSTICS -->
+<div class="section">
+<h2>5. Диагностический фреймворк</h2>
+
+<h3>Матрица CTR × CR</h3>
+<div class="matrix-box">
+<table class="matrix-table">
+  <tr>
+    <td style="width:60px"></td>
+    <td style="width:50%" class="matrix-label"><span class="tag tag-green">CR высокий</span></td>
+    <td style="width:50%" class="matrix-label"><span class="tag tag-red">CR низкий</span></td>
+  </tr>
+  <tr>
+    <td class="matrix-label"><span class="tag tag-green">CTR высокий</span></td>
+    <td class="matrix-cell green">🔥 ИДЕАЛ<br><small>лей всё</small></td>
+    <td class="matrix-cell orange">⚠ ПРОБЛЕМА С ОФФЕРОМ<br><small>креатив ок, ленд не конвертит</small></td>
+  </tr>
+  <tr>
+    <td class="matrix-label"><span class="tag tag-red">CTR низкий</span></td>
+    <td class="matrix-cell orange">⚠ ПРОБЛЕМА С КРЕО<br><small>креатив не цепляет</small></td>
+    <td class="matrix-cell red">💀 ВЫКЛЮЧАЙ<br><small>всё плохо</small></td>
+  </tr>
+</table>
+</div>
+
+<br>
+
+<h3>Чек-лист за 30 секунд</h3>
+<ol>
+  <li><strong>CPM</strong> — в норме по ГЕО? Выше ×2 → проблема с акком или аудиторией</li>
+  <li><strong>CTR</strong> — выше 0.5%? Нет → креатив мёртв</li>
+  <li><strong>CR</strong> — выше 3%? Нет → проблема с лендом/оффером</li>
+  <li><strong>CPA</strong> — ниже 50% от выплаты? Нет → дорого</li>
+  <li><strong>ROI</strong> — зелёный? Да → не трогай. Нет → иди к п.1</li>
+</ol>
+
+<br>
+
+<h3>Жёсткие критерии отключения</h3>
+<table>
+  <tr><th>Ситуация</th><th>Решение</th></tr>
+  <tr><td>Потратил 2× выплаты — 0 конверсий</td><td><span class="tag tag-red">Выключай</span></td></tr>
+  <tr><td>CPA &gt; выплаты × 3</td><td><span class="tag tag-red">Выключай</span></td></tr>
+  <tr><td>CTR &lt; 0.2% с 5000+ показов</td><td><span class="tag tag-red">Выключай креатив</span></td></tr>
+  <tr><td>Frequency &gt; 5, CTR упал ×2</td><td><span class="tag tag-yellow">Обновляй креатив</span></td></tr>
+  <tr><td>Потратил $50 на тест — 0 лидов</td><td><span class="tag tag-red">Выключай</span></td></tr>
+</table>
+
+<br>
+
+<h3>Минимум данных для решения</h3>
+<table>
+  <tr><th>Метрика</th><th>Нужно данных</th></tr>
+  <tr><td>CTR</td><td>1000 показов</td></tr>
+  <tr><td>CPM</td><td>5000 показов</td></tr>
+  <tr><td>CR</td><td>100+ кликов</td></tr>
+  <tr><td>CPA</td><td>10+ конверсий или 3× выплаты спента</td></tr>
+  <tr><td>ROI</td><td>50+ конверсий на связку</td></tr>
+</table>
+<p>До набора минимума — <strong>не суди кампанию</strong>. Meta обучается 2–3 дня.</p>
+</div>
+
+<!-- 6. GAMBLING -->
+<div class="section">
+<h2>6. Специфика гемблинг-вертикали</h2>
+
+<div class="box">
+  <h4>1. Отложенная конверсия</h4>
+  <p>Кликнул сегодня → зарегился завтра → депозит через неделю. ROI считай за 7 дней. Используй Postback в Keitaro с задержкой.</p>
+</div>
+<div class="box">
+  <h4>2. Разные выплаты на ГЕО</h4>
+  <p>CPA $50 на USA и $2 на Индонезии — совершенно разные истории. Не сравнивай напрямую.</p>
+</div>
+<div class="box">
+  <h4>3. Сезонность</h4>
+  <p>Пт–Вс конверсия выше в 1.5–3 раза, чем Пн–Ср. Сравнивай день с днём.</p>
+</div>
+<div class="box">
+  <h4>4. CRG (Cargo)</h4>
+  <p>% от проигрыша игрока. ROI считается на дистанции 14–30 дней, не на старте.</p>
+</div>
+
+<br>
+
+<h3>Keitaro: что смотреть</h3>
+<table>
+  <tr><th>Отчёт</th><th>Что даёт</th></tr>
+  <tr><td>By Landing</td><td>Какой преленд/ленд конвертит лучше</td></tr>
+  <tr><td>By Campaign</td><td>Какая кампания профитная</td></tr>
+  <tr><td>By Offer</td><td>Какой оффер топ</td></tr>
+  <tr><td>By Source</td><td>FB vs TikTok vs Push</td></tr>
+</table>
+
+<br>
+
+<h3>Режимы атрибуции в Keitaro</h3>
+<table>
+  <tr><th>Режим</th><th>Как считает</th><th>Когда использовать</th></tr>
+  <tr><td>Last Click</td><td>Последний клик = конверсия</td><td><span class="tag tag-green">Стандарт для гемблинга</span></td></tr>
+  <tr><td>First Click</td><td>Первый клик = конверсия</td><td>Когда важна модель касаний</td></tr>
+  <tr><td>Linear</td><td>Всем кликам поровну</td><td>Анализ мультитач</td></tr>
+</table>
+</div>
+
+<!-- 7. KILL & SCALE -->
+<div class="section">
+<h2>7. Kill & Scale Framework</h2>
+<p>Каждый день ты принимаешь одно из трёх решений по каждой кампании:</p>
+
+<table>
+  <tr><th>Решение</th><th>Условие</th><th>Действие</th></tr>
+  <tr>
+    <td><span class="tag tag-green">🔥 SCALE</span></td>
+    <td>ROI &gt; 50%, CPA &lt; 50% выплаты, CTR &gt; 0.8%</td>
+    <td>Увеличь бюджет ×2, Look-a-like</td>
+  </tr>
+  <tr>
+    <td><span class="tag tag-yellow">🔄 OPTIMIZE</span></td>
+    <td>ROI 0–50% или CPA 50–80% выплаты</td>
+    <td>Уменьши ставку, поменяй креатив, обрежь аудиторию</td>
+  </tr>
+  <tr>
+    <td><span class="tag tag-red">💀 KILL</span></td>
+    <td>ROI &lt; 0% или CPA &gt; 100% выплаты</td>
+    <td>Выключи. Не мучай труп.</td>
+  </tr>
+</table>
+
+<p><strong>Важно:</strong> NEVER fall in love with a campaign. Ты не реанимируешь связки — ты создаёшь новые.</p>
+</div>
+
+<!-- 8. CASE -->
+<div class="section">
+<h2>8. Практический кейс — Индонезия, $50</h2>
+
+<table>
+  <tr><th></th><th>День 1</th><th>День 2</th><th>День 3 ✅</th></tr>
+  <tr><td>Спенд</td><td>$15</td><td>$35 (всего)</td><td>$50 (всего)</td></tr>
+  <tr><td>Показы</td><td>15 000</td><td>35 000</td><td>50 000</td></tr>
+  <tr><td>Клики</td><td>150</td><td>280</td><td>450</td></tr>
+  <tr><td>CTR</td><td><span class="tag tag-green">1%</span></td><td>0.8%</td><td>0.9%</td></tr>
+  <tr><td>CR</td><td>0%</td><td>0.7%</td><td><span class="tag tag-green">1.55%</span></td></tr>
+  <tr><td>CPA</td><td>—</td><td>$17.5 (&gt;выплаты!)</td><td><strong>$7.14</strong> (&lt;$8)</td></tr>
+  <tr><td>ROI</td><td>−100%</td><td>−54%</td><td><span class="tag tag-green">+12%</span></td></tr>
+</table>
+
+<p><strong>Вывод:</strong> CPA ($7.14) &lt; выплаты ($8) → связка зелёная! ROI = +12%.</p>
+
+<div class="box">
+  <strong>Что делать дальше:</strong>
+  <ul>
+    <li>Масштабировать ×1.5–2 бюджета в день</li>
+    <li>Тестировать второй креатив на эту же аудиторию</li>
+    <li>Через неделю при стабильном ROI — Look-a-like</li>
+  </ul>
+</div>
+</div>
+
+<!-- SHPARGALKA -->
+<div class="shpargalka">
+<h2>📌 Шпаргалка баера — формулы и правила</h2>
+
+<pre>
+Метрики:
+  CPM = Spend / Impressions × 1000
+  CTR = Clicks / Impressions × 100%
+  CPC = Spend / Clicks
+  CR  = Conversions / Clicks × 100%
+  CPA = Spend / Conversions
+  EPC = (Payout × Conversions) / Clicks
+  ROI = (Revenue − Spend) / Spend × 100%
+
+Правила:
+  CPA &lt; 50% payout     →  SCALE 🔥
+  CPA &gt; payout          →  KILL 💀
+  CTR &lt; 0.3%            →  KILL креатив
+  Freq &gt; 5 + падение CTR → новый креатив
+  Не суди раньше: 100 кликов / 3× выплаты
+  Минимум 7 дней для вывода по ROI
+  Сравнивай день с днём (Пн≠Пт)
+</pre>
+</div>
+
+<div class="footer">
+  <p>Сгенерировано с Claude. Июль 2026.</p>
+  <p class="no-print"><button class="print-btn" onclick="window.print()">🖨 Распечатать / PDF</button></p>
+</div>
+
+</div><!-- /container -->
+</body>
+</html>

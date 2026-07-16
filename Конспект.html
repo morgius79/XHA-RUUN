@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Media Buying — Конспект</title>
+<style>
+  @page { margin: 2cm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1a1a1a;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 { font-size: 28px; border-bottom: 3px solid #2563eb; padding-bottom: 10px; margin-top: 30px; color: #1e3a5f; }
+  h2 { font-size: 22px; border-bottom: 2px solid #93c5fd; padding-bottom: 6px; margin-top: 40px; color: #1e40af; }
+  h3 { font-size: 18px; margin-top: 30px; color: #1e3a5f; }
+  h4 { font-size: 15px; margin-top: 20px; color: #334155; }
+  table { border-collapse: collapse; width: 100%; margin: 15px 0; font-size: 13px; }
+  th, td { border: 1px solid #cbd5e1; padding: 8px 12px; text-align: left; }
+  th { background: #eff6ff; font-weight: 600; color: #1e40af; }
+  tr:nth-child(even) { background: #f8fafc; }
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 3px; font-size: 13px; color: #b91c1c; }
+  pre { background: #0f172a; color: #e2e8f0; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.5; }
+  .toc { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 30px; margin: 20px 0; }
+  .toc h2 { border: none; margin-top: 0; color: #1e3a5f; }
+  .toc ul { padding-left: 20px; }
+  .toc li { margin: 5px 0; }
+  .toc a { color: #2563eb; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 16px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+  .warn { background: #fef2f2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+  .info { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+  .term { background: #fff7ed; border-left: 4px solid #f97316; padding: 12px 16px; margin: 15px 0; border-radius: 0 8px 8px 0; }
+  .schema { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; padding: 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin: 15px 0; font-family: monospace; font-size: 13px; }
+  .schema .arrow { color: #64748b; font-size: 20px; }
+  .schema .box-item { background: #eff6ff; border: 1px solid #93c5fd; border-radius: 6px; padding: 8px 14px; text-align: center; }
+  .schema .box-item.green { background: #f0fdf4; border-color: #86efac; }
+  .schema .box-item.red { background: #fef2f2; border-color: #fca5a5; }
+  .schema .box-item.orange { background: #fff7ed; border-color: #fdba74; }
+  .page-break { page-break-before: always; }
+  .footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #64748b; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>📘 Media Buying — Полный конспект</h1>
+<p style="font-size:16px;color:#475569;">Основы работы: Facebook → Keitaro → CPA-сети. Для аналитиков и новичков.</p>
+
+<!-- ======= ОГЛАВЛЕНИЕ ======= -->
+<div class="toc">
+<h2>📑 Содержание</h2>
+<ul>
+  <li><a href="#s1">1. Keitaro — база</a></li>
+  <li><a href="#s2">2. Полная схема работы</a></li>
+  <li><a href="#s3">3. Креативы (Creatives)</a></li>
+  <li><a href="#s4">4. PWA (Progressive Web App)</a></li>
+  <li><a href="#s5">5. Техническая сторона связки Facebook → Keitaro</a></li>
+  <li><a href="#s6">6. Преленд (Pre-lander)</a></li>
+  <li><a href="#s7">7. CPA-сети и модели оплаты</a></li>
+  <li><a href="#s8">8. Postback — техническая механика</a></li>
+  <li><a href="#s9">9. Facebook Pixel (Пиксель)</a></li>
+  <li><a href="#s10">10. Пиксель vs Postback</a></li>
+  <li><a href="#s11">11. Ретаргетинг</a></li>
+  <li><a href="#s12">12. Фрод (Fraud)</a></li>
+  <li><a href="#s13">13. Клоакинг (Cloaking)</a></li>
+  <li><a href="#s14">14. Полный цикл: от креатива до выплаты</a></li>
+  <li><a href="#s15">15. Что проверять ежедневно (аналитик)</a></li>
+</ul>
+</div>
+
+<!-- ======= 1. KEITARO ======= -->
+<h2 id="s1">1. Keitaro — база</h2>
+
+<div class="term">
+<strong>Keitaro</strong> — трекер. Сидит между рекламой (Facebook) и сайтом казино. Его задача — понять, откуда пришёл игрок, по какому объявлению кликнул и сколько ты заработал.
+</div>
+
+<div class="schema">
+  <span class="box-item">Facebook</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Keitaro</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">Казино (оффер)</span>
+</div>
+
+<h3>Основные понятия</h3>
+
+<table>
+<tr><th>Термин</th><th>Описание</th></tr>
+<tr><td><strong>Кампания (Campaign)</strong></td><td>Один эксперимент. Одна кампания = одна связка (креатив + оффер + аудитория). Создаёшь → получаешь ссылку для Facebook.</td></tr>
+<tr><td><strong>Потоки (Streams)</strong></td><td>Несколько запасных направлений внутри одной кампании. Keitaro распределяет трафик по потокам в процентах.</td></tr>
+<tr><td><strong>Лендинги (Landings)</strong></td><td>Страница до казино (пре-лендинг). Не обязательна.</td></tr>
+<tr><td><strong>Офферы (Offers)</strong></td><td>Целевая страница — сайт казино, куда ведёшь игрока.</td></tr>
+<tr><td><strong>Правила (Rules)</strong></td><td>Фильтры: страна, устройство, время, IP. Можно перенаправлять разные сегменты на разные офферы.</td></tr>
+<tr><td><strong>Postback</strong></td><td>Обратный сигнал: казино сообщает Keitaro, что клик привёл к конверсии.</td></tr>
+<tr><td><strong>Click ID</strong></td><td>Уникальный идентификатор каждого клика. «Номер заказа», связывающий клик и конверсию.</td></tr>
+</table>
+
+<h3>Правила (Rules) — подробнее</h3>
+<p>Самая мощная фича Keitaro:</p>
+<ul>
+  <li><strong>Фильтрация трафика:</strong> показывать только iOS, только Германию, только с 18:00 до 23:00</li>
+  <li><strong>Перенаправление:</strong> iPhone → один оффер, Android → другой</li>
+  <li><strong>Чёрные списки:</strong> заблокировать IP-адреса скликеров</li>
+</ul>
+
+<h3>Потоки (Streams) — как работают</h3>
+<p>Пример для казино:</p>
+<ul>
+  <li><strong>Поток 1:</strong> оффер казино A (платит $100 за депозит)</li>
+  <li><strong>Поток 2:</strong> оффер казино B (платит $80, но берёт больше гео)</li>
+  <li><strong>Поток 3:</strong> заглушка («скоро открытие», если другие не взяли)</li>
+</ul>
+<p>Распределение: 50% / 30% / 20% — настраивается вручную.</p>
+
+<h3>Колонки в статистике Keitaro</h3>
+<table>
+<tr><th>Колонка</th><th>Что значит</th></tr>
+<tr><td><strong>Hits</strong></td><td>Все переходы (клики)</td></tr>
+<tr><td><strong>Clicks</strong></td><td>Уникальные клики (без ботов и повторов)</td></tr>
+<tr><td><strong>Conversions</strong></td><td>Целевые действия (регистрации / депозиты)</td></tr>
+<tr><td><strong>CR (%)</strong></td><td>Conversion Rate = Конверсии / Клики × 100</td></tr>
+<tr><td><strong>Revenue</strong></td><td>Сколько заработал</td></tr>
+<tr><td><strong>Cost</strong></td><td>Сколько потратил на рекламу</td></tr>
+<tr><td><strong>Profit</strong></td><td>Revenue − Cost</td></tr>
+<tr><td><strong>ROI (%)</strong></td><td>Profit / Cost × 100</td></tr>
+<tr><td><strong>EPC</strong></td><td>Revenue / Clicks (средний доход с клика)</td></tr>
+<tr><td><strong>CPA</strong></td><td>Cost / Conversions (стоимость одного действия)</td></tr>
+</table>
+
+<h3>Ошибки новичков</h3>
+<div class="warn">
+❌ Льют трафик без трекера → ты слепой.<br>
+❌ Не настраивают postback → Keitaro не видит конверсий.<br>
+❌ Сложные правила с первого дня → сначала один поток и один оффер.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 2. ПОЛНАЯ СХЕМА ======= -->
+<h2 id="s2">2. Полная схема работы</h2>
+
+<div class="schema">
+  <span class="box-item">Facebook</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Клоака</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Keitaro</span>
+  <span class="arrow">→</span>
+  <span class="box-item">Преленд</span>
+  <span class="arrow">→</span>
+  <span class="box-item">PWA / Казино</span>
+</div>
+<div class="schema" style="margin-top:5px;">
+  <span class="box-item green">CPA-сеть</span>
+  <span class="arrow">←</span>
+  <span class="box-item green">Postback</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Keitaro</span>
+</div>
+
+<table>
+<tr><th>Шаг</th><th>Что происходит</th></tr>
+<tr><td>1</td><td>Байер создаёт кампанию в Facebook, вставляет ссылку из Keitaro</td></tr>
+<tr><td>2</td><td>Игрок кликает → попадает в Keitaro (или сначала в клоаку)</td></tr>
+<tr><td>3</td><td>Keitaro проверяет правила (страна, устройство, время)</td></tr>
+<tr><td>4</td><td>Перенаправляет на сайт казино / PWA</td></tr>
+<tr><td>5</td><td>Игрок регистрируется / вносит депозит</td></tr>
+<tr><td>6</td><td>Казино отправляет postback в Keitaro</td></tr>
+<tr><td>7</td><td>Keitaro записывает: клик → конверсия → профит</td></tr>
+<tr><td>8</td><td>Ты видишь статистику</td></tr>
+</table>
+
+<h3>Что передаётся в URL при клике</h3>
+<p>Facebook автоматически добавляет параметры в ссылку:</p>
+<pre>
+https://трекер.com/click/123?
+  fbclid={fbclid}&amp;         ← уникальный ID клика от Facebook
+  country={country}&amp;       ← страна пользователя
+  device={device}&amp;          ← устройство
+  os={os}&amp;                  ← ОС
+  creative={creative_id}&amp;   ← ID креатива
+  campaign={campaign_name}&amp; ← название кампании
+  adset={adset_name}&amp;       ← группа объявлений
+  ad={ad_name}               ← объявление
+</pre>
+<p>Keitaro всё это парсит — ты видишь, какой креатив принёс больше конверсий.</p>
+
+<div class="page-break"></div>
+
+<!-- ======= 3. КРЕАТИВЫ ======= -->
+<h2 id="s3">3. Креативы (Creatives)</h2>
+
+<div class="term">
+<strong>Креатив</strong> — это объявление, которое видит пользователь в Facebook. Картинка, видео, текст, заголовок — всё вместе.
+</div>
+
+<h3>Из чего состоит креатив в Facebook</h3>
+<table>
+<tr><th>Элемент</th><th>Описание</th><th>Пример для казино</th></tr>
+<tr><td><strong>Медиа</strong></td><td>Картинка или видео</td><td>Видео: «Джекпот сорвал 10 секунд назад»</td></tr>
+<tr><td><strong>Основной текст</strong></td><td>Текст над медиа</td><td>«Только сегодня — 200% на первый депозит»</td></tr>
+<tr><td><strong>Заголовок</strong></td><td>Жирный текст под медиа</td><td>«Casino XYZ — фриспины без депозита»</td></tr>
+<tr><td><strong>Кнопка</strong></td><td>Призыв к действию</td><td>«Забрать бонус» / «Играть»</td></tr>
+<tr><td><strong>Описание</strong></td><td>Короткий текст</td><td>«Лицензия Кюрасао, вывод за 5 минут»</td></tr>
+<tr><td><strong>Destination</strong></td><td>Куда ведёт ссылка</td><td>Ссылка из Keitaro</td></tr>
+</table>
+
+<h3>Виды креативов для казино</h3>
+<table>
+<tr><th>Тип</th><th>Описание</th></tr>
+<tr><td><strong>Имиджевые</strong></td><td>Бренд, элитность, красивые интерьеры. Дорого, статусно.</td></tr>
+<tr><td><strong>Бонусные</strong></td><td>В центре — халява: «100 фриспинов без депозита», «+300%».</td></tr>
+<tr><td><strong>Вин-креативы</strong></td><td>Выигрыш: скриншот баланса, видео джекпота.</td></tr>
+<tr><td><strong>Новостные / нативные</strong></td><td>Маскируются под новость: «Врач выиграл $50,000 играя в слоты».</td></tr>
+<tr><td><strong>Трэшовые</strong></td><td>Низкокачественные картинки с жирными стрелками. Часто работают лучше красивых.</td></tr>
+</table>
+
+<h3>Как байеры работают с креативами</h3>
+<ul>
+  <li><strong>Спай-сервисы:</strong> AdHeart, BigSpy — подсматривают креативы конкурентов</li>
+  <li><strong>Связка креативов:</strong> 3-5 разных креативов на одну аудиторию</li>
+  <li><strong>Ротация:</strong> креатив «выжигается» за 2-5 дней, надо заливать новый</li>
+</ul>
+
+<h3>Что аналитик контролирует</h3>
+<ul>
+  <li>CTR по креативам — какой лучше</li>
+  <li>CR по креативам — какой лучше конвертит</li>
+  <li>Сколько живёт креатив (на 3-й день CTR падает?)</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- ======= 4. PWA ======= -->
+<h2 id="s4">4. PWA (Progressive Web App)</h2>
+
+<div class="term">
+<strong>PWA</strong> — веб-сайт, который выглядит и ведёт себя как мобильное приложение. Не требует установки из App Store или Google Play.
+</div>
+
+<h3>Зачем PWA в гемблинге</h3>
+<div class="warn">
+Apple (App Store) и Google (Play Market) <strong>запрещают</strong> приложения казино.<br>
+Facebook запрещает рекламу приложений казино в магазинах.
+</div>
+<p><strong>Решение — PWA:</strong></p>
+<ul>
+  <li>Не нужно загружать в магазины приложений</li>
+  <li>Facebook не может проверить, что внутри</li>
+  <li>Байер рекламирует «браузерную игру» или «приложение для развлечения»</li>
+</ul>
+
+<h3>PWA vs Webview</h3>
+<table>
+<tr><th></th><th><strong>PWA</strong></th><th><strong>Webview (обёртка)</strong></th></tr>
+<tr><td>Что это</td><td>Сайт с возможностью установки</td><td>Реальное приложение, внутри — сайт</td></tr>
+<tr><td>Где живёт</td><td>На главном экране</td><td>В списке приложений</td></tr>
+<tr><td>Нужен магазин</td><td>Нет</td><td>Да (APK файл)</td></tr>
+<tr><td>Модерация</td><td>Нет</td><td>Да (Apple/Google проверяют)</td></tr>
+<tr><td>Ограничения Facebook</td><td>Нет</td><td>Да (удаляют приложение)</td></tr>
+</table>
+
+<h3>Технические особенности</h3>
+<ul>
+  <li>После установки выглядит как родное приложение</li>
+  <li>Работает без адресной строки браузера</li>
+  <li>Быстрее за счёт кэширования (Service Worker)</li>
+  <li>Может отправлять push-уведомления</li>
+</ul>
+
+<h3>Проблемы PWA</h3>
+<div class="warn">
+<ul>
+  <li><strong>iOS:</strong> PWA работает хуже — Safari ограничивает Service Worker, push-уведомлений нормальных нет</li>
+  <li>Криво сделанный PWA может не передавать Click ID → теряешь конверсии</li>
+  <li>PWA нужно обновлять вручную при смене дизайна казино</li>
+</ul>
+</div>
+
+<h3>Что проверять, если используется PWA</h3>
+<ul>
+  <li><strong>Установки vs регистрации:</strong> ставят PWA, но не регистрируются — проблема на первом экране</li>
+  <li><strong>Время клик → конверсия:</strong> если PWA грузится долго — конверсий меньше</li>
+  <li><strong>Устройства:</strong> на iOS может работать хуже, чем на Android</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- ======= 5. ТЕХНИЧЕСКАЯ СТОРОНА ======= -->
+<h2 id="s5">5. Техническая сторона связки Facebook → Keitaro</h2>
+
+<h3>Что происходит в момент клика</h3>
+<ol>
+  <li>Браузер пользователя → переходит по ссылке из объявления</li>
+  <li>Запрос долетает до сервера Keitaro</li>
+  <li>Сервер проверяет: кампания активна? поток работает? правила?</li>
+  <li>Делается редирект на целевой URL</li>
+  <li>Всё записывается в базу: клик, источник, юзер-агент, IP, страна, устройство</li>
+</ol>
+<p>Всё занимает <strong>10-200 мс</strong>.</p>
+
+<h3>Типы редиректов</h3>
+<table>
+<tr><th>Тип</th><th>Описание</th><th>Плюсы</th><th>Минусы</th></tr>
+<tr><td><strong>302 (HTTP)</strong></td><td>Сервер отвечает «иди туда»</td><td>Просто, быстро</td><td>Facebook видит конечный URL</td></tr>
+<tr><td><strong>Meta Refresh</strong></td><td>Показывается «Подождите...»</td><td>Можно вставить задержку</td><td>Дольше, хуже UX</td></tr>
+<tr><td><strong>JavaScript</strong></td><td>Редирект через JS</td><td>Скрывает реферер</td><td>Блокируется на iOS</td></tr>
+<tr><td><strong>Iframe</strong></td><td>Оффер внутри страницы трекера</td><td>Пользователь не покидает домен</td><td>Медленно, проблемы с куками</td></tr>
+</table>
+
+<h3>Домены и их роль</h3>
+<div class="warn">
+<strong>Самая больная тема.</strong> Facebook банит домены, которые ведут на казино. Байеру нужно постоянно покупать новые.
+</div>
+<ul>
+  <li>Покупают пачками в зонах .com, .xyz, .top, .click, .online (~$1-2)</li>
+  <li>Домен живёт от нескольких часов до нескольких недель</li>
+</ul>
+
+<div class="schema">
+  <span class="box-item">Пользователь видит:</span>
+  <span class="box-item">vk-news24.com (преленд)</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Keitaro: tracker.domain.com</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">casinosite.com (оффер)</span>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 6. ПРЕЛЕНД ======= -->
+<h2 id="s6">6. Преленд (Pre-lander)</h2>
+
+<div class="term">
+<strong>Преленд</strong> — страница, которую пользователь видит ДО того, как попадёт на сайт казино.
+</div>
+
+<h3>Зачем нужен</h3>
+<ul>
+  <li><strong>Прогрев:</strong> объяснить пользователю предложение</li>
+  <li><strong>Фильтрация:</strong> отсеять ботов, нецелевых</li>
+  <li><strong>Сбор данных:</strong> телефон, email (для повторных продаж)</li>
+  <li><strong>Маскировка:</strong> скрыть от Facebook, что трафик идёт на казино</li>
+</ul>
+
+<h3>Типы прелендов</h3>
+<table>
+<tr><th>Тип</th><th>Как выглядит</th><th>Для чего</th></tr>
+<tr><td><strong>Квиз</strong></td><td>«Ответь на 3 вопроса и получи бонус»</td><td>Сбор данных, вовлечение</td></tr>
+<tr><td><strong>Новостной</strong></td><td>«Игрок из [город] выиграл джекпот!»</td><td>Доверие, нативность</td></tr>
+<tr><td><strong>Заглушка</strong></td><td>«Приложение скоро запустится»</td><td>Сбор контактов</td></tr>
+<tr><td><strong>Демо-слот</strong></td><td>Игровой автомат прямо на странице</td><td>Вовлечение сразу</td></tr>
+<tr><td><strong>PWA-установка</strong></td><td>«Установи через браузер»</td><td>Установка PWA</td></tr>
+</table>
+
+<h3>Как преленд влияет на статистику</h3>
+<div class="warn">
+<ul>
+  <li>На каждом шаге теряется 10-30% пользователей</li>
+  <li>Если преленд не передаёт Click ID — конверсия не привяжется</li>
+  <li>Если преленд грузится &gt; 3 секунд — половина пользователей уходит</li>
+</ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 7. CPA-СЕТИ ======= -->
+<h2 id="s7">7. CPA-сети и модели оплаты</h2>
+
+<div class="term">
+<strong>CPA-сеть</strong> — посредник между рекламодателем (казино) и байером.
+</div>
+
+<div class="schema">
+  <span class="box-item">Казино (рекламодатель)</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">CPA-сеть</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">Байер (ты)</span>
+</div>
+
+<h3>Модели оплаты</h3>
+<table>
+<tr><th>Модель</th><th>Суть</th><th>Пример</th><th>Риски</th></tr>
+<tr><td><strong>CPA</strong></td><td>Платят за действие (депозит)</td><td>$80 за первый депозит</td><td>Игрок может не внести</td></tr>
+<tr><td><strong>CPL</strong></td><td>Платят за лид/заявку</td><td>$5 за заполненную форму</td><td>Лиды могут быть некачественные</td></tr>
+<tr><td><strong>RevShare</strong></td><td>% от проигрыша игрока</td><td>30% ежемесячно</td><td>Долгий возврат инвестиций</td></tr>
+<tr><td><strong>Hybrid</strong></td><td>CPA + RevShare</td><td>$50 + 20% RevShare</td><td>Сложнее считать</td></tr>
+<tr><td><strong>Fixed</strong></td><td>Фиксированная выплата</td><td>$3 за установку</td><td>Не зависит от депозита</td></tr>
+</table>
+
+<h3>Статусы конверсии в CPA-сети</h3>
+<table>
+<tr><th>Статус</th><th>Что значит</th><th>Когда</th></tr>
+<tr><td><strong>Pending</strong></td><td>На проверке</td><td>Первые 1-24 часа</td></tr>
+<tr><td><strong>Approved</strong></td><td>Засчитана, деньги твои</td><td>Через 1-24 часа</td></tr>
+<tr><td><strong>Rejected</strong></td><td>Отклонена</td><td>Мультиаккаунт, фрод, некачественный лид</td></tr>
+<tr><td><strong>Hold</strong></td><td>Заморожена</td><td>Пока не разберутся</td></tr>
+</table>
+
+<h3>Холды (Hold period)</h3>
+<table>
+<tr><th>Тип холда</th><th>Длительность</th><th>Зачем</th></tr>
+<tr><td><strong>Pre-hold</strong></td><td>1-3 дня</td><td>Проверка качества лидов</td></tr>
+<tr><td><strong>Post-hold</strong></td><td>7-30 дней</td><td>Возвраты и чарджбеки</td></tr>
+<tr><td><strong>Chargeback hold</strong></td><td>30-90 дней</td><td>Игрок отозвал платёж</td></tr>
+</table>
+
+<h3>Популярные CPA-сети для гемблинга</h3>
+<table>
+<tr><th>Сеть</th><th>Особенности</th></tr>
+<tr><td><strong>ClickDealer</strong></td><td>Хорошая поддержка, много офферов</td></tr>
+<tr><td><strong>AdCombo</strong></td><td>Работают с СНГ, низкий порог входа</td></tr>
+<tr><td><strong>Leadbit</strong></td><td>Много эксклюзивов, быстрые выплаты</td></tr>
+<tr><td><strong>MundoMedia</strong></td><td>Международный, давно на рынке</td></tr>
+<tr><td><strong>Bittraffic</strong></td><td>Хорошие выплаты, много гео</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ======= 8. POSTBACK ======= -->
+<h2 id="s8">8. Postback — техническая механика</h2>
+
+<div class="term">
+<strong>Postback</strong> — HTTP-запрос от сервера казино / CPA-сети к Keitaro. Сигнал: «Этот клик привёл к конверсии, вот выплата».
+</div>
+
+<h3>Как выглядит postback-запрос</h3>
+<pre>
+GET http://keitaro.domain.com/postback?
+  clickid=ABC123&amp;       ← ID клика из Keitaro
+  status=approved&amp;       ← статус конверсии
+  payout=75&amp;             ← выплата
+  currency=USD&amp;          ← валюта
+  ip=1.2.3.4&amp;            ← IP пользователя
+  offer_id=123&amp;          ← ID оффера
+  action_id=456789       ← ID транзакции
+</pre>
+
+<h3>Click ID — сердце системы</h3>
+<div class="box">
+Когда пользователь кликает, Keitaro создаёт запись:<br>
+<code>clickid = "5f8a3b2c1d9e4f7a", IP = 1.2.3.4, timestamp = 2026-07-08 14:30:00, campaign_id = 42</code><br><br>
+Когда приходит postback с тем же clickid — Keitaro находит запись и дописывает конверсию.
+</div>
+
+<h3>Как проверить, что postback работает</h3>
+
+<h4>Шаг 1: Проверь, передаётся ли Click ID в URL</h4>
+<p>Открой кампанию и посмотри финальный URL:</p>
+<pre>
+https://casino.com/?clickid={clickid}&sub1={campaign_id}
+</pre>
+<p>Перейди по ссылке сам — виден ли clickid в адресной строке?</p>
+
+<h4>Шаг 2: Логи Keitaro</h4>
+<p><strong>Keitaro → Reports → Logs</strong></p>
+<p>Отфильтруй по кампании. Ищи:</p>
+<ul>
+  <li><strong>Hit</strong> = клик (должен быть)</li>
+  <li><strong>Conversion / Postback</strong> = конверсия (должна прийти через некоторое время)</li>
+</ul>
+
+<h4>Шаг 3: Тестовый postback руками</h4>
+<p>Возьми реальный clickid из логов и отправь:</p>
+<pre>
+Invoke-WebRequest -Uri "http://tracker.domain.com/postback?
+  clickid=5f8a3b2c1d9e4f7a&amp;payout=100&amp;status=approved"
+</pre>
+<p>200 OK → postback работает. Проблема на стороне CPA-сети.</p>
+
+<h4>Шаг 4: Проверь настройки CPA-сети</h4>
+<p>Макросы Click ID в разных сетях:</p>
+<table>
+<tr><th>Сеть</th><th>Макрос</th></tr>
+<tr><td>ClickDealer</td><td><code>{clickid}</code></td></tr>
+<tr><td>Leadbit</td><td><code>{clickid}</code></td></tr>
+<tr><td>AdCombo</td><td><code>{sub1}</code></td></tr>
+<tr><td>MundoMedia</td><td><code>{aff_click_id}</code></td></tr>
+<tr><td>Bittraffic</td><td><code>{click_id}</code></td></tr>
+</table>
+
+<h4>Шаг 5: Сквозной тест</h4>
+<ol>
+  <li>Создай тестовую кампанию</li>
+  <li>Перейди по ссылке с телефона</li>
+  <li>Зарегистрируйся в казино</li>
+  <li>Внеси минимальный депозит ($1-5)</li>
+  <li>Подожди 10-30 минут</li>
+  <li>Проверь логи Keitaro</li>
+</ol>
+
+<h3>Типичные проблемы с postback</h3>
+<table>
+<tr><th>Проблема</th><th>Причина</th><th>Решение</th></tr>
+<tr><td>Hit есть, Conversion нет</td><td>Postback не пришёл</td><td>Проверь настройки в CPA-сети</td></tr>
+<tr><td>Conversion есть, Payout = 0</td><td>Не передаётся сумма</td><td>Настрой макрос {payout}</td></tr>
+<tr><td>Conversion в Pending бесконечно</td><td>Казино не подтверждает</td><td>Пиши в поддержку сети</td></tr>
+<tr><td>Click ID пустой</td><td>Keitaro не назначает</td><td>Проверь настройки кампании</td></tr>
+<tr><td>Много Conversion без Hits</td><td>Фейковые postback</td><td>Кто-то шлёт левые запросы</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ======= 9. ПИКСЕЛЬ ======= -->
+<h2 id="s9">9. Facebook Pixel (Пиксель)</h2>
+
+<div class="term">
+<strong>Пиксель</strong> — невидимый счётчик, который Facebook ставит на сайт. Когда кто-то заходит на сайт, пиксель говорит Facebook: «Этот пользователь у меня на сайте».
+</div>
+
+<h3>Зачем нужен</h3>
+<ul>
+  <li><strong>Считать конверсии</strong> — Facebook видит, кто кликнул и что сделал</li>
+  <li><strong>Оптимизировать показы</strong> — показывает объявления тем, кто чаще конвертится</li>
+  <li><strong>Ретаргетинг</strong> — собирает людей для повторных показов</li>
+  <li><strong>Look-alike аудитории</strong> — находит похожих на конвертировавшихся</li>
+</ul>
+
+<h3>Как выглядит код пикселя</h3>
+<pre>
+&lt;script&gt;
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){...};
+    fbq('init', '123456789012345');
+    fbq('track', 'PageView');
+  }&lt;/script&gt;
+</pre>
+
+<h3>Проблема: казино не ставят пиксель</h3>
+<div class="warn">
+Казино обычно отказывается ставить пиксель Facebook на свой сайт, потому что:
+<ul>
+  <li>Facebook получит данные о посетителях</li>
+  <li>Facebook может заблокировать аккаунт казино</li>
+</ul>
+</div>
+
+<h3>Как обходят в гемблинге</h3>
+
+<p><strong>Вариант 1: Пиксель на преленде</strong></p>
+<div class="schema">
+  <span class="box-item">Facebook</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Преленд (тут пиксель)</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">Казино</span>
+</div>
+<p>Facebook считает конверсией действие на преленде, не видя казино.</p>
+
+<p><strong>Вариант 2: Пиксель через Keitaro</strong></p>
+<p>Keitaro умеет генерировать пиксель и вставлять его в цепочку редиректа. Настраивается в кампании.</p>
+
+<p><strong>Вариант 3: Conversions API (CAPI)</strong></p>
+<p>Сервер отправляет данные о конверсиях напрямую в Facebook через API. Не зависит от браузера, блокировщиков и iOS ограничений.</p>
+
+<h3>События пикселя</h3>
+<table>
+<tr><th>Событие</th><th>Когда срабатывает</th></tr>
+<tr><td><strong>PageView</strong></td><td>При любом заходе на страницу</td></tr>
+<tr><td><strong>Lead</strong></td><td>Пользователь оставил контакты</td></tr>
+<tr><td><strong>Registration</strong></td><td>Пользователь создал аккаунт</td></tr>
+<tr><td><strong>Purchase</strong></td><td>Внёс депозит</td></tr>
+</table>
+
+<h3>iOS 14+ — проблема для пикселя</h3>
+<div class="warn">
+iOS 14.5+ требует согласия на трекинг. ~50% отказываются. CAPI (серверные конверсии) теперь обязателен — без него Facebook видит только половину конверсий.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 10. ПИКСЕЛЬ VS POSTBACK ======= -->
+<h2 id="s10">10. Пиксель vs Postback</h2>
+
+<table>
+<tr><th></th><th><strong>Facebook Pixel</strong></th><th><strong>Postback</strong></th></tr>
+<tr><td>Кто отправляет</td><td>Браузер пользователя (JS на странице)</td><td>Сервер казино / CPA-сети</td></tr>
+<tr><td>Куда отправляет</td><td>На сервера Facebook</td><td>В Keitaro</td></tr>
+<tr><td>Что передаёт</td><td>«Пользователь зашёл на страницу»</td><td>«Клик XYZ → депозит, выплата $100»</td></tr>
+<tr><td>Зачем</td><td>Оптимизация, ретаргетинг</td><td>Учёт конверсий в трекере</td></tr>
+<tr><td>Формат</td><td>JavaScript в браузере</td><td>HTTP-запрос сервер→сервер</td></tr>
+<tr><td>Можно подделать?</td><td>Да</td><td>Сложнее</td></tr>
+<tr><td>Блокируется?</td><td>Да (iOS, блокировщики)</td><td>Нет</td></tr>
+</table>
+
+<div class="box">
+<strong>Простая формула:</strong><br>
+<strong>Пиксель</strong> — Facebook узнаёт, что человек что-то сделал<br>
+<strong>Postback</strong> — Keitaro узнаёт, что человек что-то сделал
+</div>
+
+<h3>Сравнение цифр для аналитика</h3>
+<table>
+<tr><th>Ситуация</th><th>Что значит</th></tr>
+<tr><td>Пиксель = 1000, Postback = 15</td><td>Норма. Люди заходят, не все покупают</td></tr>
+<tr><td>Пиксель = 1000, Postback = 0</td><td>Сломан postback или фрод</td></tr>
+<tr><td>Пиксель = 0, Postback = 15</td><td>Пиксель не стоит — Facebook не видит конверсий</td></tr>
+<tr><td>Пиксель = 1000, Postback = 900</td><td>Подозрительно. Либо отличный трафик, либо накрутка</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ======= 11. РЕТАРГЕТИНГ ======= -->
+<h2 id="s11">11. Ретаргетинг</h2>
+
+<div class="term">
+<strong>Ретаргетинг</strong> — показ рекламы людям, которые уже взаимодействовали с твоей рекламой или сайтом.
+</div>
+
+<h3>Как работает</h3>
+<ol>
+  <li>Человек кликнул по объявлению → попал на преленд (там пиксель)</li>
+  <li>Посмотрел, но не зарегистрировался</li>
+  <li>Пиксель записал: «Вася был на сайте, не конвертился»</li>
+  <li>Facebook показывает Васе другие объявления</li>
+</ol>
+
+<h3>Типы аудиторий для ретаргетинга</h3>
+<table>
+<tr><th>Аудитория</th><th>Кто там</th><th>Что показывают</th></tr>
+<tr><td>Все посетители</td><td>Любой, кто открыл преленд</td><td>Новые креативы</td></tr>
+<tr><td>Не конверсия</td><td>Был > 10 сек, не зарегился</td><td>«А ты видел бонус?»</td></tr>
+<tr><td>Брошенная корзина</td><td>Начал регистрацию, бросил</td><td>«Добей регистрацию, получи фриспин»</td></tr>
+<tr><td>Зарегился, нет депозита</td><td>Есть аккаунт, нет денег</td><td>«Внеси депозит → +100%»</td></tr>
+<tr><td>Лучшие клиенты</td><td>> 3 депозитов</td><td>VIP-предложения</td></tr>
+</table>
+
+<h3>Окна ретаргетинга</h3>
+<table>
+<tr><th>Окно</th><th>Когда использовать</th></tr>
+<tr><td>1-3 дня</td><td>Свежие, дёшево вернуть</td></tr>
+<tr><td>7-14 дней</td><td>Стандартный ретаргетинг для гемблинга</td></tr>
+<tr><td>30-180 дней</td><td>Долгий ретаргетинг (брендовый)</td></tr>
+</table>
+
+<h3>Ретаргетинг + Keitaro (Rules by Cookie)</h3>
+<p>В Keitaro можно перенаправлять пользователя на другой поток при повторном клике:</p>
+<ul>
+  <li><strong>1-й клик:</strong> Поток A (стандартный оффер)</li>
+  <li><strong>2-й клик:</strong> Поток B (оффер с бонусом 200% вместо 100%)</li>
+</ul>
+
+<h3>⚠️ Что проверять как аналитик</h3>
+<div class="warn">
+<strong>Красный флаг:</strong> холодный трафик не конвертится, а ретаргетинг даёт все конверсии. Это значит, что байер забил на холодную аудиторию и живёт только за счёт прогретых. Масштабировать такую связку нельзя.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 12. ФРОД ======= -->
+<h2 id="s12">12. Фрод (Fraud)</h2>
+
+<div class="term">
+<strong>Фрод</strong> — мошенничество, обман, нечестные действия. Искусственное завышение статистики или воровство бюджета.
+</div>
+
+<h3>Виды фрода</h3>
+
+<h4>1. Клик-фрод (Click Fraud)</h4>
+<p>Фейковые клики, которых на самом деле не было.</p>
+<ul>
+  <li><strong>Как делают:</strong> бот-фермы, сервисы скликивания, скрипты</li>
+  <li><strong>Признаки:</strong> CTR &gt; 5%, трафик по расписанию, один User-Agent, повторяющиеся IP</li>
+</ul>
+
+<h4>2. Конверсионный фрод (Conversion Fraud)</h4>
+<p>Фейковые регистрации и депозиты.</p>
+<ul>
+  <li><strong>Как делают:</strong> мусорные email, виртуальные карты, друзья «зарегайся за подарок»</li>
+  <li><strong>Признаки:</strong> все конверсии в одно время, одинаковые email-домены (@mailinator.com), Conversion Time = 0</li>
+</ul>
+
+<h4>3. Инсентив-трафик (Incentive Traffic)</h4>
+<p>Байер платит людям за действия.</p>
+<ul>
+  <li><strong>Как делают:</strong> «зарегайся получи 10 рублей», форумы, группы</li>
+  <li><strong>Чем плохо:</strong> конверсии отклоняются через 7-30 дней (Rejected), но байер уже получил выплату</li>
+</ul>
+
+<h4>4. Атрибуционный фрод (Attribution Fraud)</h4>
+<p>Кража чужих конверсий. Перехват postback и подмена Click ID.</p>
+
+<h4>5. Фрод по Postback</h4>
+<p>Байер сам шлёт фейковые postback-запросы в Keitaro.</p>
+<ul>
+  <li><strong>Признаки:</strong> postback приходят быстрее, чем возможна реальная конверсия; одинаковое время у многих конверсий</li>
+</ul>
+
+<h4>6. Return / Chargeback Fraud</h4>
+<p>Байер знает, что часть конверсий откатят, и закладывает это в стратегию — успевает вывести деньги до пересчёта.</p>
+
+<h3>Инструменты Keitaro против фрода</h3>
+<table>
+<tr><th>Инструмент</th><th>Что делает</th></tr>
+<tr><td><strong>Deduplication</strong></td><td>Убирает повторные клики с одного устройства</td></tr>
+<tr><td><strong>Anti-bot</strong></td><td>Проверяет JavaScript, User-Agent, время загрузки</td></tr>
+<tr><td><strong>IP blacklist</strong></td><td>Блокирует подозрительные IP</td></tr>
+<tr><td><strong>UA blacklist</strong></td><td>Блокирует подозрительные браузеры</td></tr>
+<tr><td><strong>Geo filter</strong></td><td>Блокирует нецелевые страны</td></tr>
+<tr><td><strong>Time filter</strong></td><td>Блокирует трафик вне рабочего времени</td></tr>
+</table>
+
+<h3>Что проверять аналитику — признаки фрода</h3>
+<table>
+<tr><th>Признак</th><th>Что смотреть</th></tr>
+<tr><td>CTR &gt; 5%</td><td>В Facebook. Норма для казино 0.3-2%</td></tr>
+<tr><td>CR = 0 при большом трафике</td><td>1000 кликов, 0 регистраций — 100% боты</td></tr>
+<tr><td>Время на сайте = 0</td><td>В Keitaro (трекинг времени)</td></tr>
+<tr><td>Один IP / много кликов</td><td>В логах Keitaro</td></tr>
+<tr><td>Трафик по расписанию</td><td>Ровно в 10:00, 14:00, 18:00</td></tr>
+<tr><td>User-Agent однотипный</td><td>Все клики с Chrome 124 на Windows</td></tr>
+<tr><td>Расхождение кликов FB и Keitaro</td><td>&gt; 5% — трафик уходит мимо или добавляется левый</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ======= 13. КЛОАКИНГ ======= -->
+<h2 id="s13">13. Клоакинг (Cloaking)</h2>
+
+<div class="term">
+<strong>Клоакинг</strong> — технология, показывающая разный контент разным людям. Facebook-модератору — безопасную страницу, пользователю — казино.
+</div>
+
+<div class="schema">
+  <span class="box-item">Facebook (модератор)</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">Белый контент (безопасно)</span>
+</div>
+<div class="schema" style="margin-top:5px;">
+  <span class="box-item">Пользователь</span>
+  <span class="arrow">→</span>
+  <span class="box-item red">Казино</span>
+</div>
+
+<h3>Как клоака определяет, кто кликнул</h3>
+<table>
+<tr><th>Данные</th><th>Что проверяет</th></tr>
+<tr><td><strong>IP-адрес</strong></td><td>Принадлежит Facebook? Есть в базе IP модераторов?</td></tr>
+<tr><td><strong>User-Agent</strong></td><td>Браузер, версия, ОС</td></tr>
+<tr><td><strong>Куки / LocalStorage</strong></td><td>Есть ли фейсбучные куки?</td></tr>
+<tr><td><strong>Screen Resolution</strong></td><td>У модератора 1920×1080, у пользователя 375×812</td></tr>
+<tr><td><strong>Referrer</strong></td><td>Откуда пришёл клик</td></tr>
+<tr><td><strong>Canvas fingerprint</strong></td><td>Уникальный отпечаток браузера</td></tr>
+<tr><td><strong>Проверка мыши</strong></td><td>Двигает ли курсор? Как быстро?</td></tr>
+<tr><td><strong>WebRTC</strong></td><td>Реальный IP (даже через VPN)</td></tr>
+<tr><td><strong>Наличие Facebook Pixel</strong></td><td>Есть ли пиксель на странице?</td></tr>
+</table>
+
+<h3>Виды клоакинга</h3>
+<table>
+<tr><th>Вид</th><th>Описание</th><th>Надёжность</th></tr>
+<tr><td><strong>Серверный (Server-side)</strong></td><td>Скрипт на сервере проверяет и отдаёт контент</td><td>⭐ Самый надёжный</td></tr>
+<tr><td><strong>JavaScript (Client-side)</strong></td><td>JS на странице проверяет и подгружает</td><td>Меньше — JS виден в коде</td></tr>
+<tr><td><strong>DNS-клоакинг</strong></td><td>Один домен = разные IP для разных DNS</td><td>⭐⭐ Очень сложно заблокировать</td></tr>
+<tr><td><strong>Гео-клоакинг</strong></td><td>Разный контент для разных стран</td><td>Устарел, работает только в связке</td></tr>
+</table>
+
+<h3>Клоакинг + Keitaro</h3>
+<div class="schema">
+  <span class="box-item">Facebook</span>
+  <span class="arrow">→</span>
+  <span class="box-item red">Клоака</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">Пользователь</span>
+  <span class="arrow">→</span>
+  <span class="box-item orange">Keitaro</span>
+  <span class="arrow">→</span>
+  <span class="box-item">Казино</span>
+</div>
+<div class="schema" style="margin-top:5px;">
+  <span class="box-item red">Клоака</span>
+  <span class="arrow">→</span>
+  <span class="box-item">Модератор</span>
+  <span class="arrow">→</span>
+  <span class="box-item green">Белый контент</span>
+</div>
+
+<h3>Популярные клоака-сервисы</h3>
+<table>
+<tr><th>Сервис</th><th>Цена</th></tr>
+<tr><td>PeerClick</td><td>от $99/мес</td></tr>
+<tr><td>CPAbuild (трекер + клоака)</td><td>от $149</td></tr>
+<tr><td>AdSaver</td><td>$99/мес</td></tr>
+<tr><td>BenzTracker</td><td>от $199</td></tr>
+</table>
+
+<h3>Важно для аналитика</h3>
+<div class="warn">
+<ul>
+  <li>Клоака стоит <strong>ДО</strong> Keitaro. Keitaro видит только «хороший» трафик</li>
+  <li>Если клоака сломалась — Keitaro не получает трафик, конверсии падают до 0</li>
+  <li>Байер может отключить клоаку и лить напрямую → бан аккаунта</li>
+  <li><strong>Клоака ≠ качество трафика.</strong> Если байер гонит ботов через клоаку — это всё ещё фрод</li>
+</ul>
+</div>
+
+<h3>Клоакинг vs Фрод</h3>
+<div class="info">
+<strong>Клоакинг — это не фрод для CPA (трафик реальный), но нарушение правил Facebook.</strong><br>
+Фрод — обман CPA-сети. Клоакинг — обход модерации Facebook.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 14. ПОЛНЫЙ ЦИКЛ ======= -->
+<h2 id="s14">14. Полный цикл: от креатива до выплаты</h2>
+
+<h3>Этап 1: Подготовка (1-3 дня)</h3>
+<ul>
+  <li>Выбрать оффер в CPA-сети</li>
+  <li>Подготовить 3-5 креативов (спай-сервисы + дизайнер)</li>
+  <li>Настроить кампанию в Keitaro (поток, Sub-ID, ссылка)</li>
+  <li>Купить 5-10 доменов</li>
+  <li>Подготовить/прогреть аккаунты Facebook</li>
+</ul>
+
+<h3>Этап 2: Запуск (30 мин + модерация до 24 ч)</h3>
+<ul>
+  <li>Создать кампанию в Facebook Ads Manager</li>
+  <li>Выбрать цель (Traffic / Conversions)</li>
+  <li>Настроить аудиторию (гео, пол, возраст)</li>
+  <li>Загрузить креатив, вставить ссылку Keitaro</li>
+  <li>Установить бюджет $50-100/день</li>
+</ul>
+
+<h3>Этап 3: Трафик пошёл</h3>
+<p><strong>Первые 30-60 минут:</strong></p>
+<pre>
+Facebook: 100 кликов, потрачено $20
+Keitaro:  95 hits, 0 конверсий (пока)
+</pre>
+
+<h3>Этап 4: Первая конверсия (15-60 мин после клика)</h3>
+<pre>
+Игрок: клик → регистрация → депозит €50
+Postback: clickid=ABC123 &amp; status=approved &amp; payout=100
+
+Байер видит: потрачено $20, заработано $100, ROI = 400%
+</pre>
+
+<h3>Этап 5: Холд (7-30 дней)</h3>
+<ul>
+  <li>День 0-3: Pending (проверка качества)</li>
+  <li>День 3: Approved или Rejected</li>
+  <li>День 7-30: Hold (заморозка на случай возврата)</li>
+  <li>День 30+: выплата</li>
+</ul>
+
+<h3>Этап 6: Скейл</h3>
+<ul>
+  <li>Увеличение бюджета: $50 → $200 → $500/день</li>
+  <li>Запуск похожих кампаний (новые креативы, новая аудитория, другие гео)</li>
+  <li>Клонирование успешных связок</li>
+</ul>
+
+<h3>Этап 7: Выплата (30-45 дней от конверсии)</h3>
+<table>
+<tr><th>День</th><th>Событие</th></tr>
+<tr><td>1 января</td><td>Конверсия</td></tr>
+<tr><td>3 января</td><td>Approved</td></tr>
+<tr><td>30 января</td><td>Холд закончился</td></tr>
+<tr><td>5 февраля</td><td>Выплата (USDT, PayPal, Wise)</td></tr>
+</table>
+
+<h3>Этап 8: Аналитика</h3>
+<p><strong>Считает байер:</strong></p>
+<pre>
+Доход от CPA:        $10,000
+Facebook:              -$6,000
+Инструменты (Keitaro и т.д.): -$669
+Чистая прибыль:        $3,331
+</pre>
+
+<p><strong>Считаешь ты (реальная прибыль):</strong></p>
+<pre>
+Чистая прибыль:                $3,331
+Rejected (20%):                 -$2,000
+Chargeback (5%):                -$500
+Реальная прибыль:               $831
+</pre>
+
+<h3>Горячий vs Холодный ROI</h3>
+<table>
+<tr><th>Период</th><th>ROI</th><th>Что учтено</th></tr>
+<tr><td>Горячий (Pending)</td><td>+400%</td><td>Все конверсии, включая сомнительные</td></tr>
+<tr><td>Реальный (Approved через неделю)</td><td>+150%</td><td>Часть ушла в Rejected</td></tr>
+<tr><td>Через 30 дней</td><td>+80%</td><td>Chargeback и возвраты</td></tr>
+</table>
+
+<div class="warn">
+Если реальный ROI значительно ниже горячего — либо байер гонит некачественный трафик, либо накручивает конверсии.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ======= 15. ЕЖЕДНЕВНЫЙ КОНТРОЛЬ ======= -->
+<h2 id="s15">15. Что проверять ежедневно (аналитик)</h2>
+
+<h3>Ежедневно</h3>
+<table>
+<tr><th>Проверка</th><th>Что искать</th></tr>
+<tr><td>Расхождение кликов Facebook vs Keitaro</td><td>Keitaro &lt; Facebook — потери; Keitaro &gt; Facebook — левый трафик</td></tr>
+<tr><td>Конверсии за сегодня</td><td>CR = 0 при трафике — проблема с postback или фрод</td></tr>
+<tr><td>Postback-логи</td><td>Приходят ли сигналы</td></tr>
+<tr><td>ROI по кампаниям</td><td>Минус — выключать</td></tr>
+</table>
+
+<h3>Раз в 3 дня</h3>
+<table>
+<tr><th>Проверка</th><th>Что искать</th></tr>
+<tr><td>Логи Keitaro (postback)</td><td>Подозрительные IP, повторяющиеся clickid</td></tr>
+</table>
+
+<h3>Раз в неделю</h3>
+<table>
+<tr><th>Проверка</th><th>Что искать</th></tr>
+<tr><td>Время конверсий</td><td>Все в одно время — подозрительно</td></tr>
+<tr><td>% Chargeback / Rejected</td><td>&gt; 10% — проблемы с качеством трафика</td></tr>
+<tr><td>User-Agent разнообразие</td><td>Все клики с одного браузера — боты</td></tr>
+</table>
+
+<h3>Что должно быть на дашборде</h3>
+<table>
+<tr><th>Метрика</th><th>Норма</th><th>Тревога</th></tr>
+<tr><td><strong>CTR</strong></td><td>0.5% — 3%</td><td>&gt; 5% = возможно скликивание</td></tr>
+<tr><td><strong>CR</strong></td><td>Зависит от гео и оффера</td><td>0% = postback сломан или боты</td></tr>
+<tr><td><strong>CPM</strong></td><td>В рамках нормы для гео</td><td>Резкий рост = аудитория выжжена</td></tr>
+<tr><td><strong>ROI</strong></td><td>&gt; 0%</td><td>Минус = меняй связку</td></tr>
+<tr><td><strong>Hits vs Clicks</strong></td><td>Расхождение &lt; 5%</td><td>&gt; 10% = трафик уходит мимо</td></tr>
+<tr><td><strong>Конверсии по Sub-ID</strong></td><td>Все Sub-ID заполнены</td><td>Пустые = байер не передаёт данные</td></tr>
+</table>
+
+<h3>Что может сломаться на каждом шаге</h3>
+<table>
+<tr><th>Шаг цепочки</th><th>Типичная проблема</th></tr>
+<tr><td>Facebook → Keitaro</td><td>Кривая ссылка, битый домен</td></tr>
+<tr><td>Keitaro → Преленд</td><td>Преленд не передал clickid</td></tr>
+<tr><td>Преленд → PWA</td><td>PWA не передал clickid</td></tr>
+<tr><td>PWA → Казино</td><td>Казино не получило clickid</td></tr>
+<tr><td>Казино → Postback</td><td>Postback URL неправильный</td></tr>
+<tr><td>Postback → Keitaro</td><td>Click ID не совпадает</td></tr>
+</table>
+
+<h3>Схема для аналитика — «матрешка метрик»</h3>
+<pre>
+Горячий ROI (Pending):  +400%    ← оптимистично
+Реальный ROI (Approved): +150%  ← правда через 3 дня
+ROI через 30 дней:       +80%   ← истина
+
+Разрыв между ними = качество трафика и/или фрод
+</pre>
+
+<div class="footer">
+Создано: 8 июля 2026 | Claude Code + OmniRoute
+</div>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шпаргалка баера</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  @media print {
+    body { background: white; color: #1f2328; font-size: 11px; padding: 10px; }
+    .card { border: 1px solid #d0d7de !important; box-shadow: none !important; }
+    .header h1 { -webkit-text-fill-color: #1f2328 !important; color: #1f2328 !important; background: none !important; }
+    .formula-cell { border: 1px solid #d0d7de !important; }
+    .rule-cell { border: 1px solid #d0d7de !important; }
+    .accent-line { background: #1f2328 !important; }
+  }
+
+  .card {
+    max-width: 800px;
+    width: 100%;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #3fb950;
+  }
+  .header h1 {
+    font-size: 1.5em;
+    background: linear-gradient(135deg, #58a6ff, #3fb950);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 4px;
+  }
+  .header p {
+    color: #8b949e;
+    font-size: 0.85em;
+  }
+
+  .two-col {
+    display: flex;
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    .two-col { flex-direction: column; }
+  }
+
+  .col { flex: 1; min-width: 0; }
+
+  .section-title {
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .section-title.formulas { color: #58a6ff; }
+  .section-title.rules { color: #3fb950; }
+
+  .accent-line {
+    height: 2px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+  }
+  .accent-line.blue { background: #58a6ff; }
+  .accent-line.green { background: #3fb950; }
+  .accent-line.orange { background: #d29922; }
+
+  .formula-table { width: 100%; border-collapse: collapse; }
+  .formula-cell {
+    padding: 5px 8px;
+    border: 1px solid #30363d;
+    font-size: 0.9em;
+    vertical-align: middle;
+  }
+  .formula-cell.name {
+    font-weight: 700;
+    width: 20%;
+    white-space: nowrap;
+  }
+  .formula-cell.formula {
+    font-family: 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.9em;
+    width: 38%;
+    background: #1c2128;
+  }
+  .formula-cell.desc {
+    width: 42%;
+    font-size: 0.85em;
+    color: #8b949e;
+  }
+  @media print {
+    .formula-cell.formula { background: #f6f8fa; }
+    .formula-cell.desc { color: #656d76; }
+  }
+
+  .rules-table { width: 100%; border-collapse: collapse; }
+  .rule-cell {
+    padding: 5px 8px;
+    border: 1px solid #30363d;
+    font-size: 0.9em;
+    vertical-align: top;
+  }
+  .rule-cell.cond {
+    width: 55%;
+    font-size: 0.85em;
+  }
+  .rule-cell.action {
+    width: 45%;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  .tag-green { background: #1a3a2a; color: #3fb950; }
+  .tag-red { background: #3a1a1a; color: #f85149; }
+  .tag-yellow { background: #3a2e1a; color: #d29922; }
+  .tag-blue { background: #1a2a3a; color: #58a6ff; }
+  @media print {
+    .tag-green { background: #d4edda; color: #155724; border: 1px solid #155724; }
+    .tag-red { background: #f8d7da; color: #721c24; border: 1px solid #721c24; }
+    .tag-yellow { background: #fff3cd; color: #856404; border: 1px solid #856404; }
+    .tag-blue { background: #e6eefd; color: #1a3a8a; border: 1px solid #1a3a8a; }
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #30363d;
+    margin: 12px 0;
+  }
+
+  .note {
+    font-size: 0.8em;
+    color: #8b949e;
+    margin-top: 8px;
+  }
+  @media print { .note { color: #656d76; } }
+
+  .print-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 14px;
+    background: #58a6ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+  }
+  @media print { .print-btn { display: none !important; } }
+
+  .keyword {
+    color: #f0883e;
+    font-weight: 600;
+  }
+  @media print { .keyword { color: #c06c20; } }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>📌 Шпаргалка баера</h1>
+    <p>Формулы + правила принятия решений</p>
+  </div>
+
+  <div class="two-col">
+
+    <!-- ЛЕВАЯ КОЛОНКА: ФОРМУЛЫ -->
+    <div class="col">
+      <div class="section-title formulas">📐 Формулы</div>
+      <div class="accent-line blue"></div>
+
+      <table class="formula-table">
+        <tr>
+          <td class="formula-cell name">CPM</td>
+          <td class="formula-cell formula">Spend (затраты) ÷ Impressions (показы) × 1000</td>
+          <td class="formula-cell desc">Цена за 1000 показов</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">CTR</td>
+          <td class="formula-cell formula">Clicks (клики) ÷ Impressions (показы) × 100%</td>
+          <td class="formula-cell desc">Кликабельность (насколько креатив заставляет нажать)</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">CPC</td>
+          <td class="formula-cell formula">Spend (затраты) ÷ Clicks (клики)</td>
+          <td class="formula-cell desc">Цена одного клика</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">CR</td>
+          <td class="formula-cell formula">Conversions (конверсии) ÷ Clicks (клики) × 100%</td>
+          <td class="formula-cell desc">Конверсия (качество трафика)</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">CPA</td>
+          <td class="formula-cell formula">Spend (затраты) ÷ Conversions (конверсии)</td>          <td class="formula-cell desc">Цель целевого действия</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">EPC</td>
+          <td class="formula-cell formula">(Payout (выплата) × Conv (конверсии)) ÷ Clicks (клики)</td>
+          <td class="formula-cell desc">Доход с одного клика</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">ROI</td>
+          <td class="formula-cell formula">(Revenue (доход) − Spend (затраты)) ÷ Spend (затраты) × 100%</td>
+          <td class="formula-cell desc">Окупаемость в %</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">ROAS</td>
+          <td class="formula-cell formula">Revenue (доход) ÷ Spend (затраты)</td>
+          <td class="formula-cell desc">Окупаемость в разах</td>
+        </tr>
+        <tr>
+          <td class="formula-cell name">Frequency</td>
+          <td class="formula-cell formula">Impressions (показы) ÷ Reach (охват)</td>
+          <td class="formula-cell desc">Сколько раз человек увидел объявление</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ПРАВАЯ КОЛОНКА: ПРАВИЛА -->
+    <div class="col">
+      <div class="section-title rules">🎯 Правила</div>
+      <div class="accent-line green"></div>
+
+      <table class="rules-table">
+        <tr>
+          <td class="rule-cell cond">CPA < 50% от выплаты</td>
+          <td class="rule-cell action"><span class="tag tag-green">🔥 SCALE</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">CPA 50–80% от выплаты</td>
+          <td class="rule-cell action"><span class="tag tag-yellow">🔄 OPTIMIZE</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">CPA > 100% выплаты</td>
+          <td class="rule-cell action"><span class="tag tag-red">💀 KILL</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">CTR < 0.3% с 5000+ показов</td>
+          <td class="rule-cell action"><span class="tag tag-red">💀 KILL креатив</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">Frequency > 5 И CTR упал ×2</td>
+          <td class="rule-cell action"><span class="tag tag-yellow">🆕 Новый креатив</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">2 × выплаты потрачено — 0 конверсий</td>
+          <td class="rule-cell action"><span class="tag tag-red">💀 KILL</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">$50 на тест — 0 лидов</td>
+          <td class="rule-cell action"><span class="tag tag-red">💀 KILL</span></td>
+        </tr>
+        <tr>
+          <td class="rule-cell cond">ROI > 50% + CPA < 50% + CTR > 0.8%</td>
+          <td class="rule-cell action"><span class="tag tag-green">🔥 SCALE</span></td>
+        </tr>
+      </table>
+
+      <hr class="divider">
+
+      <div class="section-title" style="color: #d29922; font-size: 0.8em;">⏱ Минимум данных для вывода</div>
+      <div class="accent-line orange"></div>
+
+      <table class="rules-table">
+        <tr><td class="rule-cell cond">CTR</td><td class="rule-cell action" style="text-align:left; font-weight:400;">1000 показов</td></tr>
+        <tr><td class="rule-cell cond">CPM</td><td class="rule-cell action" style="text-align:left; font-weight:400;">5000 показов</td></tr>
+        <tr><td class="rule-cell cond">CR</td><td class="rule-cell action" style="text-align:left; font-weight:400;">100+ кликов</td></tr>
+        <tr><td class="rule-cell cond">CPA</td><td class="rule-cell action" style="text-align:left; font-weight:400;">10+ конверсий или 3× выплаты спента</td></tr>
+        <tr><td class="rule-cell cond">ROI</td><td class="rule-cell action" style="text-align:left; font-weight:400;">50+ конверсий / 7 дней</td></tr>
+      </table>
+
+      <hr class="divider">
+
+      <div class="note">
+        <strong>🔑 Важно:</strong> Не суди кампанию раньше набора минимума.<br>
+        Meta обучается 2–3 дня. ROI в гемблинге считай за <span class="keyword">7 дней</span>.<br>
+        Пт–Вс конверсия выше в <span class="keyword">1.5–3×</span>, чем Пн–Ср — сравнивай день с днём.<br>
+        <strong>NEVER fall in love with a campaign.</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="print-btn" onclick="window.print()">🖨 Распечатать / Сохранить PDF</button>
+</div>
+
+</body>
+</html>
