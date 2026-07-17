@@ -9,7 +9,10 @@
     "build:pdf:sha": "node scripts/make-sha-pdf.js",
     "build:font": "node scripts/generate-sharuu-font.js",
     "build:md": "powershell -File xharuun/scripts/build-encyclopedia.ps1",
-    "validate": "powershell -File xharuun/scripts/validate-refs.ps1"
+    "validate": "powershell -File xharuun/scripts/validate-refs.ps1",
+    "validate:links": "node tools/link-validator.js",
+    "validate:canon": "node tools/canon-validator.js",
+    "registry:generate": "node tools/registry-generator.js"
   },
   "keywords": [],
   "author": "",

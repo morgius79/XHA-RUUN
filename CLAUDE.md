@@ -32,3 +32,15 @@ The entire project is a single `start.bat` script that:
 - OmniRoute must be installed and available on `PATH` for `omniroute` to work
 - The script uses a 60-second startup window for OmniRoute; if the API doesn't respond in time, it exits with an error
 - All Claude Code API traffic flows through the local proxy at port 20128, allowing OmniRoute to handle model routing, load balancing, and failover across providers
+
+## Xha'Ruun Project Tools (v0.1.2)
+
+```bash
+npm run validate          # Проверка ссылок (xharuun)
+npm run validate:links    # Проверка всех ссылок и ID-паттернов в проекте
+npm run validate:canon    # Проверка согласованности глав с CANON.md
+npm run registry:generate # Генератор реестров (--help для справки)
+npm run build:md          # Сборка энциклопедии
+npm run build:pdf:sha     # Сборка PDF
+npm run build:font        # Генерация шрифта Sharuu
+```
