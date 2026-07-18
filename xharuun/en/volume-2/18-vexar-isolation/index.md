@@ -1,37 +1,37 @@
-# Volume II: History — Chapter 18: The Isolation of Vexar
+# Volume II: History — Chapter 18: Isolation of Vexar
 
-> *"Vexar did not lag behind — it waited. While Kharak and Rhuval warred and reconciled, Vexar built its own civilization — quiet, deep, different."*
-> — "History of Vexar", Shan-En Academy
+> *"Vexar was not lagging behind — it was waiting. While Kharak and Rhuval fought and reconciled, Vexar built its civilization — quiet, deep, different."*
+> — "History of Vexar," Shan-En Academy
 
 ---
 
-**Related sections:** → see [Ch.13, "Continents"], → see [Volume II, Ch.3–5]
+**Related sections:** → see [Ch.13, "Continents"], → see [Vol. II, Ch.3–5]
 **Volume:** 25 pages
 
 ---
 
-## 18.1 Period of isolation
+## 18.1 Period of Isolation
 
-After the fall of the First Empire, Vexar found itself completely isolated from the other continents for ~1,000 years (−2,000 – −1,000). The lack of sea routes across the Gharra Ocean led to independent development.
+After the fall of the First Empire, Vexar found itself completely isolated from the other continents for ~1,000 years (−2,000 – −1,000). The absence of navigable routes across the Gharra ocean led to independent development.
 
-## 18.2 Achievements of isolation
+## 18.2 Achievements of Isolation
 
-| Field | Vexar development | Continents (same period) |
-|---------|---------------|---------------------------|
-| Writing | Syllabic (own system) | Syllabary |
-| Philosophy | School of the "Third Way" | Decline |
+| Field | Vexar Development | Continents (same period) |
+|-------|------------------|-------------------------|
+| Writing | Syllabic (own) | Syllabary |
+| Philosophy | "Third Way" School | Decline |
 | Architecture | Black basalt | Wood, stone |
-| Medicine | Bio-pharmaceuticals | Herbalism |
-| Ecology | Nature reserves (first) | Deforestation |
+| Medicine | Bio-pharmaceuticals | Herbal medicine |
+| Ecology | Reserves (first) | Deforestation |
 
 ## 18.3 Reunification
 
 | Event | Year |
-|---------|-----|
-| First Gharra crossing | −1,200 |
+|-------|------|
+| First voyage across Gharra | −1,200 |
 | Regular communication | −800 |
 | Cultural exchange | −500 |
-| Accession to the Treaty of Unity | +200 |
+| Joining the Unity Treaty | +200 |
 
 ---
 
