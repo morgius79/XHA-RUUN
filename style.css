@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Sharuu';
+  src: url('/XHA-RUUN/fonts/sharuu-font.svg') format('svg');
+}
+
+.sharuu { font-family: 'Sharuu', 'Georgia', serif; font-size: 24px; }
+.sharuu-lg { font-family: 'Sharuu', 'Georgia', serif; font-size: 48px; }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {

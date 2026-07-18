@@ -1,0 +1,379 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <defs>
+    <font id="ShaRuun" horiz-adv-x="1000">
+      <font-face
+        font-family="ShaRuun"
+        units-per-em="1000"
+        ascent="800"
+        descent="200"
+        alphabetic="0"
+      />
+      <missing-glyph horiz-adv-x="500" d="M 200,300 L 800,300 L 800,700 L 200,700 Z" />
+      <glyph unicode="&#x20;" glyph-name="space" horiz-adv-x="500" />
+      
+    <glyph unicode="&#xE000;" glyph-name="SHARUUN_NUM_0" d="M 500,380 A 120,120 0 1,1 500,620 A 120,120 0 1,1 500,380 Z" />
+
+    <glyph unicode="&#xE001;" glyph-name="SHARUUN_NUM_1" d="M 500,440 A 60,60 0 1,1 500,560 A 60,60 0 1,1 500,440 Z" />
+
+    <glyph unicode="&#xE002;" glyph-name="SHARUUN_NUM_2" d="M 420,420 A 40,40 0 1,1 420,419 M 580,580 A 40,40 0 1,1 580,579" />
+
+    <glyph unicode="&#xE003;" glyph-name="SHARUUN_NUM_3" d="M 410,580 L 500,420 L 590,580 Z" />
+
+    <glyph unicode="&#xE004;" glyph-name="SHARUUN_NUM_4" d="M 380,380 L 620,380 L 620,620 L 380,620 Z" />
+
+    <glyph unicode="&#xE005;" glyph-name="SHARUUN_NUM_5" d="M 500,380 L 603.92,440 L 603.92,560 L 500,620 L 396.08,560 L 396.08,440 Z" />
+
+    <glyph unicode="&#xE100;" glyph-name="SHARUUN_V_A" d="M 0,450 L 140,500 L 0,550 Z" />
+    <glyph unicode="a" glyph-name="sha_a" d="M 0,450 L 140,500 L 0,550 Z" />
+    <glyph unicode="&#xE101;" glyph-name="SHARUUN_V_E" d="M 140,450 L 0,500 L 140,550 Z" />
+
+    <glyph unicode="&#xE102;" glyph-name="SHARUUN_V_I" d="M 450,570 L 500,430 L 550,570 Z" />
+
+    <glyph unicode="&#xE103;" glyph-name="SHARUUN_V_O" d="M 450,430 L 500,570 L 550,430 Z" />
+
+    <glyph unicode="&#xE104;" glyph-name="SHARUUN_V_U" d="M 0,460 L 60,500 L 0,540 M 60,460 L 120,500 L 60,540" />
+
+    <glyph unicode="&#xE105;" glyph-name="SHARUUN_V_SCHWA" d="M 400,500 L 600,500 M 500,400 L 500,600" />
+
+    <glyph unicode="&#xE106;" glyph-name="SHARUUN_V_II" d="M 460,560 L 500,440 L 540,560 Z M 550,380 L 550,620" />
+
+    <glyph unicode="&#xE107;" glyph-name="SHARUUN_V_UU" d="M 460,440 L 500,560 L 540,440 Z M 550,380 L 550,620" />
+
+    <glyph unicode="&#xE110;" glyph-name="SHARUUN_CV_K_A" d="M 300,400 L 450,300 L 600,400 L 450,500 Z" />
+
+    <glyph unicode="&#xE111;" glyph-name="SHARUUN_CV_K_E" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE112;" glyph-name="SHARUUN_CV_K_I" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE113;" glyph-name="SHARUUN_CV_K_O" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE114;" glyph-name="SHARUUN_CV_K_U" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE115;" glyph-name="SHARUUN_CV_K_Ə" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE116;" glyph-name="SHARUUN_CV_KH_A" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 450,300 L 450,500" />
+
+    <glyph unicode="&#xE117;" glyph-name="SHARUUN_CV_KH_E" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 450,300 L 450,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE118;" glyph-name="SHARUUN_CV_KH_I" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 450,300 L 450,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE119;" glyph-name="SHARUUN_CV_KH_O" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 450,300 L 450,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE11A;" glyph-name="SHARUUN_CV_KH_U" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 450,300 L 450,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE11B;" glyph-name="SHARUUN_CV_KH_Ə" d="M 300,400 L 450,300 L 600,400 L 450,500 Z M 450,300 L 450,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE11C;" glyph-name="SHARUUN_CV_G_A" d="M 300,300 L 500,300 L 600,400 L 500,500 L 300,500 Z" />
+
+    <glyph unicode="&#xE11D;" glyph-name="SHARUUN_CV_G_E" d="M 300,300 L 500,300 L 600,400 L 500,500 L 300,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE11E;" glyph-name="SHARUUN_CV_G_I" d="M 300,300 L 500,300 L 600,400 L 500,500 L 300,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE11F;" glyph-name="SHARUUN_CV_G_O" d="M 300,300 L 500,300 L 600,400 L 500,500 L 300,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE120;" glyph-name="SHARUUN_CV_G_U" d="M 300,300 L 500,300 L 600,400 L 500,500 L 300,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE121;" glyph-name="SHARUUN_CV_G_Ə" d="M 300,300 L 500,300 L 600,400 L 500,500 L 300,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE122;" glyph-name="SHARUUN_CV_T_A" d="M 350,300 L 650,350 L 550,500 L 350,500 Z" />
+
+    <glyph unicode="&#xE123;" glyph-name="SHARUUN_CV_T_E" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE124;" glyph-name="SHARUUN_CV_T_I" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE125;" glyph-name="SHARUUN_CV_T_O" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE126;" glyph-name="SHARUUN_CV_T_U" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE127;" glyph-name="SHARUUN_CV_T_Ə" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE128;" glyph-name="SHARUUN_CV_TH_A" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 400,380 L 580,380" />
+
+    <glyph unicode="&#xE129;" glyph-name="SHARUUN_CV_TH_E" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 400,380 L 580,380 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE12A;" glyph-name="SHARUUN_CV_TH_I" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 400,380 L 580,380 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE12B;" glyph-name="SHARUUN_CV_TH_O" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 400,380 L 580,380 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE12C;" glyph-name="SHARUUN_CV_TH_U" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 400,380 L 580,380 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE12D;" glyph-name="SHARUUN_CV_TH_Ə" d="M 350,300 L 650,350 L 550,500 L 350,500 Z M 400,380 L 580,380 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE12E;" glyph-name="SHARUUN_CV_D_A" d="M 350,300 L 600,350 L 550,500 L 300,500 Z" />
+
+    <glyph unicode="&#xE12F;" glyph-name="SHARUUN_CV_D_E" d="M 350,300 L 600,350 L 550,500 L 300,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE130;" glyph-name="SHARUUN_CV_D_I" d="M 350,300 L 600,350 L 550,500 L 300,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE131;" glyph-name="SHARUUN_CV_D_O" d="M 350,300 L 600,350 L 550,500 L 300,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE132;" glyph-name="SHARUUN_CV_D_U" d="M 350,300 L 600,350 L 550,500 L 300,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE133;" glyph-name="SHARUUN_CV_D_Ə" d="M 350,300 L 600,350 L 550,500 L 300,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE134;" glyph-name="SHARUUN_CV_R_A" d="M 450,300 L 600,350 L 500,500 L 400,500 Z M 450,300 L 350,400" />
+
+    <glyph unicode="&#xE135;" glyph-name="SHARUUN_CV_R_E" d="M 450,300 L 600,350 L 500,500 L 400,500 Z M 450,300 L 350,400 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE136;" glyph-name="SHARUUN_CV_R_I" d="M 450,300 L 600,350 L 500,500 L 400,500 Z M 450,300 L 350,400 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE137;" glyph-name="SHARUUN_CV_R_O" d="M 450,300 L 600,350 L 500,500 L 400,500 Z M 450,300 L 350,400 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE138;" glyph-name="SHARUUN_CV_R_U" d="M 450,300 L 600,350 L 500,500 L 400,500 Z M 450,300 L 350,400 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE139;" glyph-name="SHARUUN_CV_R_Ə" d="M 450,300 L 600,350 L 500,500 L 400,500 Z M 450,300 L 350,400 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE13A;" glyph-name="SHARUUN_CV_L_A" d="M 400,300 L 600,300 L 600,500 L 400,500 Z" />
+
+    <glyph unicode="&#xE13B;" glyph-name="SHARUUN_CV_L_E" d="M 400,300 L 600,300 L 600,500 L 400,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE13C;" glyph-name="SHARUUN_CV_L_I" d="M 400,300 L 600,300 L 600,500 L 400,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE13D;" glyph-name="SHARUUN_CV_L_O" d="M 400,300 L 600,300 L 600,500 L 400,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE13E;" glyph-name="SHARUUN_CV_L_U" d="M 400,300 L 600,300 L 600,500 L 400,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE13F;" glyph-name="SHARUUN_CV_L_Ə" d="M 400,300 L 600,300 L 600,500 L 400,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE140;" glyph-name="SHARUUN_CV_N_A" d="M 400,300 L 550,350 L 550,550 L 400,500 Z M 400,300 L 400,500" />
+
+    <glyph unicode="&#xE141;" glyph-name="SHARUUN_CV_N_E" d="M 400,300 L 550,350 L 550,550 L 400,500 Z M 400,300 L 400,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE142;" glyph-name="SHARUUN_CV_N_I" d="M 400,300 L 550,350 L 550,550 L 400,500 Z M 400,300 L 400,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE143;" glyph-name="SHARUUN_CV_N_O" d="M 400,300 L 550,350 L 550,550 L 400,500 Z M 400,300 L 400,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE144;" glyph-name="SHARUUN_CV_N_U" d="M 400,300 L 550,350 L 550,550 L 400,500 Z M 400,300 L 400,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE145;" glyph-name="SHARUUN_CV_N_Ə" d="M 400,300 L 550,350 L 550,550 L 400,500 Z M 400,300 L 400,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE146;" glyph-name="SHARUUN_CV_SH_A" d="M 350,300 L 600,300 L 500,400 L 600,500 L 350,500 L 450,400 Z" />
+
+    <glyph unicode="&#xE147;" glyph-name="SHARUUN_CV_SH_E" d="M 350,300 L 600,300 L 500,400 L 600,500 L 350,500 L 450,400 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE148;" glyph-name="SHARUUN_CV_SH_I" d="M 350,300 L 600,300 L 500,400 L 600,500 L 350,500 L 450,400 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE149;" glyph-name="SHARUUN_CV_SH_O" d="M 350,300 L 600,300 L 500,400 L 600,500 L 350,500 L 450,400 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE14A;" glyph-name="SHARUUN_CV_SH_U" d="M 350,300 L 600,300 L 500,400 L 600,500 L 350,500 L 450,400 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE14B;" glyph-name="SHARUUN_CV_SH_Ə" d="M 350,300 L 600,300 L 500,400 L 600,500 L 350,500 L 450,400 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE14C;" glyph-name="SHARUUN_CV_S_A" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z" />
+
+    <glyph unicode="&#xE14D;" glyph-name="SHARUUN_CV_S_E" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE14E;" glyph-name="SHARUUN_CV_S_I" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE14F;" glyph-name="SHARUUN_CV_S_O" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE150;" glyph-name="SHARUUN_CV_S_U" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE151;" glyph-name="SHARUUN_CV_S_Ə" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE152;" glyph-name="SHARUUN_CV_Z_A" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 400,300 L 450,450 L 400,500" />
+
+    <glyph unicode="&#xE153;" glyph-name="SHARUUN_CV_Z_E" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 400,300 L 450,450 L 400,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE154;" glyph-name="SHARUUN_CV_Z_I" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 400,300 L 450,450 L 400,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE155;" glyph-name="SHARUUN_CV_Z_O" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 400,300 L 450,450 L 400,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE156;" glyph-name="SHARUUN_CV_Z_U" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 400,300 L 450,450 L 400,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE157;" glyph-name="SHARUUN_CV_Z_Ə" d="M 400,300 L 600,350 L 550,450 L 600,550 L 400,500 Z M 400,300 L 450,450 L 400,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE158;" glyph-name="SHARUUN_CV_M_A" d="M 350,300 L 650,300 L 550,450 L 650,600 L 350,600 Z" />
+
+    <glyph unicode="&#xE159;" glyph-name="SHARUUN_CV_M_E" d="M 350,300 L 650,300 L 550,450 L 650,600 L 350,600 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE15A;" glyph-name="SHARUUN_CV_M_I" d="M 350,300 L 650,300 L 550,450 L 650,600 L 350,600 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE15B;" glyph-name="SHARUUN_CV_M_O" d="M 350,300 L 650,300 L 550,450 L 650,600 L 350,600 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE15C;" glyph-name="SHARUUN_CV_M_U" d="M 350,300 L 650,300 L 550,450 L 650,600 L 350,600 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE15D;" glyph-name="SHARUUN_CV_M_Ə" d="M 350,300 L 650,300 L 550,450 L 650,600 L 350,600 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE15E;" glyph-name="SHARUUN_CV_V_A" d="M 400,300 L 550,400 L 400,500 L 550,600" />
+
+    <glyph unicode="&#xE15F;" glyph-name="SHARUUN_CV_V_E" d="M 400,300 L 550,400 L 400,500 L 550,600 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE160;" glyph-name="SHARUUN_CV_V_I" d="M 400,300 L 550,400 L 400,500 L 550,600 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE161;" glyph-name="SHARUUN_CV_V_O" d="M 400,300 L 550,400 L 400,500 L 550,600 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE162;" glyph-name="SHARUUN_CV_V_U" d="M 400,300 L 550,400 L 400,500 L 550,600 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE163;" glyph-name="SHARUUN_CV_V_Ə" d="M 400,300 L 550,400 L 400,500 L 550,600 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE164;" glyph-name="SHARUUN_CV_'_A" d="M 450,300 L 550,350 L 500,450 L 550,550 L 450,600" />
+
+    <glyph unicode="&#xE165;" glyph-name="SHARUUN_CV_'_E" d="M 450,300 L 550,350 L 500,450 L 550,550 L 450,600 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE166;" glyph-name="SHARUUN_CV_'_I" d="M 450,300 L 550,350 L 500,450 L 550,550 L 450,600 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE167;" glyph-name="SHARUUN_CV_'_O" d="M 450,300 L 550,350 L 500,450 L 550,550 L 450,600 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE168;" glyph-name="SHARUUN_CV_'_U" d="M 450,300 L 550,350 L 500,450 L 550,550 L 450,600 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE169;" glyph-name="SHARUUN_CV_'_Ə" d="M 450,300 L 550,350 L 500,450 L 550,550 L 450,600 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE16A;" glyph-name="SHARUUN_CV_P_A" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z" />
+
+    <glyph unicode="&#xE16B;" glyph-name="SHARUUN_CV_P_E" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE16C;" glyph-name="SHARUUN_CV_P_I" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE16D;" glyph-name="SHARUUN_CV_P_O" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE16E;" glyph-name="SHARUUN_CV_P_U" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE16F;" glyph-name="SHARUUN_CV_P_Ə" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE170;" glyph-name="SHARUUN_CV_B_A" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 350,300 L 350,500" />
+
+    <glyph unicode="&#xE171;" glyph-name="SHARUUN_CV_B_E" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 350,300 L 350,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE172;" glyph-name="SHARUUN_CV_B_I" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 350,300 L 350,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE173;" glyph-name="SHARUUN_CV_B_O" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 350,300 L 350,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE174;" glyph-name="SHARUUN_CV_B_U" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 350,300 L 350,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE175;" glyph-name="SHARUUN_CV_B_Ə" d="M 350,300 L 650,300 L 600,400 L 650,500 L 350,500 Z M 350,300 L 350,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE176;" glyph-name="SHARUUN_CV_F_A" d="M 400,300 L 550,300 L 550,500 L 400,500 Z M 400,300 L 300,400 L 400,500" />
+
+    <glyph unicode="&#xE177;" glyph-name="SHARUUN_CV_F_E" d="M 400,300 L 550,300 L 550,500 L 400,500 Z M 400,300 L 300,400 L 400,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE178;" glyph-name="SHARUUN_CV_F_I" d="M 400,300 L 550,300 L 550,500 L 400,500 Z M 400,300 L 300,400 L 400,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE179;" glyph-name="SHARUUN_CV_F_O" d="M 400,300 L 550,300 L 550,500 L 400,500 Z M 400,300 L 300,400 L 400,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE17A;" glyph-name="SHARUUN_CV_F_U" d="M 400,300 L 550,300 L 550,500 L 400,500 Z M 400,300 L 300,400 L 400,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE17B;" glyph-name="SHARUUN_CV_F_Ə" d="M 400,300 L 550,300 L 550,500 L 400,500 Z M 400,300 L 300,400 L 400,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE17C;" glyph-name="SHARUUN_CV_H_A" d="M 400,300 L 600,400 L 400,500 M 350,350 L 550,450 L 350,550" />
+
+    <glyph unicode="&#xE17D;" glyph-name="SHARUUN_CV_H_E" d="M 400,300 L 600,400 L 400,500 M 350,350 L 550,450 L 350,550 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE17E;" glyph-name="SHARUUN_CV_H_I" d="M 400,300 L 600,400 L 400,500 M 350,350 L 550,450 L 350,550 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE17F;" glyph-name="SHARUUN_CV_H_O" d="M 400,300 L 600,400 L 400,500 M 350,350 L 550,450 L 350,550 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE180;" glyph-name="SHARUUN_CV_H_U" d="M 400,300 L 600,400 L 400,500 M 350,350 L 550,450 L 350,550 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE181;" glyph-name="SHARUUN_CV_H_Ə" d="M 400,300 L 600,400 L 400,500 M 350,350 L 550,450 L 350,550 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE182;" glyph-name="SHARUUN_CV_W_A" d="M 350,350 Q 500,250 650,350 Q 500,450 350,350" />
+
+    <glyph unicode="&#xE183;" glyph-name="SHARUUN_CV_W_E" d="M 350,350 Q 500,250 650,350 Q 500,450 350,350 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE184;" glyph-name="SHARUUN_CV_W_I" d="M 350,350 Q 500,250 650,350 Q 500,450 350,350 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE185;" glyph-name="SHARUUN_CV_W_O" d="M 350,350 Q 500,250 650,350 Q 500,450 350,350 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE186;" glyph-name="SHARUUN_CV_W_U" d="M 350,350 Q 500,250 650,350 Q 500,450 350,350 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE187;" glyph-name="SHARUUN_CV_W_Ə" d="M 350,350 Q 500,250 650,350 Q 500,450 350,350 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE188;" glyph-name="SHARUUN_CV_J_A" d="M 350,300 L 500,300 Q 600,400 500,500 L 350,500" />
+
+    <glyph unicode="&#xE189;" glyph-name="SHARUUN_CV_J_E" d="M 350,300 L 500,300 Q 600,400 500,500 L 350,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE18A;" glyph-name="SHARUUN_CV_J_I" d="M 350,300 L 500,300 Q 600,400 500,500 L 350,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE18B;" glyph-name="SHARUUN_CV_J_O" d="M 350,300 L 500,300 Q 600,400 500,500 L 350,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE18C;" glyph-name="SHARUUN_CV_J_U" d="M 350,300 L 500,300 Q 600,400 500,500 L 350,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE18D;" glyph-name="SHARUUN_CV_J_Ə" d="M 350,300 L 500,300 Q 600,400 500,500 L 350,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE18E;" glyph-name="SHARUUN_CV_Ŋ_A" d="M 400,300 L 600,350 L 650,450 L 600,550 L 400,500 Z M 400,300 L 400,500" />
+
+    <glyph unicode="&#xE18F;" glyph-name="SHARUUN_CV_Ŋ_E" d="M 400,300 L 600,350 L 650,450 L 600,550 L 400,500 Z M 400,300 L 400,500 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE190;" glyph-name="SHARUUN_CV_Ŋ_I" d="M 400,300 L 600,350 L 650,450 L 600,550 L 400,500 Z M 400,300 L 400,500 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE191;" glyph-name="SHARUUN_CV_Ŋ_O" d="M 400,300 L 600,350 L 650,450 L 600,550 L 400,500 Z M 400,300 L 400,500 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE192;" glyph-name="SHARUUN_CV_Ŋ_U" d="M 400,300 L 600,350 L 650,450 L 600,550 L 400,500 Z M 400,300 L 400,500 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE193;" glyph-name="SHARUUN_CV_Ŋ_Ə" d="M 400,300 L 600,350 L 650,450 L 600,550 L 400,500 Z M 400,300 L 400,500 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE194;" glyph-name="SHARUUN_CV_TS_A" d="M 350,300 L 550,350 L 450,450 L 550,550 L 350,500 M 600,350 L 650,450 L 600,550" />
+
+    <glyph unicode="&#xE195;" glyph-name="SHARUUN_CV_TS_E" d="M 350,300 L 550,350 L 450,450 L 550,550 L 350,500 M 600,350 L 650,450 L 600,550 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE196;" glyph-name="SHARUUN_CV_TS_I" d="M 350,300 L 550,350 L 450,450 L 550,550 L 350,500 M 600,350 L 650,450 L 600,550 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE197;" glyph-name="SHARUUN_CV_TS_O" d="M 350,300 L 550,350 L 450,450 L 550,550 L 350,500 M 600,350 L 650,450 L 600,550 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE198;" glyph-name="SHARUUN_CV_TS_U" d="M 350,300 L 550,350 L 450,450 L 550,550 L 350,500 M 600,350 L 650,450 L 600,550 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE199;" glyph-name="SHARUUN_CV_TS_Ə" d="M 350,300 L 550,350 L 450,450 L 550,550 L 350,500 M 600,350 L 650,450 L 600,550 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE19A;" glyph-name="SHARUUN_CV_CH_A" d="M 350,300 L 650,300 L 500,400 L 650,500 L 350,500 M 500,400 L 500,550" />
+
+    <glyph unicode="&#xE19B;" glyph-name="SHARUUN_CV_CH_E" d="M 350,300 L 650,300 L 500,400 L 650,500 L 350,500 M 500,400 L 500,550 M 680,200 L 400,240 L 480,280 Z" />
+
+    <glyph unicode="&#xE19C;" glyph-name="SHARUUN_CV_CH_I" d="M 350,300 L 650,300 L 500,400 L 650,500 L 350,500 M 500,400 L 500,550 M 600,280 L 440,200 L 480,280 Z" />
+
+    <glyph unicode="&#xE19D;" glyph-name="SHARUUN_CV_CH_O" d="M 350,300 L 650,300 L 500,400 L 650,500 L 350,500 M 500,400 L 500,550 M 600,200 L 440,280 L 480,200 Z" />
+
+    <glyph unicode="&#xE19E;" glyph-name="SHARUUN_CV_CH_U" d="M 350,300 L 650,300 L 500,400 L 650,500 L 350,500 M 500,400 L 500,550 M 600,240 L 440,200 L 480,240 L 440,280 Z" />
+
+    <glyph unicode="&#xE19F;" glyph-name="SHARUUN_CV_CH_Ə" d="M 350,300 L 650,300 L 500,400 L 650,500 L 350,500 M 500,400 L 500,550 M 600,240 L 480,240" />
+
+    <glyph unicode="&#xE200;" glyph-name="SHARUUN_LOG_VOKH" d="M 500,320 L 655.88,410 L 655.88,590 L 500,680 L 344.12,590 L 344.12,410 Z M 500,440 A 60,60 0 1,1 500,560 A 60,60 0 1,1 500,440 Z" />
+
+    <glyph unicode="&#xE201;" glyph-name="SHARUUN_LOG_KHAR" d="M 500,380 L 603.92,440 L 603.92,560 L 500,620 L 396.08,560 L 396.08,440 Z M 500,320 L 500,680 M 320,500 L 680,500 M 380,380 L 620,620 M 620,380 L 380,620" />
+
+    <glyph unicode="&#xE202;" glyph-name="SHARUUN_LOG_THE" d="M 500,340 A 160,160 0 1,1 500,660 A 160,160 0 1,1 500,340 Z M 380,380 L 620,620 M 620,380 L 380,620" />
+
+    <glyph unicode="&#xE203;" glyph-name="SHARUUN_LOG_XA" d="M 400,590 L 500,410 L 600,590 Z M 500,380 L 500,620 M 380,500 L 620,500" />
+
+    <glyph unicode="&#xE204;" glyph-name="SHARUUN_LOG_XHA" d="M 400,590 L 500,410 L 600,590 Z M 430,440 L 500,560 L 570,440 Z M 450,450 L 550,550 M 550,450 L 450,550" />
+
+    <glyph unicode="&#xE205;" glyph-name="SHARUUN_LOG_RUUN" d="M 500,320 A 180,180 0 1,1 500,680 A 180,180 0 1,1 500,320 Z M 500,420 A 80,80 0 1,1 500,580 A 80,80 0 1,1 500,420 Z M 400,500 L 600,500" />
+
+    <glyph unicode="&#xE206;" glyph-name="SHARUUN_LOG_VEN" d="M 350,650 L 500,350 L 650,650 Z M 500,350 L 500,200" />
+
+    <glyph unicode="&#xE207;" glyph-name="SHARUUN_LOG_MOR" d="M 0,420 L 100,500 L 0,580 M 100,420 L 200,500 L 100,580 M 400,500 L 600,500 M 0,470 L 80,500 L 0,530 Z" />
+
+    <glyph unicode="&#xE208;" glyph-name="SHARUUN_LOG_RASS" d="M 500,320 A 180,180 0 1,1 500,680 A 180,180 0 1,1 500,320 Z M 500,400 L 586.6,450 L 586.6,550 L 500,600 L 413.4,550 L 413.4,450 Z M 30,470 L 60,500 L 30,530 L 0,500 Z" />
+
+    <glyph unicode="&#xE209;" glyph-name="SHARUUN_LOG_THAR" d="M 350,350 L 650,350 L 500,650 Z M 500,350 L 500,650 M 380,500 L 620,500" />
+
+    <glyph unicode="&#xE20A;" glyph-name="SHARUUN_LOG_SHA" d="M 350,350 L 650,350 L 650,650 L 350,650 Z M 0,470 L 50,500 L 0,530 M 50,470 L 100,500 L 50,530 M 350,500 L 650,500" />
+
+    <glyph unicode="&#xE20B;" glyph-name="SHARUUN_LOG_NUR" d="M 500,320 A 180,180 0 1,1 500,680 A 180,180 0 1,1 500,320 Z M 500,420 L 569.28,460 L 569.28,540 L 500,580 L 430.72,540 L 430.72,460 Z M 450,450 L 550,550 M 550,450 L 450,550 M 20,480 L 40,500 L 20,520 L 0,500 Z" />
+
+    <glyph unicode="&#xE300;" glyph-name="SHARUUN_PERIOD" d="M 500,470 A 30,30 0 1,1 500,530 A 30,30 0 1,1 500,470 Z" />
+
+    <glyph unicode="&#xE301;" glyph-name="SHARUUN_COMMA" d="M 0,470 L 40,500 L 0,530 Z" />
+
+    <glyph unicode="&#xE302;" glyph-name="SHARUUN_SECTION" d="M 30,460 L 60,500 L 30,540 L 0,500 Z" />
+
+    <glyph unicode="A" glyph-name="A" d="M 300,650 L 500,350 L 700,650 M 380,550 L 620,550" />
+    <glyph unicode="B" glyph-name="B" d="M 350,300 L 550,300 L 600,400 L 550,500 L 350,500 Z M 350,300 L 350,500" />
+    <glyph unicode="K" glyph-name="K" d="M 350,300 L 650,300 M 350,500 L 650,500 M 350,300 L 350,500 L 550,400" />
+    <glyph unicode="R" glyph-name="R" d="M 350,300 L 600,300 L 650,400 L 600,500 L 350,500 Z M 600,500 L 650,600" />
+    <glyph unicode="S" glyph-name="S" d="M 650,300 Q 450,300 450,400 Q 450,500 650,500 M 450,400 L 650,400" />
+    <glyph unicode="T" glyph-name="T" d="M 350,300 L 650,300 M 500,300 L 500,600" />
+    <glyph unicode="V" glyph-name="V" d="M 350,300 L 500,600 L 650,300" />
+    <glyph unicode="X" glyph-name="X" d="M 350,300 L 650,600 M 650,300 L 350,600" />
+    <glyph unicode="." glyph-name="period" d="M 480,550 Q 500,570 520,550 Q 500,530 480,550" />
+    <glyph unicode="," glyph-name="comma" d="M 480,550 Q 500,570 520,550 Q 500,530 480,550 M 510,550 L 505,580" />
+    <glyph unicode="-" glyph-name="hyphen" d="M 400,500 L 600,500" />
+    <glyph unicode=" " glyph-name="space" d="" />
+
+    </font>
+  </defs>
+  <rect width="100%" height="100%" fill="none" />
+  <text x="50" y="50" font-family="ShaRuun" font-size="40">ShaRuun Font Sample</text>
+</svg>
