@@ -12,12 +12,14 @@
     "validate": "powershell -File xharuun/scripts/validate-refs.ps1",
     "validate:links": "node tools/link-validator.js",
     "validate:canon": "node tools/canon-validator.js",
-    "registry:generate": "node tools/registry-generator.js"
+    "registry:generate": "node tools/registry-generator.js",
+    "build:site": "node scripts/build-site.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "marked": "^18.0.6",
     "md-to-pdf": "^5.2.5"
   }
 }
