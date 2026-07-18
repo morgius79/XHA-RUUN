@@ -14,7 +14,7 @@
 
 Théxar-mor xa-khel — khel-mor thek-rik-ak-the mor-ven xa-khel-ak-tor xa-el. 8 tor 12 mil-ak xa-rik-ak Théxar-vex xa-el, ~2.8 mil-ak xa-rik-ak xhar-ak-ven (~28%).
 
-Ven thel-ak — mor ven-ak-mor thel-ren. Tash, Théxar-mor kha-ren-ak thel-rik-ak-rak xa-ak: rhen thel-ak ak rhen thel-ak ven-ak, thel-ren zhal-ak, ak thel-ak mor-ak ven-ak.
+Ven thel-ak — mor ven-ak-mor thel-ren. Tash, Théxar-mor kha-ren-ak-sha thel-rik-ak-thar xa-ak: rhen thel-ak ak rhen thel-ak ven-ak, thel-ren zhal-ak, ak thel-ak mor-ak ven-ak.
 
 ---
 
@@ -39,12 +39,12 @@ Théxar **3 xa-khel the ren-ak-ven** thel-el (thel-ak khel-rik-ak-ther):
 
 ## 11.2 Xa'xhal ak Xa-xhal-ak
 
-### 11.2.1 Xa'xhal ak Xa-xhal-ak
+### 11.2.1 Xa'xhal-ak ak Thel-rik Xa'xhal-ak
 
 Théxar-mor xa'xhal-ak — thel xa-khel-mor thel-ak.
 
-| Ren | Khel | Thel | Ren |
-|-----|------|------|-----|
+| Ren | Khel-rik | Xa-Thel | Ren |
+|-----|----------|---------|-----|
 | **Thel-rik xa'xhal-ak** | Thel-rik | Thel-vex | O₂ xa-ren |
 | **Khel-ren xa'xhal-ak** | H₂S → S⁰ | Thal khel-ren | Khel-ren ren |
 | **Xha-ren xa'xhal-ak** | CH₄ | Xa-vel-ak the | Xha ren |
@@ -73,7 +73,7 @@ Théxar-mor xa-the-ak — Khar'Vex-mor thel-rik-ven thel-ren-ak. Thel thel-rik x
 
 > **MOR XHA**
 >
-> Théxar-mor xa-the-ak — **thel-rik ak khel-rik**, khel-rik-ak mor. Khel-mor thel-rik-mor thel: chromophyll thel-rik thel-thar (570 nm) thel-el ak thel-rik-ak thel-el tor-ak.
+> Théxar-mor xa-the-ak — **thel-rik ak khel-rik**, khel-rik-ak mor. Khel-mor thel-rik thel-thar: chromophyll thel-rik thel-thar (570 nm) thel-el ak thel-rik-ak thel-el tor-ak.
 
 ### 11.3.2 Xa-The Mor Ren-ak
 

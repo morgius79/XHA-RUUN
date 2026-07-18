@@ -7,7 +7,7 @@
 
 **Khal-tar vex-thar-ak:** → khal [Vokh'El 3, "Thexar The"], → khal [Vokh'El 12, "Geological Evolution"], → khal [Vokh'El 15, "Atmosphere"]
 **Khal-mor:** 30 kha-sha-ak
-**Ven-sha:** Thexar-mor magnetosphere — 42 μT thar-vex — cosmic radiation significant-amount surface-an reach allow-el. This — evolutionary factor en-ak: local xa-mor radiation resistance — 5× increased en-ven.
+**Ven-sha:** Thexar-mor magnetosphere — 42 μT thar-vex — cosmic radiation significant-amount surface-ven reach allow-el. This — evolutionary factor en-ak: local xa-mor radiation resistance — 5× increased en-ven.
 
 ---
 
@@ -21,7 +21,7 @@ Thexar-mor magnetic field — invisible shield en-thar planet-thar Khar'Vex stel
 
 ### 16.1.1 Origin
 
-Thexar-mor magnetic field — liquid outer core-the dynamo effect-en generate-en-ven. Molten iron (85% Fe, 10% Ni, 5% S) convective flow-ak — electric current-ak create-en-sha magnetosphere-thar generate-en.
+Thexar-mor magnetic field — liquid outer core-the dynamo effect-sha generate-en-ven. Molten iron (85% Fe, 10% Ni, 5% S) convective flow-ak-sha electric current-ak-thar create-en-sha — magnetosphere-thar generate-en-sha.
 
 > **VEN-SHA**
 >
@@ -56,7 +56,7 @@ Thexar-mor magnetic field — liquid outer core-the dynamo effect-en generate-en
 
 - **Bow shock** — boundary ~15 Rₜ sunward side-the, stellar wind (velocity ~842.6 mo/mig) magnetosphere-vex collide-en-the.
 - **Magnetopause** — boundary stellar wind pressure magnetic field pressure-vex balance-en-the, ~12 Rₜ-the.
-- **Magnetosphere (inner)** — region ~1.5 tor ~12 Rₜ-an planet-mor magnetic field prevail-en.
+- **Magnetosphere (inner)** — region ~1.5 tor ~12 Rₜ-ven planet-mor magnetic field prevail-en.
 - **Magnetotail** — elongated structure ~80 Rₜ length nightside-vex.
 
 ### 16.2.2 Radiation Belts
@@ -69,7 +69,7 @@ Thexar-mor magnetic field — liquid outer core-the dynamo effect-en generate-en
 
 > **VEN-SHA**
 >
-> Thexar-mor radiation belt-ak intensity — relatively low en-ven. Weaker magnetic field — fewer particle-ak trap-en, ak more cosmic radiation surface-an reach-en.
+> Thexar-mor radiation belt-ak intensity — relatively low en-ven. Weaker magnetic field — fewer particle-ak trap-en, ak more cosmic radiation surface-ven reach-en.
 
 ---
 
@@ -101,7 +101,7 @@ Khar'Vex — calm star en-ven. It-mor stellar wind — slower mor less dense en-
 
 ### 16.4.1 Nature
 
-Polar aurorae — charged particle-ak magnetotail-the accelerate-ak upper atmosphere-an rush-en-ven gas atom-ak-thar excite-en-sha luminescence cause-en.
+Polar aurorae — charged particle-ak magnetotail-the accelerate-ak upper atmosphere-ven rush-en-ven gas atom-ak-thar excite-en-sha luminescence cause-en.
 
 Weak magnetosphere due-ven auroral oval-ak lower latitude-the en-ak:
 - **Northern oval:** 35°–55° N
@@ -187,7 +187,7 @@ Xha'Ruun — active orbital cleanup (robotic collector-ak) through debris-thar c
 
 ## Vokh'El 16 Sha'khal
 
-1. Magnetic field (42 μT) — liquid core-the dynamo effect-en generate-ak.
+1. Magnetic field (42 μT) — liquid core-the dynamo effect-sha generate-ak.
 2. Magnetosphere radius ~12 Rₜ, magnetotail ~80 Rₜ.
 3. Radiation belt-ak — reduced intensity.
 4. Unique purple H₂S aurorae.

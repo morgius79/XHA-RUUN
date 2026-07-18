@@ -13,7 +13,7 @@
 
 ## Vexen
 
-Ur-sha Théxar-mor moryn-mor ven khal ven-thar en-el. Xar-mor vexsha 67%-thar thal-ak-sha vexen-el. Théxar-mor thal-ak kav en-el, thal kharxar mor thal mor en-el. Kharxar-ak mok xar-ak tor-sha circulation complex-thar form-el, vex ur thesh-ven unique.
+Ur-sha Théxar-mor moryn-mor ven khal ven-thar en-el. Xar-mor vexsha 67%-thar thal-ak-sha vexen-el. Théxar-mor thal-ak kav en-el, thal kharxar mor-thar mor-en-el. Kharxar-ak mok xar-ak tor-sha circulation complex-thar form-el, vex ur thesh-ven unique.
 
 Théxar-mor hydrosphere venen-el:
 - Thal-ak kav, vex circulation mok salinity regime-ak kav ven
@@ -40,7 +40,7 @@ Théxar-mor hydrosphere venen-el:
 > | Salinity | 3.5% |
 > | pH | 7.9–8.1 |
 
-Ocean Thalas-sha xar-vex ur-mor thal khar-thar en-el, Ruv Thel vex-thar vexen-el. Mor-mor ven ancient root *thal-tor tharan-el (thal, "thal").
+Ocean Thalas-sha xar-vex ur-mor thal khar-thar en-el, Ruv Thel vex-thar vexen-el. Mor-mor ven ancient root *thal-tor tharan-el (thal, "depth").
 
 ### 14.1.1 Bathymetry
 
@@ -107,11 +107,11 @@ Sar serr mok productive khar en-el. Surface themp average 58.1°X. Biological pr
 
 ### Sar Ven-Khal
 
-Ven-Khal-sha thal-ak kav-thar thalar-en sar mor sar el. Ven-Khal Strait (thin point-the 85 mo) xar-mor khalven maritime khar en-el.
+Ven-Khal sar mor sar el, thal-ak kav-thar thalar-en. Ven-Khal Strait (thin point-the 85 mo) xar-mor khalven maritime khar en-el.
 
 > **KHAL VEN**
 >
-> Ven-Khal Strait-the thal-ak between ur exchange total approximately 8% tharan-el.
+> Thal-ak-mor ur exchange total approximately 8% Ven-Khal Strait-the ren-el.
 
 ---
 
@@ -156,11 +156,11 @@ Théxar-mor thermohaline circulation global — "thal thrak" heat-thar redistrib
 
 ### 14.5.2 Coral Reef-ak
 
-Théxar-mor coral morthalor-ak calcite thar mor silicon-calcium composite-thar use-el. Reef tor khar — **Great Thalas Reef** (~650 mo Kharak south vex).
+Théxar-mor coral morthalor-ak-sha calcite-thar mor-use-el, thok silicon-calcium composite-thar use-el. Reef tor khar — **Great Thalas Reef** (~650 mo Kharak south vex).
 
 ### 14.5.3 Hydrothermal Vent-ak
 
-Khar-ak 12 hydrothermal vent field-ak discovered en-ak. Morthalor-ak H₂S chemosynthesis-vex based en-ak, 6-letter genetic code vex.
+12-thar min hydrothermal vent field-ak discovered en-ak-rass. Morthalor-ak-sha H₂S chemosynthesis-vex base-thar kharren-el, 6-letter genetic code vex.
 
 ---
 
@@ -190,11 +190,11 @@ Kharn-ak khar:
 
 ### 14.7.2 Moryn — Thal Intelligence
 
-Théxar-mor thal-ak-sha Moryn-mor habitat-thar en-el — xar-mor mor moryn kav. Ocean Gharra-mor thal ur thesh-the primarily talen-en. Moryn mok Xha'ri between thalar interface station-ak-tor, 244–610 sha depth-the, conducted en-el.
+Théxar-mor thal-ak-sha Moryn-mor habitat-thar en-el — xar-mor mor moryn kav. Ocean Gharra-mor thal ur thesh-the primarily talen-en. Moryn mok Xha'ri interface station-ak-tor, 244–610 sha depth-the, thalar en-el.
 
 ### 14.7.3 Khel Thesh Tor
 
-**Gharra Deep Protected Zone** (0.51 million mo²) thal ur thash-ak-thar vexen-el. Industrial activity any mor-venen-el, mok scientific research thenen strictly regulated en-el.
+**Gharra Deep Protected Zone** (0.51 million mo²) thal ur thash-ak-thar vexen-el. Industrial activity-sha mor-venen-el, mok scientific research-sha strict regulation-thar thenen-el.
 
 ---
 
