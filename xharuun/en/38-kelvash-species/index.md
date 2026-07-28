@@ -16,7 +16,7 @@ Kel'vash are the second sentient species of Théxar, a silicon-organic life form
 
 The discovery of Kel'vash sentience was one of the pivotal moments in Xha'Ruun civilization: confirmation that the path to intelligence is not singular. → see [Vol.II, Ch.14, §14.2]
 
-![Portrait of the Kel'vash species](../assets/art/ART-000004-kelvash-portrait.svg)
+![Portrait of the Kel'vash species](../assets/art/ART-000007-kelvash-portrait-raster.png)
 
 *Fig. 38.0. A Kel'vash individual.*
 

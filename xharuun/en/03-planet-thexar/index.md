@@ -16,6 +16,10 @@ Thexar (/ˈθɛk.sɑr/ — "earth-mother" in ancient Xha'Ruun) is the third plan
 
 From a planetological perspective, Thexar is distinguished by longer days, a more ancient and calm geological regime, a different atmospheric composition, and two small moons. These features shaped the unique evolutionary trajectory of local life — and, ultimately, intelligence.
 
+![Landscape of Théxar](../assets/art/ART-000009-thexar-landscape.png)
+
+*Fig. 3.0. Sunset on Théxar: mountains, ocean, and both moons — Serrin and Thel.*
+
 ---
 
 ## 3.1 Origin and Geological Evolution

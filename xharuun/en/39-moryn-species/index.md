@@ -16,7 +16,7 @@ Moryn are the third sentient species of Théxar, inhabiting the lightless depths
 
 Their existence is a living refutation of the idea that intelligence requires land, fire, and writing. → see [Vol.II, Ch.14, §14.3]
 
-![Portrait of the Moryn species](../assets/art/ART-000005-moryn-portrait.svg)
+![Portrait of the Moryn species](../assets/art/ART-000008-moryn-portrait-raster.png)
 
 *Fig. 39.0. A Moryn individual in the depths of Gharra.*
 

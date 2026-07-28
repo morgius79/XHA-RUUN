@@ -16,9 +16,9 @@ Kel'vash — второй разумный вид Théxar, кремний-орг
 
 Открытие разумности Kel'vash стало одним из важнейших моментов в истории цивилизации Xha'Ruun: подтверждением того, что путь к разуму не один. → см. [Том II, Гл.14, §14.2]
 
-![Портрет вида Kel'vash](../../registry/art/ART-000004-kelvash-portrait.svg)
+![Портрет вида Kel'vash](../../registry/art/ART-000007-kelvash-portrait-raster.png)
 
-*Илл. 38.0. Представитель вида Kel'vash — [ART-000004](../../registry/art/ART-000004.md).*
+*Илл. 38.0. Представитель вида Kel'vash — [ART-000007](../../registry/art/ART-000007.md). Схематичная векторная версия: [ART-000004](../../registry/art/ART-000004.md).*
 
 ---
 
