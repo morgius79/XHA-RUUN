@@ -9,26 +9,14 @@ const path = require('path');
         { path: path.join(root, 'xharuun', 'build', 'full-encyclopedia.md') },
         {
             dest: path.join(root, 'xharuun', 'build', 'full-encyclopedia.pdf'),
+            stylesheet: [path.join(root, 'xharuun', 'templates', 'print.css')],
             pdf_options: {
-                format: 'A4',
-                margin: { top: '20mm', bottom: '20mm', left: '15mm', right: '15mm' },
+                format: 'A5',
+                margin: { top: '18mm', bottom: '15mm', left: '15mm', right: '15mm' },
                 printBackground: true,
                 displayHeaderFooter: true,
                 headerTemplate: '<div></div>',
-                footerTemplate: '<div style="font-size:8px;text-align:center;width:100%;color:#888;">Xha-Ruun Encyclopedia v1.2.0 — Page <span class="pageNumber"></span> of <span class="totalPages"></span></div>'
-            },
-            styles: {
-                body: 'font-family: "Segoe UI", Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #222;',
-                h1: 'color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 5px; font-size: 20pt;',
-                h2: 'color: #2a5a8c; font-size: 16pt; margin-top: 20px;',
-                h3: 'color: #3a7abc; font-size: 13pt;',
-                'blockquote': 'border-left: 3px solid #5a8abc; padding-left: 15px; color: #555; font-style: italic;',
-                'table, th, td': 'border: 1px solid #ccc; border-collapse: collapse; padding: 5px 8px;',
-                th: 'background-color: #1a3a5c; color: white;',
-                'tr:nth-child(even)': 'background-color: #f0f4f8;',
-                pre: 'background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 10px; font-size: 9pt; overflow-x: auto;',
-                code: 'font-family: "Consolas", "Courier New", monospace; font-size: 9pt;',
-                '.page-break': 'page-break-before: always;'
+                footerTemplate: '<div style="font-size:7.5pt;width:100%;padding:0 15mm;display:flex;justify-content:space-between;color:#8b6f4e;font-family:Georgia,serif;"><span>Xha\'Ruun · Том I: Вселенная</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>'
             }
         }
     );

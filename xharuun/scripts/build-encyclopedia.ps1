@@ -13,25 +13,11 @@ $OutputFile = Join-Path $XharuunDir "build\full-encyclopedia.md"
 $script:fileCount = 0
 $script:totalLines = 0
 
-function Add-Content {
-    param([string]$Text)
-    $script:lines += $Text
-}
-
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "  XHA'RUUN ENCYCLOPEDIA BUILDER" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 
-$script:lines = @()
-$script:lines += "# Энциклопедия цивилизации Xha-Ruun"
-$script:lines += ""
-$script:lines += "**Полная компиляция** | Версия 1.0.0 | $(Get-Date -Format 'dd.MM.yyyy')"
-$script:lines += ""
-$script:lines += "---"
-$script:lines += ""
-
-$fileOrder = @(
-    "CANON.md",
+$chapterFiles = @(
     "01-universe-spec\index.md",
     "02-star-system\index.md",
     "03-planet-thexar\index.md",
@@ -71,7 +57,10 @@ $fileOrder = @(
     "37-ecological-zones\index.md",
     "38-kelvash-species\index.md",
     "39-moryn-species\index.md",
-    "40-three-species-accord\index.md",
+    "40-three-species-accord\index.md"
+)
+
+$appendixFiles = @(
     "appendices\timeline.md",
     "appendices\glossary.md",
     "appendices\names.md",
@@ -79,6 +68,57 @@ $fileOrder = @(
     "appendices\biological-reference.md",
     "appendices\index.md"
 )
+
+# ---- Pass 1: extract chapter titles for the table of contents ----
+$toc = @()
+foreach ($relativePath in $chapterFiles) {
+    $fullPath = Join-Path $XharuunDir $relativePath
+    if (-not (Test-Path $fullPath)) { continue }
+    $firstLine = (Get-Content -Path $fullPath -TotalCount 1 -Encoding UTF8)
+    $title = $firstLine -replace '^#\s*', ''
+    $toc += $title
+}
+
+# ---- Front matter: title page, preface, table of contents ----
+$script:lines = @()
+$script:lines += "# Энциклопедия цивилизации Xha'Ruun"
+$script:lines += ""
+$script:lines += "## Том I: Вселенная"
+$script:lines += ""
+$script:lines += "**Полная компиляция натуралистического обзора** · $($chapterFiles.Count) глав + приложения"
+$script:lines += ""
+$script:lines += "Версия v0.5.0 (Release Candidate) · Сборка: $(Get-Date -Format 'dd.MM.yyyy')"
+$script:lines += ""
+$script:lines += "---"
+$script:lines += ""
+$script:lines += "<div style='page-break-before: always;'></div>"
+$script:lines += ""
+$script:lines += "## Предисловие"
+$script:lines += ""
+$script:lines += "Эта книга — плод многолетнего (по меркам её собственного мира) труда Гильдии Естественной Истории: полный обзор планеты Théxar, звёздной системы Khar'Vex и трёх разумных видов, разделивших между собой сушу, недра и глубины единственной известной обитаемой планеты этой системы."
+$script:lines += ""
+$script:lines += "Том I задуман как введение в целое: здесь по одному разу говорится обо всём — от фундаментальных констант вселенной до последнего из трёх видов, вступивших в Совет Единства. Последующие тома (II-X) разворачивают отдельные нити этого обзора в глубину: историю, общество, язык, культуру, технологии и природу Théxar."
+$script:lines += ""
+$script:lines += "Как и любой труд такого масштаба, он не свободен от шероховатостей — часть из них зафиксирована и сознательно оставлена как «мягкий канон» (см. PROJECT_CONTEXT.md §11.6) до централизованной правки. Это не помешает чтению, но добросовестность требует не скрывать это от читателя."
+$script:lines += ""
+$script:lines += "---"
+$script:lines += ""
+$script:lines += "<div style='page-break-before: always;'></div>"
+$script:lines += ""
+$script:lines += "## Оглавление"
+$script:lines += ""
+for ($i = 0; $i -lt $toc.Count; $i++) {
+    $num = $i + 1
+    $script:lines += "$num. $($toc[$i])"
+}
+$script:lines += ""
+$script:lines += "---"
+$script:lines += ""
+$script:lines += "<div style='page-break-before: always;'></div>"
+$script:lines += ""
+
+# ---- Pass 2: append CANON.md, all chapters, all appendices ----
+$fileOrder = @("CANON.md") + $chapterFiles + $appendixFiles
 
 foreach ($relativePath in $fileOrder) {
     $fullPath = Join-Path $XharuunDir $relativePath
