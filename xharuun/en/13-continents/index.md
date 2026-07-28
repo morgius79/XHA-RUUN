@@ -55,6 +55,10 @@ The total land area of Théxar is ~3.3 million mo² — about 33% of the planet'
 
 *Fig. 13.1. Schematic map of Théxar. Numbers in parentheses indicate continent area in million mo².*
 
+![Map of the planet Théxar](../assets/art/ART-000001-planetary-map.svg)
+
+*Fig. 13.1a. Full vector map of Théxar.*
+
 > **TABLE 13.1: Comparative characteristics of continents**
 >
 > | Parameter | Kharak | Rhuval | Vexar | Islands |

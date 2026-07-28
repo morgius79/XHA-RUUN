@@ -28,6 +28,23 @@ function extractTitle(content) {
 }
 
 console.log('Building Xha\'Ruun site...');
+
+// Copy static assets (illustrations etc.) verbatim
+function copyDir(src, dest) {
+  if (!fs.existsSync(src)) return 0;
+  let copied = 0;
+  fs.mkdirSync(dest, { recursive: true });
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const s = path.join(src, entry.name);
+    const d = path.join(dest, entry.name);
+    if (entry.isDirectory()) copied += copyDir(s, d);
+    else { fs.copyFileSync(s, d); copied++; }
+  }
+  return copied;
+}
+const assetsCopied = copyDir(path.join(SRC, 'assets'), path.join(DEST, 'assets'));
+console.log(`Copied ${assetsCopied} asset file(s).`);
+
 const files = collectFiles(SRC);
 let count = 0;
 
@@ -36,9 +53,12 @@ for (const { fullPath, relPath } of files) {
     const md = fs.readFileSync(fullPath, 'utf-8');
     const title = extractTitle(md);
     const body = marked.parse(md);
+    const depth = relPath.split('/').length - 1;
+    const base = depth > 0 ? '../'.repeat(depth) : './';
     const html = TEMPLATE
       .replace('{{title}}', title)
       .replace('{{breadcrumb}}', title)
+      .replace(/\{\{base\}\}/g, base)
       .replace('{{content}}', body);
     const destPath = path.join(DEST, relPath.replace('index.md', 'index.html'));
     fs.mkdirSync(path.dirname(destPath), { recursive: true });

@@ -16,6 +16,10 @@ Xha'Ruun (full form: **Xha'Ruun-Vokh** — "thinking people of great harmony") a
 
 Xha'Ruun are a product of 4 billion cycles of evolution in unique conditions: under an orange sky, at lower gravity, with sulfur-rich biochemistry and elevated background radiation. Every feature of their anatomy and physiology is a response to the challenges of the Thexar environment.
 
+![Portrait of the Xha'Ruun species](../assets/art/ART-000003-xharuun-portrait.svg)
+
+*Fig. 5.0. A Xha'Ruun individual.*
+
 ---
 
 ## 5.1 Evolutionary Origin

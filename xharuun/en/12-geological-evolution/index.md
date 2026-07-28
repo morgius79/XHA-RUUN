@@ -163,6 +163,10 @@ Théxar has active plate tectonics — the movement of lithospheric plates acros
 
 *Fig. 12.2. Diagram of Théxar's tectonic plates. 10 major plates, 3 of which are continental.*
 
+![Tectonic plates of Théxar](../assets/art/ART-000002-tectonic-plates.svg)
+
+*Fig. 12.2a. Full vector diagram of the plates.*
+
 ### 12.3.1 Plate List
 
 > **TABLE 12.2: Lithospheric Plates of Théxar**

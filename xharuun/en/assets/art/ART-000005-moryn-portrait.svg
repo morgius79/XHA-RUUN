@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" font-family="Georgia, 'IBM Plex Serif', serif">
+  <defs>
+    <radialGradient id="deepwater" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#020508"/>
+    </radialGradient>
+    <linearGradient id="morynbody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a3a4a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#141e28" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#5ec9e8" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#5ec9e8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c94c8f" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c94c8f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7ee87e" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#7ee87e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softglow"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="600" height="720" fill="url(#deepwater)"/>
+  <rect x="16" y="16" width="568" height="688" fill="none" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- distant particulate / marine snow -->
+  <g fill="#3a597a" opacity="0.5">
+    <circle cx="90" cy="140" r="1.5"/><circle cx="150" cy="90" r="1"/><circle cx="480" cy="160" r="1.5"/>
+    <circle cx="520" cy="260" r="1"/><circle cx="80" cy="320" r="1.5"/><circle cx="540" cy="420" r="1"/>
+    <circle cx="120" cy="560" r="1.5"/><circle cx="460" cy="580" r="1"/><circle cx="300" cy="120" r="1"/>
+  </g>
+
+  <!-- gelatinous elongated body, streamlined -->
+  <path d="M300,220
+           C240,240 200,300 210,380
+           C215,440 240,500 280,540
+           C260,560 250,580 260,600
+           C280,585 300,580 300,580
+           C300,580 320,585 340,600
+           C350,580 340,560 320,540
+           C360,500 385,440 390,380
+           C400,300 360,240 300,220 Z"
+        fill="url(#morynbody)" stroke="#3a597a" stroke-width="1.5"/>
+
+  <!-- trailing fin-tendrils -->
+  <path d="M255,530 C230,560 210,600 215,650" fill="none" stroke="#2a3a4a" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M345,530 C370,560 390,600 385,650" fill="none" stroke="#2a3a4a" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M300,580 C300,610 300,640 300,665" fill="none" stroke="#2a3a4a" stroke-width="7" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- dorsal sensory crest (electroreception) -->
+  <path d="M300,222 C295,200 305,200 300,222" fill="none" stroke="#5b7db5" stroke-width="3" opacity="0.7"/>
+
+  <!-- bioluminescent pattern — the "language": chain of glowing marks along the body -->
+  <g filter="url(#softglow)">
+    <circle cx="300" cy="260" r="16" fill="url(#glow1)"/>
+    <circle cx="270" cy="310" r="12" fill="url(#glow2)"/>
+    <circle cx="330" cy="310" r="12" fill="url(#glow2)"/>
+    <circle cx="300" cy="360" r="18" fill="url(#glow3)"/>
+    <circle cx="260" cy="410" r="10" fill="url(#glow1)"/>
+    <circle cx="340" cy="410" r="10" fill="url(#glow1)"/>
+    <circle cx="300" cy="460" r="14" fill="url(#glow2)"/>
+    <circle cx="280" cy="500" r="8" fill="url(#glow3)"/>
+    <circle cx="320" cy="500" r="8" fill="url(#glow3)"/>
+  </g>
+  <!-- sharper points of light on top of glow -->
+  <g fill="#eaffff">
+    <circle cx="300" cy="260" r="3"/>
+    <circle cx="270" cy="310" r="2.2"/>
+    <circle cx="330" cy="310" r="2.2"/>
+    <circle cx="300" cy="360" r="3.4"/>
+    <circle cx="260" cy="410" r="2"/>
+    <circle cx="340" cy="410" r="2"/>
+    <circle cx="300" cy="460" r="2.6"/>
+  </g>
+
+  <!-- light "trails" suggesting motion / the dance-speech -->
+  <g stroke="#5ec9e8" stroke-width="1" opacity="0.35" fill="none">
+    <path d="M270,310 Q250,340 260,380"/>
+    <path d="M330,310 Q350,340 340,380"/>
+  </g>
+
+  <!-- rudimentary photoreceptor patch (not eyes) -->
+  <ellipse cx="300" cy="250" rx="10" ry="5" fill="#141e28" stroke="#3a597a" stroke-width="1" opacity="0.8"/>
+
+  <!-- caption -->
+  <text x="30" y="672" fill="#c9a84c" font-size="18" font-weight="bold">ART-000005 · Moryn</text>
+  <text x="30" y="692" fill="#8a8676" font-size="10">Биолюминесцентный язык · глубины Gharra · согласовано с Гл.39</text>
+</svg>
