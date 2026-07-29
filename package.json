@@ -13,7 +13,8 @@
     "validate:links": "node tools/link-validator.js",
     "validate:canon": "node tools/canon-validator.js",
     "registry:generate": "node tools/registry-generator.js",
-    "build:site": "node scripts/build-site.js"
+    "build:site": "node scripts/build-site.js",
+    "build:md:node": "node scripts/build-md.js"
   },
   "keywords": [],
   "author": "",
