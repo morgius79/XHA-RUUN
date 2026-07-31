@@ -8,7 +8,7 @@ const preface = `# Xha'Ruun: Энциклопедия цивилизации
 
 **Том I: Вселенная**
 
-Версия v0.5.0 (Release Candidate) · Сборка: ${new Date().toLocaleDateString('ru-RU')}
+Версия v1.0.0 · Сборка: ${new Date().toLocaleDateString('ru-RU')}
 
 ---
 

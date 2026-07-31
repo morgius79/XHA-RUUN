@@ -7,3 +7,19 @@ node_modules/
 # Xha'Ruun build outputs
 xharuun/build/
 xharuun/sharuun/
+
+# VPN / infra (local server config)
+Caddyfile.tmp
+*.conf
+*.sh
+*.py
+awg/
+iptables*.sh
+setup-*.sh
+fix-*.sh
+gen-*.sh
+gen-*.py
+test-*.sh
+tmp-*.sh
+add-*.sh
+desktop-*.conf
