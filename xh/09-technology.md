@@ -274,13 +274,13 @@ Somatic cell-ak-mor thurmor vex-mor-en legal en mor thur-mor thurthel-ven khar-v
 | Year | Achievement |
 |------|-------------|
 | +480 | First orbital flight (Thash-Ven) |
-| +510 | Landing on Serrin |
 | +620 | Probe to Xhel |
 | +750 | Reconnaissance of asteroid belt |
+| +1,200 | Landing on Serrin |
 | +1,200 | Landing on Thalass (moon of Rhuun) |
 | +1,550 | Probe to Koss |
-| +2,100 | Orbital elevator |
 | +2,200 | Base on Xhel |
+| +3,000 | Orbital elevator |
 | +3,500 | Probe to heliosphere boundary |
 | **+3,800** | **Interstellar probe** |
 
@@ -431,7 +431,7 @@ Tharak Khar-vex (−2,100 – −750) ecological collapse-tor thor-ak-ven (thur-
 ### Established Facts (for CANON.md)
 
 - Thermonuclear fusion: +1,420 y.c. — CONFIRMED
-- Orbital elevator: +2,100 y.c. — CONFIRMED
+- Orbital elevator: +3,000 y.c. — CONFIRMED
 - Interstellar probe ("Nur-Vex"): +3,800 y.c. — CONFIRMED
 - Kharinium (Kh, Z=127), vexanium (Vx, Z=128), tharinium (Thr, Z=129), nurinium (Nur, Z=130) — CONFIRMED
 - Civilization type: ~0.78 on Kardashev scale — CONFIRMED

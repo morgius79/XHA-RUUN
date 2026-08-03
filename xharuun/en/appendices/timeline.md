@@ -97,7 +97,6 @@
 | 0 | Introduction of the unified calendar |
 | +250 | First satellite (artificial) |
 | +480 | **First orbital flight** (Thash-Ven) |
-| +510 | First landing on Serrin |
 | +620 | Automated probe to Xhel |
 | +750 | Exploration of the asteroid belt |
 | +820 | First asteroid mining rig |
@@ -110,14 +109,17 @@
 | 0 (+850) | Foundation of the Council of Unity |
 | 100 (+950) | Universal literacy (law) |
 | 250 (+1,100) | First flyby of the asteroid belt (mapping) |
+| 350 (+1,200) | First landing on Serrin |
 | 350 (+1,200) | First landing on Thalass (moon of Rhuun) |
 | 450 (+1,300) | Medical genetics (correction of hereditary diseases) |
 | 570 (+1,420) | **Controlled thermonuclear fusion** |
 | 700 (+1,550) | Probe to Koss |
 | 950 (+1,800) | First quantum computer |
-| 1,250 (+2,100) | **Orbital elevator** (equator) |
+| 1,250 (+2,100) | First landing on Thel |
 | 1,350 (+2,200) | Foundation of the "Xhel-Aero" base |
 | 1,950 (+2,800) | Industrial mining on Veksarr |
+| 2,150 (+3,000) | **Orbital elevator** (equator) |
+| 2,450 (+3,300) | Permanent base on Thel (He-3 mining) |
 | 2,650 (+3,500) | Probe to the heliosphere boundary |
 | 2,950 (+3,800) | **Launch of the interstellar probe "Nur-Vex"** |
 | **3,178** (+4,028) | **PRESENT TIME** |

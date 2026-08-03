@@ -130,7 +130,7 @@ Fragmentation:
 | Date | Event |
 |------|-------|
 | **+480** | **First orbital flight** (Thash-Ven) |
-| +510 | First Serrin landing |
+| +520 | First satellite |
 | +750 | Asteroid belt exploitation |
 
 ---
@@ -143,9 +143,11 @@ Fragmentation:
 
 | Date | Achievement |
 |------|-------------|
+| +1,200 | First Serrin landing |
 | +1,420 | **Controlled thermonuclear fusion** |
 | +1,800 | Quantum computer |
-| +2,100 | First orbital elevator |
+| +2,100 | First landing on Thel |
+| +3,000 | First orbital elevator |
 | **+3,800** | **Interstellar probe launch** |
 
 **Present (+4,028 E.U.):**

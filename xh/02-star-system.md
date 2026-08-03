@@ -204,8 +204,8 @@ Dwarf planet. Eccentric orbit (0.21). Water mor methane ice.
 | Mor | Event |
 |------|-------|
 | +480 | First orbital flight |
-| +510 | First Serrin landing |
 | +750 | First asteroid belt mapping |
+| +1,200 | First Serrin landing |
 | +1,200 | Thalass landing |
 | +3,800 | Interstellar probe launch |
 | **+4,028** | **Present** |

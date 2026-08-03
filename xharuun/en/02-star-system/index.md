@@ -479,10 +479,10 @@ The Xha'Ruun civilization has by the present time (4,028 Era of Unity) explored 
 > | Year | Event |
 > |------|-------|
 > | +480 | First orbital flight (Thexar) |
-> | +510 | First landing on Serrin (moon) |
 > | +620 | First flyby of Vax |
 > | +750 | First orbiter at Xhel |
 > | +1,100 | First asteroid belt flyby, mapping of Veksarr |
+> | +1,200 | First landing on Serrin (moon) |
 > | +1,200 | Landing on Thalass (moon of Rhuun) |
 > | +1,550 | Probe reached Koss |
 > | +1,800 | Flyby of Phor |

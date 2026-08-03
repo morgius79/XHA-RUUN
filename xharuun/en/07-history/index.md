@@ -311,7 +311,7 @@ The Renaissance Era — the second scientific flourishing:
 | Date | Event | Details |
 |------|-------|---------|
 | **+480** | **First orbital flight** | Thash-Ven on ship "Khar-Vex-1" |
-| +510 | First landing on Serrin | Habitable module |
+| +520 | First satellite | "Ser-Mor" |
 | +620 | First flight to Xhel | Automatic probe |
 | +750 | Exploitation of asteroid belt | First mine on Veksarr |
 | +850 | Foundation of the Council of Unity | New form of government |
@@ -339,19 +339,20 @@ The Renaissance Era — the second scientific flourishing:
 
 | Date | Achievement | Significance |
 |------|-------------|--------------|
-| +1,200 | First landing on Thel | Second moon |
+| +1,200 | First landing on Serrin | Habitable module |
 | +1,420 | **Controlled thermonuclear fusion** | Practically inexhaustible energy |
 | +1,800 | Quantum computer | Bio-optical hybrid |
-| +2,100 | First orbital elevator (equator) | Space cargo flow |
+| +2,100 | First landing on Thel | Second moon |
 | +2,200 | Base on Xhel (aerostat) | Research station |
 | +2,800 | Drilling station on Veksarr | Industrial mining |
+| +3,000 | First orbital elevator (equator) | Space cargo flow |
 | +3,500 | Probe to heliosphere boundary | Edge of the system |
 | **+3,800** | **Launch of interstellar probe** | To the nearest star |
 
 ### 7.7.3 Social Development
 
 The Era of Unity is characterized by:
-- Stable population growth (from 1.2 billion to 2.8 billion)
+- Stable population growth (from ~0.4 billion to ~2.8 billion)
 - Eradication of hunger (fusion energy + automation)
 - High level of education (universal literacy)
 - Cultural flourishing (literature, music, architecture)
