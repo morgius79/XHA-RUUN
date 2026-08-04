@@ -183,7 +183,7 @@ The First Empire left behind monumental structures:
 ### 7.4.5 Decline
 
 By **−2,500 y.c.** the First Empire shows signs of decline:
-- Overpopulation (~1.1 billion by the end of the era)
+- Demographic pressure (~18 million on Kharak by the end of the era)
 - Resource depletion (deforestation, soil erosion)
 - Climatic changes (little ice age on Thexar)
 - Political corruption and separatism
@@ -208,7 +208,7 @@ After the fall of the Empire came an era of fragmentation:
 - Disintegration into ~200 independent city-states and clan territories
 - Loss of centralized knowledge (First Library plundered)
 - Technological regression (loss of steel and glass secrets)
-- Demographic collapse (population reduced to ~400 million)
+- Demographic collapse (planet-wide population reduced to ~400 million; Kharak core: ~4 million)
 - Resource wars between clans
 
 #### 7.5.2.1 Clan War (−2,100 – −1,950)
@@ -377,41 +377,40 @@ Current moment in history: Xha'Ruun civilization stands on the threshold of the 
 > **TABLE 7.8: Population Growth of Thexar**
 
 ```
-    CYCLES OF PROSPERITY AND CRISIS IN XHA'RUUN HISTORY
+    POPULATION GROWTH OF XHA'RI (in billions; species Xha'ri)
 
     Growth ↑
+    3.0 │                                      ██████████
+        │                                      ██████████
+    2.0 │                                      ██████████  Era
+        │                                      ██████████  of Unity
+    1.0 │                                      ██████████  (≤ 0.3%/year)
+        │                                      ██████████
+    0.4 │                                ████████████████
+        │                                ██
+    0.0 │────████████████████████████████████████████████████
+        │ History before +850       Council    Present
+        │ (Empire peak 18 million,   +850       +4,028
+        │  crisis 4 million)         400 million 2.8 billion
         │
-    1.2 │    ██
-        │    ██
-    1.0 │    ██        ╔══ Flourishing Era ═══╗
-        │    ██        ║                       ║
-    0.8 │    █████████ ║    Population         ║
-        │    ║        ║    growth              ║
-    0.6 │    ║        ║    to 1.1 billion      ║
-        │    ║        ║                        ║
-    0.4 │    ║        ╚═══ ════════════════════╝
-        │    ██               │   ██
-    0.2 │    ██               │   ██    ████████
-        │    ██               ▼   ██    ║
-    0.0 │────██───────────────────████──║██████████████
-        │ Pre-civ. Early   Flourishing  Crisis Ren.  Unity
-        │ −12,000 −9,800   −6,200     −2,100 −750  +850  +4,028
-        │
-          ════ Prosperity    ███ Crisis/Fall
+        Before the Council of Unity, Xha'ri population never
+        exceeded ~18 million — on this scale early history
+        is practically a zero line.
 ```
 
 *Fig. 7.8. Cycles of demographic growth and decline. Each major crisis is followed by a period of recovery. The Era of Unity is the longest period of stable growth.*
 
-| Period | Year | Population | Growth Rate | Note |
-|--------|------|------------|-------------|------|
-| Pre-civ. | −11,000 | ~2 million | — | |
-| Early civ. | −7,000 | ~40 million | Slow | |
-| Flourishing (peak) | −2,500 | ~1.1 billion | Fast | Empire |
-| Crisis (trough) | −1,900 | ~400 million | Decline | |
-| Renaissance | 0 | ~800 million | Moderate | Recovery |
-| Era of Unity | +1,000 | ~1.5 billion | Moderate | Stability |
-| Era of Unity | +2,000 | ~2.0 billion | Moderate | |
-| **Present** | **+4,028** | **~2.8 billion** | **0.3%/year** | **Stable** |
+| Period | Year | Population (Xha'ri) | Growth Rate | Note |
+|--------|------|---------------------|-------------|------|
+| Pre-civ. | −15,000 | ~8,000 | — | First Xha'ri |
+| Early civ. | −9,800 | ~200,000 | 0.04%/year | Writing |
+| Flourishing (Empire peak) | −2,150 | ~18 million (Kharak) | 0.08%/year | First Empire |
+| Crisis (trough) | −750 | ~4 million (Kharak) | −0.12%/year | Red Rot, Dark Ages |
+| Council of Unity | +850 | ~400 million | 0.15%/year | Recovery |
+| Era of Unity | +2,000 | ~1.0 billion | ≤0.3%/year | Stability |
+| **Present** | **+4,028** | **~2.8 billion** | **0.30%/year** | **Space civilization** |
+
+> Population figures are for the **Xha'ri** species; including Kel'vash and Moryn, the planet's total ≈ **4.8 billion** (→ see [Vol. II, Ch.16, "Demographics"]). The "Empire peak" and "Crisis trough" rows refer to the imperial core **Kharak** (18 → 4 million; → see [Vol. II, Ch.4, "Crisis"]); the "Red Rot" pandemic (−2,120 – −2,105) killed **~200 million lives planetwide**.
 
 ---
 

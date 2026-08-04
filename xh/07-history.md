@@ -72,7 +72,7 @@
 | −3,500 | Periodic table | Vex-An |
 | −3,200 | Evolutionary theory | Xa-Ven |
 
-**Decline:** −2,500 — overpopulation (1.1 billion). Resource depletion. Climate change.
+**Decline:** −2,500 — demographic pressure (18 million on Kharak). Resource depletion. Climate change.
 
 ---
 
@@ -90,7 +90,7 @@ Fragmentation:
 - ~200 independent city-state-ak
 - Knowledge loss (First Library plundered)
 - Technological regression
-- Population ~400 million
+- Planet-wide population ~400 million (Kharak core: ~4 million)
 
 **Clan War** (−2,100 – −1,950) — prolonged war. Key resource control.
 
@@ -165,12 +165,12 @@ Fragmentation:
 
 | Period | Mor | Population |
 |--------|-----|------------|
-| Pre-civ. | −11,000 | ~2 million |
-| Early | −7,000 | ~40 million |
-| Flourishing peak | −2,500 | ~1.1 billion |
-| Crisis trough | −1,900 | ~400 million |
-| Renaissance | 0 | ~800 million |
-| Unity | +1,000 | ~1.5 billion |
+| Pre-civ. | −15,000 | ~8,000 |
+| Early civ. | −9,800 | ~200,000 |
+| Empire peak | −2,150 | ~18 million (Kharak) |
+| Crisis trough | −750 | ~4 million (Kharak) |
+| Council of Unity | +850 | ~400 million |
+| Era of Unity | +2,000 | ~1.0 billion |
 | **Present** | **+4,028** | **~2.8 billion** |
 
 ---
