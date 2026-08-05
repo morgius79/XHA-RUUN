@@ -81,6 +81,10 @@ for (const lang of Object.keys(LANGS)) sets[lang] = new Set(files[lang].map(f =>
 const assetsCopied = copyDir(path.join(ROOT, 'xharuun', 'en', 'assets'), path.join(ROOT, 'docs', 'assets'));
 console.log(`Copied ${assetsCopied} asset file(s).`);
 
+// registry/art → docs/registry/art (RU-главы ссылаются на ../../registry/art/...)
+const registryCopied = copyDir(path.join(ROOT, 'registry', 'art'), path.join(ROOT, 'docs', 'registry', 'art'));
+console.log(`Copied ${registryCopied} registry/art file(s).`);
+
 let count = 0;
 for (const lang of Object.keys(LANGS)) {
   const cfg = LANGS[lang];

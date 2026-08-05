@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="Georgia, 'IBM Plex Serif', serif">
+  <defs>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d3a5c"/>
+      <stop offset="55%" stop-color="#123f63"/>
+      <stop offset="100%" stop-color="#0a2e49"/>
+    </linearGradient>
+    <linearGradient id="kharak" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b99a5b"/>
+      <stop offset="60%" stop-color="#8b6f3e"/>
+      <stop offset="100%" stop-color="#6e5730"/>
+    </linearGradient>
+    <linearGradient id="rhuval" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a8683f"/>
+      <stop offset="100%" stop-color="#7a4626"/>
+    </linearGradient>
+    <linearGradient id="vexar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5c7a52"/>
+      <stop offset="100%" stop-color="#3f5738"/>
+    </linearGradient>
+    <radialGradient id="polar" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#eef4f6"/>
+      <stop offset="100%" stop-color="#c7d9df"/>
+    </radialGradient>
+    <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#3a2e18" stroke-width="1" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Background / frame -->
+  <rect x="0" y="0" width="1000" height="560" fill="#0a0e17"/>
+  <rect x="20" y="20" width="960" height="480" fill="url(#ocean)" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- Polar caps -->
+  <ellipse cx="500" cy="35" rx="480" ry="18" fill="url(#polar)" opacity="0.9"/>
+  <ellipse cx="500" cy="485" rx="480" ry="18" fill="url(#polar)" opacity="0.9"/>
+
+  <!-- Graticule (parallels every 30 deg lat, meridians every 60 deg lon) -->
+  <g stroke="#3a597a" stroke-width="0.6" opacity="0.4">
+    <line x1="20" y1="140" x2="980" y2="140"/>
+    <line x1="20" y1="250" x2="980" y2="250"/>
+    <line x1="20" y1="360" x2="980" y2="360"/>
+    <line x1="180" y1="20" x2="180" y2="500"/>
+    <line x1="340" y1="20" x2="340" y2="500"/>
+    <line x1="500" y1="20" x2="500" y2="500"/>
+    <line x1="660" y1="20" x2="660" y2="500"/>
+    <line x1="820" y1="20" x2="820" y2="500"/>
+  </g>
+  <text x="30" y="253" fill="#7fa3c2" font-size="9">экватор</text>
+
+  <!-- ================= KHARAK (north) ================= -->
+  <path d="M 300 95
+           C 280 70, 330 45, 400 48
+           C 460 40, 540 42, 590 65
+           C 640 78, 665 110, 650 140
+           C 660 165, 630 185, 600 178
+           C 610 200, 575 215, 540 205
+           C 520 222, 480 218, 465 200
+           C 430 212, 390 205, 375 185
+           C 340 190, 305 170, 300 145
+           C 275 130, 280 108, 300 95 Z"
+        fill="url(#kharak)" stroke="#e8e4d8" stroke-width="1.5"/>
+  <!-- Khar-Tor mountain range (west coast ridge) -->
+  <path d="M 320 100 C 335 120, 330 150, 345 180" fill="none" stroke="#5a4525" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 320 100 C 335 120, 330 150, 345 180" fill="none" stroke="url(#hatch)" stroke-width="6" opacity="0.9"/>
+  <circle cx="322" cy="103" r="4" fill="#e8e4d8" stroke="#0a0e17"/>
+  <text x="298" y="95" fill="#e8e4d8" font-size="10" font-weight="bold">▲ Verksan 9 537ша</text>
+  <!-- Shan desert (SE) -->
+  <ellipse cx="565" cy="165" rx="55" ry="28" fill="#c9b06a" opacity="0.55"/>
+  <text x="530" y="168" fill="#4a3c1c" font-size="10">пуст. Shan</text>
+  <!-- Delta Thar / capital -->
+  <circle cx="470" cy="205" r="5" fill="#c94c4c" stroke="#e8e4d8" stroke-width="1"/>
+  <text x="410" y="222" fill="#f5e9c8" font-size="11" font-weight="bold">Khar-Vexar</text>
+  <text x="380" y="55" fill="#f5e9c8" font-size="20" font-weight="bold" letter-spacing="2">KHARAK</text>
+  <text x="400" y="70" fill="#e8e4d8" font-size="10">1.4 млн мо² · 39% населения</text>
+
+  <!-- ================= RHUVAL (south-west) ================= -->
+  <path d="M 250 365
+           C 235 350, 260 330, 300 335
+           C 330 325, 360 340, 355 365
+           C 380 375, 385 405, 365 425
+           C 375 445, 350 465, 320 458
+           C 300 470, 270 460, 265 440
+           C 240 435, 230 405, 245 385
+           C 235 378, 240 368, 250 365 Z"
+        fill="url(#rhuval)" stroke="#e8e4d8" stroke-width="1.5"/>
+  <!-- Irkhen volcanic chain (north coast of Rhuval) -->
+  <path d="M 270 340 C 290 345, 310 342, 330 350" fill="none" stroke="#7a3a20" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 300 344 l -3 -9 l 6 0 z" fill="#e07a3a"/>
+  <text x="235" y="330" fill="#f5e9c8" font-size="16" font-weight="bold" letter-spacing="1">RHUVAL</text>
+  <text x="235" y="475" fill="#e8e4d8" font-size="10">0.9 млн мо² · 32% нас.</text>
+
+  <!-- ================= VEXAR (south-east, isolated) ================= -->
+  <path d="M 430 375
+           C 420 360, 445 348, 470 355
+           C 495 348, 515 365, 508 385
+           C 522 398, 518 420, 498 428
+           C 502 445, 480 458, 458 450
+           C 435 458, 415 445, 418 425
+           C 400 415, 405 390, 425 382
+           C 422 378, 425 375, 430 375 Z"
+        fill="url(#vexar)" stroke="#e8e4d8" stroke-width="1.5"/>
+  <text x="425" y="345" fill="#f5e9c8" font-size="14" font-weight="bold" letter-spacing="1">VEXAR</text>
+  <text x="412" y="468" fill="#e8e4d8" font-size="10">0.8 млн мо² · 18% нас.</text>
+
+  <!-- Ven-Khal strait label -->
+  <text x="378" y="405" fill="#9fc4e0" font-size="8" font-style="italic" transform="rotate(90 378 405)">прол. Ven-Khal</text>
+
+  <!-- ================= Islands ================= -->
+  <!-- Irkhen archipelago between Kharak and Rhuval -->
+  <g fill="#8b6f3e" stroke="#e8e4d8" stroke-width="0.5">
+    <circle cx="330" cy="255" r="4"/>
+    <circle cx="345" cy="265" r="3"/>
+    <circle cx="360" cy="258" r="3.5"/>
+    <circle cx="320" cy="275" r="3"/>
+  </g>
+  <text x="300" y="245" fill="#cfe3f0" font-size="9" font-style="italic">арх. Irkhen</text>
+
+  <!-- Khal-Tor (volcanic, Kharak) -->
+  <circle cx="660" cy="175" r="5" fill="#c9683a" stroke="#e8e4d8" stroke-width="0.6"/>
+  <text x="670" y="178" fill="#e8e4d8" font-size="8">Khal-Tor</text>
+
+  <!-- Sha-Enn (Rhuval) -->
+  <circle cx="235" cy="320" r="4.5" fill="#8b6f3e" stroke="#e8e4d8" stroke-width="0.6"/>
+  <text x="195" y="315" fill="#e8e4d8" font-size="8">Sha-Enn</text>
+
+  <!-- Serrin-Ur (Vexar) -->
+  <circle cx="530" cy="400" r="4" fill="#5c7a52" stroke="#e8e4d8" stroke-width="0.6"/>
+  <text x="537" y="403" fill="#e8e4d8" font-size="8">Serrin-Ur</text>
+
+  <!-- Vel-Koss atoll (Kharak) -->
+  <circle cx="700" cy="140" r="7" fill="none" stroke="#7fd0c9" stroke-width="2"/>
+  <text x="710" y="143" fill="#e8e4d8" font-size="8">Vel-Koss</text>
+
+  <!-- ================= Oceans ================= -->
+  <text x="760" y="90" fill="#8fc1e8" font-size="18" font-style="italic" letter-spacing="3">THALAS</text>
+  <text x="763" y="106" fill="#6ea3c8" font-size="9">(Северный, 94.2 млн мо²)</text>
+  <text x="600" y="500" fill="#8fc1e8" font-size="18" font-style="italic" letter-spacing="3">GHARRA</text>
+  <text x="618" y="516" fill="#6ea3c8" font-size="9">(Южный, 87.5 млн мо²)</text>
+  <text x="120" y="180" fill="#7fb0d6" font-size="12" font-style="italic">море Serrin</text>
+
+  <!-- Compass rose -->
+  <g transform="translate(910,75)">
+    <circle r="26" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+    <path d="M0,-22 L6,0 L0,22 L-6,0 Z" fill="#c9a84c"/>
+    <text x="-4" y="-32" fill="#e8e4d8" font-size="11">С</text>
+    <text x="-4" y="42" fill="#e8e4d8" font-size="11">Ю</text>
+  </g>
+
+  <!-- Scale bar (1 mo = 1 лига = 4.92 км) -->
+  <g transform="translate(50,470)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#e8e4d8" stroke-width="2"/>
+    <line x1="0" y1="-4" x2="0" y2="4" stroke="#e8e4d8" stroke-width="2"/>
+    <line x1="100" y1="-4" x2="100" y2="4" stroke="#e8e4d8" stroke-width="2"/>
+    <text x="0" y="16" fill="#e8e4d8" font-size="9">0</text>
+    <text x="80" y="16" fill="#e8e4d8" font-size="9">~500 мо</text>
+  </g>
+
+  <!-- Title block -->
+  <text x="30" y="530" fill="#c9a84c" font-size="16" font-weight="bold">ART-000001 · Карта планеты Théxar</text>
+  <text x="30" y="547" fill="#8a8676" font-size="10">Экваториальная проекция · согласовано с Гл.13 «Континенты Théxar» и CANON.md §3.5</text>
+</svg>

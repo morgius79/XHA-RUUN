@@ -94,6 +94,10 @@ This directly corresponds to the cyclic universe cosmological model discussed by
 
 *Fig. 10.1. Diagram of the "Great Breath" — cyclic model of the universe in the Teaching of Vibration. Four phases: Exhalation → Pause → Inhalation → Silence.*
 
+![Great Breath](../assets/art/ART-000012-great-breath.png)
+
+*Fig. 10.4. "Great Breath" (Mor-Vokh) — the cycle of the universe in the Teaching of Vibration: Exhalation, Pause, Inhalation, Silence.*
+
 ---
 
 ## 10.2 Pantheon: Nature of the Deities

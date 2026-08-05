@@ -77,6 +77,10 @@ The D-³He reaction — the "holy grail" of fusion. Its advantages:
 
 D-³He uses magnetic confinement reactors — tokamaks.
 
+![Fusion reactor diagram](../assets/art/ART-000010-termoyad-reactor.png)
+
+*Fig. 33.1. Diagram of a controlled fusion reactor (tokamak, D-³He): plasma torus, magnetic coils, He-3 supply, blanket, steam circuit, power output.*
+
 | Parameter | Value |
 |----------|----------|
 | Type | Tokamak (magnetic confinement) |

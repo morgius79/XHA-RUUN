@@ -203,6 +203,10 @@ The orbital elevator is an engineering feat of Xha'Ruun civilization. It connect
 
 *Fig. 9.2. Diagram of the Khar-Tor orbital elevator. Length: 7,764.2 mo. Cable material: carbon nanotubes + kharinium.*
 
+![Khar-Tor orbital elevator](../assets/art/ART-000011-orbital-lift.png)
+
+*Fig. 9.3. Khar-Tor orbital elevator: cable from the Théxar equator to geostationary orbit, elevator cabins, counterweight, orbital hub.*
+
 **New elevators (under construction):**
 - **"Ven-Khal"** — second elevator, location: 0°, 28° W (off the coast of Rhuval). Planned completion: +4,080 y.c.
 - **"Khar-Tor II"** — third elevator, location: 0°, 108° E (Khal-Tor island). Planned completion: +4,150 y.c.

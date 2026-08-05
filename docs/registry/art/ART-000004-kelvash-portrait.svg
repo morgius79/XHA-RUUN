@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" font-family="Georgia, 'IBM Plex Serif', serif">
+  <defs>
+    <linearGradient id="skyk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2e18"/>
+      <stop offset="60%" stop-color="#1a140a"/>
+      <stop offset="100%" stop-color="#0a0e17"/>
+    </linearGradient>
+    <linearGradient id="rockk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c9a84c"/>
+      <stop offset="50%" stop-color="#8b6f3e"/>
+      <stop offset="100%" stop-color="#5a4525"/>
+    </linearGradient>
+    <linearGradient id="rockk2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a68a5b"/>
+      <stop offset="100%" stop-color="#6e5730"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="720" fill="url(#skyk)"/>
+  <rect x="16" y="16" width="568" height="688" fill="none" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- desert sun -->
+  <circle cx="470" cy="120" r="40" fill="#e0783c" opacity="0.5"/>
+
+  <!-- distant mountains -->
+  <path d="M16,420 L120,340 L200,410 L300,320 L400,400 L500,350 L584,420 L584,470 L16,470 Z" fill="#2a2010" opacity="0.7"/>
+
+  <!-- ground / rocky plain -->
+  <path d="M16,650 Q300,610 584,650 L584,704 L16,704 Z" fill="#2a2010"/>
+
+  <!-- KEL'VASH BODY — crystalline, angular, growing from rock -->
+  <!-- lower crystal base / legs fused with rock -->
+  <path d="M240,650 L260,540 L300,560 L340,540 L360,650 Z" fill="url(#rockk2)" stroke="#e8e4d8" stroke-width="1.5"/>
+
+  <!-- torso, faceted crystal plates -->
+  <path d="M230,540 L250,420 L300,400 L350,420 L370,540 L340,560 L300,570 L260,560 Z"
+        fill="url(#rockk)" stroke="#e8e4d8" stroke-width="2"/>
+  <!-- facet lines on torso -->
+  <g stroke="#e8e4d8" stroke-width="1" opacity="0.5">
+    <line x1="250" y1="420" x2="300" y2="560"/>
+    <line x1="350" y1="420" x2="300" y2="560"/>
+    <line x1="300" y1="400" x2="300" y2="570"/>
+    <line x1="260" y1="470" x2="340" y2="470"/>
+    <line x1="255" y1="510" x2="345" y2="510"/>
+  </g>
+
+  <!-- crystalline "arms" - angular limbs, more limbs than Xha'Ruun-standard, asymmetric growths -->
+  <path d="M250,440 L190,470 L180,520 L210,510 L230,470 Z" fill="url(#rockk2)" stroke="#e8e4d8" stroke-width="1.5"/>
+  <path d="M350,440 L410,470 L420,520 L390,510 L370,470 Z" fill="url(#rockk2)" stroke="#e8e4d8" stroke-width="1.5"/>
+  <!-- secondary smaller limb pair -->
+  <path d="M255,500 L205,540 L215,570 L240,545 Z" fill="url(#rockk)" stroke="#e8e4d8" stroke-width="1.2" opacity="0.9"/>
+  <path d="M345,500 L395,540 L385,570 L360,545 Z" fill="url(#rockk)" stroke="#e8e4d8" stroke-width="1.2" opacity="0.9"/>
+
+  <!-- head — a large hexagonal crystal, no distinct eyes, faint light-sensitive facet patches -->
+  <path d="M300,320 L340,350 L340,400 L300,420 L260,400 L260,350 Z"
+        fill="url(#rockk)" stroke="#e8e4d8" stroke-width="2"/>
+  <g stroke="#e8e4d8" stroke-width="1" opacity="0.5">
+    <line x1="300" y1="320" x2="300" y2="420"/>
+    <line x1="260" y1="350" x2="340" y2="400"/>
+    <line x1="260" y1="400" x2="340" y2="350"/>
+  </g>
+  <!-- faint photosensitive patches (rudimentary "eyes") -->
+  <circle cx="285" cy="365" r="5" fill="#e0783c" opacity="0.4"/>
+  <circle cx="315" cy="365" r="5" fill="#e0783c" opacity="0.4"/>
+
+  <!-- growth rings on head crystal (age indicator, per Гл.38 §38.3.2) -->
+  <path d="M300,330 L332,352 L332,395 L300,412 L268,395 L268,352 Z" fill="none" stroke="#f5e9c8" stroke-width="0.8" opacity="0.5"/>
+  <path d="M300,340 L322,356 L322,388 L300,402 L278,388 L278,356 Z" fill="none" stroke="#f5e9c8" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- heat shimmer lines around body -->
+  <g stroke="#e0783c" stroke-width="1" opacity="0.25" fill="none">
+    <path d="M200,600 Q210,580 200,560"/>
+    <path d="M400,600 Q390,580 400,560"/>
+  </g>
+
+  <!-- vibration waves (pьезоэлектрическая коммуникация) -->
+  <g stroke="#5b7db5" stroke-width="1.2" opacity="0.5" fill="none">
+    <path d="M180,470 Q140,450 100,470"/>
+    <path d="M180,470 Q140,470 100,500"/>
+    <path d="M420,470 Q460,450 500,470"/>
+    <path d="M420,470 Q460,470 500,500"/>
+  </g>
+
+  <!-- caption -->
+  <text x="30" y="672" fill="#c9a84c" font-size="18" font-weight="bold">ART-000004 · Kel'vash</text>
+  <text x="30" y="692" fill="#8a8676" font-size="10">Кремний-серная биохимия · пьезоэлектрическая связь · согласовано с Гл.38</text>
+</svg>
