@@ -4,17 +4,16 @@ const path = require('path');
 const { marked } = require('marked');
 
 const ROOT = path.resolve(__dirname, '..');
-const SRC = path.join(ROOT, 'xharuun', 'en');
-const DEST = path.join(ROOT, 'docs');
-const TEMPLATE = fs.readFileSync(path.join(DEST, 'template.html'), 'utf-8');
+const TEMPLATE = fs.readFileSync(path.join(ROOT, 'docs', 'template.html'), 'utf-8');
 
-function collectFiles(dir, base = '') {
+function collectFiles(dir, base = '', skip = []) {
   let results = [];
   try {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (skip.includes(entry.name)) continue;
       const full = path.join(dir, entry.name);
       const rel = base ? path.join(base, entry.name) : entry.name;
-      if (entry.isDirectory()) results = results.concat(collectFiles(full, rel));
+      if (entry.isDirectory()) results = results.concat(collectFiles(full, rel, skip));
       else if (entry.isFile() && entry.name === 'index.md')
         results.push({ fullPath: full, relPath: rel.replace(/\\/g, '/') });
     }
@@ -27,9 +26,6 @@ function extractTitle(content) {
   return m ? m[1].replace(/\*\*/g, '').trim() : 'Chapter';
 }
 
-console.log('Building Xha\'Ruun site...');
-
-// Copy static assets (illustrations etc.) verbatim
 function copyDir(src, dest) {
   if (!fs.existsSync(src)) return 0;
   let copied = 0;
@@ -42,31 +38,88 @@ function copyDir(src, dest) {
   }
   return copied;
 }
-const assetsCopied = copyDir(path.join(SRC, 'assets'), path.join(DEST, 'assets'));
+
+function urlOf(rel) { return '/' + rel.replace(/index\.md$/, ''); }
+
+const LANGS = {
+  en: {
+    src: path.join(ROOT, 'xharuun', 'en'),
+    dest: path.join(ROOT, 'docs'),
+    skip: [],
+    htmlLang: 'en',
+    altPrefix: '/ru',
+    label: 'Русский',
+    titleSuffix: ' — Xha\'Ruun Encyclopedia',
+    navLabel: 'Encyclopedia',
+    backLabel: 'Back to the Encyclopedia',
+  },
+  ru: {
+    src: path.join(ROOT, 'xharuun'),
+    dest: path.join(ROOT, 'docs', 'ru'),
+    // RU-тома 2-10 — черновики (пустые заглушки + дубли номеров), не публикуем
+    skip: ['en', 'build', 'sharuun', 'scripts', 'templates', 'assets', 'xh',
+           'volume-2', 'volume-3', 'volume-4', 'volume-5', 'volume-6',
+           'volume-7', 'volume-8', 'volume-9', 'volume-10'],
+    htmlLang: 'ru',
+    altPrefix: '',
+    label: 'English',
+    titleSuffix: ' — Энциклопедия Xha\'Ruun',
+    navLabel: 'Энциклопедия',
+    backLabel: 'Назад к энциклопедии',
+  },
+};
+
+console.log('Building Xha\'Ruun site (en + ru)...');
+
+const files = {};
+for (const lang of Object.keys(LANGS)) {
+  files[lang] = collectFiles(LANGS[lang].src, '', LANGS[lang].skip);
+}
+const sets = {};
+for (const lang of Object.keys(LANGS)) sets[lang] = new Set(files[lang].map(f => f.relPath));
+
+const assetsCopied = copyDir(path.join(ROOT, 'xharuun', 'en', 'assets'), path.join(ROOT, 'docs', 'assets'));
 console.log(`Copied ${assetsCopied} asset file(s).`);
 
-const files = collectFiles(SRC);
 let count = 0;
+for (const lang of Object.keys(LANGS)) {
+  const cfg = LANGS[lang];
+  const other = lang === 'en' ? 'ru' : 'en';
+  for (const { fullPath, relPath } of files[lang]) {
+    try {
+      const md = fs.readFileSync(fullPath, 'utf-8');
+      const title = extractTitle(md);
+      const body = marked.parse(md);
+      const depth = relPath.split('/').length - 1;
+      const base = depth > 0 ? '../'.repeat(depth) : './';
 
-for (const { fullPath, relPath } of files) {
-  try {
-    const md = fs.readFileSync(fullPath, 'utf-8');
-    const title = extractTitle(md);
-    const body = marked.parse(md);
-    const depth = relPath.split('/').length - 1;
-    const base = depth > 0 ? '../'.repeat(depth) : './';
-    const html = TEMPLATE
-      .replace('{{title}}', title)
-      .replace('{{breadcrumb}}', title)
-      .replace(/\{\{base\}\}/g, base)
-      .replace('{{content}}', body);
-    const destPath = path.join(DEST, relPath.replace('index.md', 'index.html'));
-    fs.mkdirSync(path.dirname(destPath), { recursive: true });
-    fs.writeFileSync(destPath, html, 'utf-8');
-    count++;
-  } catch (e) {
-    console.error(`  ERROR: ${relPath}: ${e.message}`);
+      // Переключатель языка — только если парная страница существует
+      let langSwitch = '';
+      if (sets[other].has(relPath)) {
+        const href = cfg.altPrefix + urlOf(relPath);
+        langSwitch = `<a class="lang" href="${href}">${cfg.label}</a>`;
+      } else if (lang === 'en' && relPath === 'volume-1/index.md') {
+        // EN-лендинг Тома I → RU-главная (Том I на RU — 40 корневых глав)
+        langSwitch = `<a class="lang" href="/ru/">${cfg.label}</a>`;
+      }
+
+      const html = TEMPLATE
+        .replace('{{title}}', title)
+        .replace('{{titleSuffix}}', cfg.titleSuffix)
+        .replace('{{breadcrumb}}', title)
+        .replace('{{navLabel}}', cfg.navLabel)
+        .replace('{{backLabel}}', cfg.backLabel)
+        .replace(/\{\{base\}\}/g, base)
+        .replace('{{htmlLang}}', cfg.htmlLang)
+        .replace('{{langSwitch}}', langSwitch)
+        .replace('{{content}}', body);
+      const destPath = path.join(cfg.dest, relPath.replace('index.md', 'index.html'));
+      fs.mkdirSync(path.dirname(destPath), { recursive: true });
+      fs.writeFileSync(destPath, html, 'utf-8');
+      count++;
+    } catch (e) {
+      console.error(`  ERROR ${lang}/${relPath}: ${e.message}`);
+    }
   }
 }
-
 console.log(`Done. ${count} pages generated.`);
