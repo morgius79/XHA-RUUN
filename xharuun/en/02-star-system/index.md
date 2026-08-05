@@ -186,6 +186,10 @@ Habitable zone: ▓▓▓▓▓▓▓▓▓▓▓▓▓ (0.44–0.82 AU)
 
 *Fig. 2.2. Schematic of the Khar'Vex star system. Thexar is located in the central part of the habitable zone. The system demonstrates a classic architecture: rocky planets inside, gas giants outside.*
 
+![Khar'Vex star system](../assets/art/ART-000014-kharvex-system.svg)
+
+*Fig. 2.3. Map-schematic of the Khar'Vex star system: planet orbits, asteroid belt, Théxar system inset, probe trajectory.*
+
 ### 2.2.4 Habitable Zone
 
 The habitable zone is the range of orbits where temperature allows liquid water to exist on the planet's surface with sufficient atmospheric pressure.

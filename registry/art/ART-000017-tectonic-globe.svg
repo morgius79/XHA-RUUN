@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Georgia, 'IBM Plex Serif', serif">
+  <defs>
+    <marker id="g-teeth" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#e8e4d8"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="620" fill="#0a0e17"/>
+  <rect x="20" y="20" width="960" height="520" fill="#0d1b2a" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- Globe -->
+  <circle cx="360" cy="310" r="205" fill="#0d3a57" stroke="#e8e4d8" stroke-width="2"/>
+
+  <!-- Plate patches -->
+  <!-- Polar (north cap) -->
+  <path d="M 155 310 A 205 205 0 0 1 565 310 Q 520 120 155 310 Z" fill="#3f5566" opacity="0.85"/>
+  <!-- Kharak (large continental, center-left) -->
+  <path d="M 155 310 Q 200 180 340 200 Q 470 180 500 300 Q 430 360 340 360 Q 240 360 155 310 Z" fill="#8b6f3e" opacity="0.9"/>
+  <!-- Thalas (oceanic, east) -->
+  <path d="M 500 300 Q 520 230 565 250 Q 560 340 520 360 Q 490 340 500 300 Z" fill="#1f5f86" opacity="0.9"/>
+  <!-- Irkhen (mixed, between Kharak and Rhuval) -->
+  <path d="M 260 360 Q 340 385 420 370 Q 400 430 320 430 Q 250 420 260 360 Z" fill="#3f7a6e" opacity="0.9"/>
+  <!-- Gharra (oceanic, south band) -->
+  <path d="M 155 310 Q 260 470 360 470 Q 480 460 565 310 Q 520 430 360 455 Q 210 440 155 310 Z" fill="#154a6b" opacity="0.9"/>
+  <!-- Rhuval (continental, south-west) -->
+  <path d="M 205 380 Q 270 400 300 445 Q 230 500 168 470 Q 160 420 205 380 Z" fill="#a8683f" opacity="0.9"/>
+  <!-- Vexar (continental, south-east) -->
+  <path d="M 420 380 Q 480 400 520 450 Q 470 505 405 480 Q 380 430 420 380 Z" fill="#5c7a52" opacity="0.9"/>
+
+  <!-- Plate name labels -->
+  <g fill="#f5e9c8" font-size="12" font-weight="bold" text-anchor="middle">
+    <text x="340" y="222">Kharak</text>
+    <text x="330" y="270" fill="#e8e4d8" font-size="10" font-weight="normal">континентальная</text>
+    <text x="430" y="100">Polar</text>
+    <text x="520" y="300" fill="#dff0fb" font-size="10">Thalas</text>
+    <text x="330" y="420" fill="#e8f5f0" font-size="10">Irkhen</text>
+    <text x="300" y="480" fill="#e8c9a0" font-size="10">Rhuval</text>
+    <text x="480" y="490" fill="#f0f5e0" font-size="10">Vexar</text>
+    <text x="230" y="470" fill="#dff0fb" font-size="10">Gharra</text>
+  </g>
+
+  <!-- Boundaries -->
+  <!-- Rift (divergent) dotted red -->
+  <path d="M 155 310 Q 340 380 565 310" fill="none" stroke="#c94c4c" stroke-width="2.5" stroke-dasharray="1,7"/>
+  <!-- Subduction (convergent) teeth -->
+  <path d="M 205 380 Q 300 470 420 380" fill="none" stroke="#e8e4d8" stroke-width="2" marker-mid="url(#g-teeth)" marker-start="url(#g-teeth)" marker-end="url(#g-teeth)"/>
+  <!-- Transform -->
+  <line x1="360" y1="310" x2="360" y2="380" stroke="#f2c14e" stroke-width="2" stroke-dasharray="10,4"/>
+
+  <!-- Volcanoes along subduction -->
+  <g fill="#e86a2f">
+    <path d="M 260 430 l 7 -14 l 7 14 z"/>
+    <path d="M 300 455 l 7 -14 l 7 14 z"/>
+    <path d="M 350 465 l 7 -14 l 7 14 z"/>
+    <path d="M 385 445 l 7 -14 l 7 14 z"/>
+  </g>
+
+  <!-- Globe grid lines -->
+  <ellipse cx="360" cy="310" rx="205" ry="70" fill="none" stroke="#3a6a8a" stroke-width="1" opacity="0.5"/>
+  <ellipse cx="360" cy="310" rx="205" ry="140" fill="none" stroke="#3a6a8a" stroke-width="1" opacity="0.4"/>
+  <line x1="155" y1="310" x2="565" y2="310" stroke="#3a6a8a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="30" y="30" fill="#c9a84c" font-size="16" font-weight="bold">ART-000017 · Тектонические плиты Théxar (глобус)</text>
+  <text x="30" y="46" fill="#8a8676" font-size="10">визуализация · 10 плит · согласовано с Гл.12 §12.3 и ART-000002 (векторная карта)</text>
+
+  <!-- Legend -->
+  <g transform="translate(40,565)">
+    <rect x="-10" y="-15" width="920" height="45" fill="#0d1b2a" stroke="#c9a84c" stroke-width="1"/>
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#c94c4c" stroke-width="2.5" stroke-dasharray="1,7"/>
+    <text x="34" y="4" fill="#e8e4d8" font-size="10">рифтовая зона</text>
+    <path d="M 170 0 L 198 0" fill="none" stroke="#e8e4d8" stroke-width="2" marker-mid="url(#g-teeth)"/>
+    <text x="204" y="4" fill="#e8e4d8" font-size="10">субдукция</text>
+    <line x1="330" y1="0" x2="358" y2="0" stroke="#f2c14e" stroke-width="2" stroke-dasharray="10,4"/>
+    <text x="364" y="4" fill="#e8e4d8" font-size="10">трансформный разлом</text>
+    <path d="M 520 4 l 6 -12 l 6 12 z" fill="#e86a2f"/>
+    <text x="540" y="4" fill="#e8e4d8" font-size="10">вулканическая дуга</text>
+    <text x="700" y="-3" fill="#e8e4d8" font-size="9">■ бронза — континентальная</text>
+    <text x="700" y="10" fill="#e8e4d8" font-size="9">■ синий — океаническая · ■ бирюза — смешанная</text>
+  </g>
+</svg>

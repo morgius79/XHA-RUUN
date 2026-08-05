@@ -43,6 +43,10 @@ Names of the 14 months:
 
 5 days of Renewal (Ven-Khal): do not belong to any month.
 
+![Xha'Ruun calendar](../assets/art/ART-000015-calendar.svg)
+
+*Fig. 34.1. Yearly cycle of the Xha'Ruun calendar: 412.7 days, 14 months, and 5 days of Renewal.*
+
 ---
 
 ## 34.2 System of Measures

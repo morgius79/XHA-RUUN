@@ -257,6 +257,10 @@ The architecture of the temple turns it into a gigantic musical instrument. Each
 
 *Fig. 10.2. Acoustic diagram of a resonance temple. The hexagonal shape creates 6 focal points where sound is amplified through interference.*
 
+![Resonance temple Khar-Vokh-Thel](../assets/art/ART-000019-resonator-temple.svg)
+
+*Fig. 10.2a. Resonance temple Khar-Vokh-Thel (cross-section): modulation galleries, reverberator hall, 7 niches of the Voices, resonance focus.*
+
 ### 10.4.2 Musical Meditations
 
 The main form of religious practice is **collective singing** (Sha-Rass). Worshippers gather in the temple and sing multi-frequency chorales. Thanks to two pairs of vocal cords (→ see [Ch.05, "Physiology"]), priests can produce two tones simultaneously.

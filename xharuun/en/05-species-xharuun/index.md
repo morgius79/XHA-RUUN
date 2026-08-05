@@ -109,6 +109,10 @@ Although Xha'Ruun are the only sapient species on Thexar, they have close living
 
 *Fig. 5.1. Frontal view of Xha'Ruun. Six limbs, three eyes, two pairs of ears.*
 
+![Dual circulatory system of Xha'Ruun](../assets/art/ART-000018-circulatory.svg)
+
+*Fig. 5.2. Dual circulatory system of Xha'Ruun: two hearts (ven-thor, ven-abd), four lungs, hemocyanin (Cu).*
+
 > **PROFILE: Average Xha'Ruun (adult)**
 >
 > | Parameter | Male (♂) | Female (♀) | Neuter (⚲) |
@@ -185,7 +189,7 @@ The Xha'Ruun spine consists of 42–46 vertebrae. It is divided into:
       └──────┴──────┘
 ```
 
-*Fig. 5.2. Xha'Ruun skull. Three eye sockets oriented frontally (trinocular vision). Auditory capsules arranged in pairs front and back. The bony crest on the crown is a secondary sexual characteristic.*
+*Fig. 5.3. Xha'Ruun skull. Three eye sockets oriented frontally (trinocular vision). Auditory capsules arranged in pairs front and back. The bony crest on the crown is a secondary sexual characteristic.*
 
 ---
 
@@ -388,7 +392,7 @@ In modern society it is used for:
    (analog)                            (♂ and ♀)
 ```
 
-*Fig. 5.3. Xha'Ruun life cycle in local years.*
+*Fig. 5.4. Xha'Ruun life cycle in local years.*
 
 | Stage | Age (civ. years) | Key Events |
 |-------|------------------|------------|

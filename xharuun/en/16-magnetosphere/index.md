@@ -95,6 +95,10 @@ The longer period between reversals is explained by lower turbulence in Théxar'
 
 *Fig. 16.1. Structure of Théxar's magnetosphere.*
 
+![Magnetosphere of Théxar](../assets/art/ART-000021-magnetosphere.svg)
+
+*Fig. 16.1a. Magnetosphere of Théxar (visualization): Khar'Vex solar wind, bow shock, radiation belts, magnetotail.*
+
 ### 16.2.1 Key Elements
 
 - **Bow shock** — boundary at ~15 Rₜ on the sunward side, where the supersonic Khar'Vex stellar wind (velocity ~842.6 мо/mig) collides with the magnetosphere, forming a standing shock wave. Plasma temperature at the front reaches ~5.4×10⁴ °X.

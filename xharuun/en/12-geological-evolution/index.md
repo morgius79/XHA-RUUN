@@ -167,6 +167,10 @@ Théxar has active plate tectonics — the movement of lithospheric plates acros
 
 *Fig. 12.2a. Full vector diagram of the plates.*
 
+![Tectonic plates of Théxar (globe)](../assets/art/ART-000017-tectonic-globe.svg)
+
+*Fig. 12.2b. Globe of Théxar's tectonic plates: rifts, subduction, transform faults, volcanic arcs.*
+
 ### 12.3.1 Plate List
 
 > **TABLE 12.2: Lithospheric Plates of Théxar**

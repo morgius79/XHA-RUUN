@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Georgia, 'IBM Plex Serif', serif">
+  <rect x="0" y="0" width="1000" height="620" fill="#0a0e17"/>
+  <rect x="20" y="20" width="960" height="520" fill="#0d3a57" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- 8 founding regions -->
+  <g stroke="#0a0e17" stroke-width="2">
+    <!-- Shan (north, energy) -->
+    <polygon points="300,120 520,110 560,180 400,190 300,190" fill="#6a5a7a"/>
+    <!-- Vexar (north-east, tech) -->
+    <polygon points="520,110 700,120 720,200 560,180" fill="#4a7a94"/>
+    <!-- Thar (center, admin) -->
+    <polygon points="400,190 560,180 600,300 470,340 380,290" fill="#c9a84c"/>
+    <!-- Serrin (east, trade) -->
+    <polygon points="560,180 720,200 740,320 600,300" fill="#3f7a6e"/>
+    <!-- Khar-Tor (west, agrarian) -->
+    <polygon points="300,190 380,290 340,400 240,330 230,240" fill="#5c7a52"/>
+    <!-- Raal (south-west, mining) -->
+    <polygon points="240,330 340,400 400,470 280,480 180,400" fill="#a8683f"/>
+    <!-- Irkhen (south-east, industrial) -->
+    <polygon points="470,340 600,300 620,430 480,460" fill="#3f5566"/>
+    <!-- Serrin-Ur (east island, cultural) -->
+    <polygon points="760,340 800,350 790,400 740,390" fill="#8a7a5a"/>
+  </g>
+
+  <!-- Capital Khar-Vexar (gold star) -->
+  <path d="M490 252 L493.2 260.5 L502.4 261.0 L495.2 266.7 L497.6 275.5 L490 270.5 L482.4 275.5 L484.8 266.7 L477.6 261.0 L486.8 260.5 Z" fill="#f2c14e" stroke="#5a3a08" stroke-width="1"/>
+  <text x="505" y="250" fill="#f5e9c8" font-size="9" font-weight="bold">Кхар-Вексар</text>
+
+  <!-- Region labels -->
+  <g fill="#f5e9c8" font-size="11" font-weight="bold" text-anchor="middle">
+    <text x="410" y="152">Shan</text>
+    <text x="620" y="152">Vexar</text>
+    <text x="488" y="290">Thar</text>
+    <text x="655" y="248">Serrin</text>
+    <text x="305" y="270">Khar-Tor</text>
+    <text x="295" y="430">Raal</text>
+    <text x="548" y="400">Irkhen</text>
+    <text x="772" y="368">Serrin-Ur</text>
+  </g>
+  <g fill="#c9c4b0" font-size="9" text-anchor="middle">
+    <text x="410" y="166">Mor-Thal · энергетика</text>
+    <text x="620" y="166">Shan-En · технологии</text>
+    <text x="488" y="304" fill="#4a3208">Khar-Vexar · центр</text>
+    <text x="655" y="262">Ven-Khal · торговля</text>
+    <text x="305" y="284">Khal-Ven · аграрный</text>
+    <text x="295" y="444">Tor-Ven · добыча</text>
+    <text x="548" y="414">Irkhen · промышленность</text>
+    <text x="772" y="382">Khal-Tor · культура</text>
+  </g>
+
+  <!-- Ocean labels -->
+  <g fill="#7f9ab0" font-size="12">
+    <text x="70" y="110">Океан</text>
+    <text x="880" y="500">Океан</text>
+  </g>
+
+  <!-- Compass rose -->
+  <g transform="translate(860,110)" stroke="#e8e4d8">
+    <line x1="0" y1="18" x2="0" y2="-18" stroke-width="1.5"/>
+    <line x1="-18" y1="0" x2="18" y2="0" stroke-width="1"/>
+    <path d="M0 -18 L4 -4 L0 0 L-4 -4 Z" fill="#e8a33d"/>
+  </g>
+  <text x="860" y="102" fill="#e8a33d" font-size="9" text-anchor="middle">С</text>
+
+  <!-- Title -->
+  <text x="30" y="30" fill="#c9a84c" font-size="16" font-weight="bold">ART-000022 · Карта регионов Kharak (Договор Единства, −750 г.)</text>
+  <text x="30" y="46" fill="#8a8676" font-size="10">8 регионов-основателей · столица Кхар-Вексар · согласовано с Томом II гл.05 и Гл.07</text>
+
+  <!-- Legend -->
+  <g transform="translate(40,565)">
+    <rect x="-10" y="-15" width="920" height="45" fill="#0d1b2a" stroke="#c9a84c" stroke-width="1"/>
+    <rect x="0" y="-6" width="12" height="12" fill="#c9a84c"/><text x="16" y="4" fill="#e8e4d8" font-size="9">Thar</text>
+    <rect x="70" y="-6" width="12" height="12" fill="#3f7a6e"/><text x="86" y="4" fill="#e8e4d8" font-size="9">Serrin</text>
+    <rect x="145" y="-6" width="12" height="12" fill="#3f5566"/><text x="161" y="4" fill="#e8e4d8" font-size="9">Irkhen</text>
+    <rect x="215" y="-6" width="12" height="12" fill="#a8683f"/><text x="231" y="4" fill="#e8e4d8" font-size="9">Raal</text>
+    <rect x="280" y="-6" width="12" height="12" fill="#5c7a52"/><text x="296" y="4" fill="#e8e4d8" font-size="9">Khar-Tor</text>
+    <rect x="370" y="-6" width="12" height="12" fill="#6a5a7a"/><text x="386" y="4" fill="#e8e4d8" font-size="9">Shan</text>
+    <rect x="435" y="-6" width="12" height="12" fill="#4a7a94"/><text x="451" y="4" fill="#e8e4d8" font-size="9">Vexar</text>
+    <rect x="505" y="-6" width="12" height="12" fill="#8a7a5a"/><text x="521" y="4" fill="#e8e4d8" font-size="9">Serrin-Ur</text>
+    <path d="M 650 4 l 0 -10 l 5 7 l 5 -7 l 0 10 z" fill="#f2c14e"/>
+    <text x="668" y="4" fill="#e8e4d8" font-size="9">столица</text>
+  </g>
+</svg>

@@ -279,6 +279,10 @@ Gradually, through centuries of fragmentation, recovery began:
 3. Created the Interregional Council (prototype of the Council of Unity)
 4. Introduced unified measures and weights
 
+![Kharak regions](../assets/art/ART-000022-kharak-regions.svg)
+
+*Fig. 7.7. The eight founding regions of Kharak at the time of the Unity Treaty (−750 y.c.).*
+
 ### 7.6.2 Industrial Revolution
 
 | Date | Technology | Region | Consequence |

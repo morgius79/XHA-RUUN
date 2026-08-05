@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Georgia, 'IBM Plex Serif', serif">
+  <rect x="0" y="0" width="1000" height="620" fill="#0a0e17"/>
+  <rect x="20" y="20" width="960" height="520" fill="#0d1b2a" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- Planet cross-section -->
+  <circle cx="340" cy="300" r="222" fill="#1a3a5a" opacity="0.35"/>
+  <circle cx="340" cy="300" r="222" fill="none" stroke="#3a5a78" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <circle cx="340" cy="300" r="212" fill="#1f5f86"/>
+  <circle cx="340" cy="300" r="195" fill="#4a5a4a"/>
+  <circle cx="340" cy="300" r="180" fill="#5a7a52"/>
+  <circle cx="340" cy="300" r="150" fill="#8a6b3e"/>
+  <circle cx="340" cy="300" r="85" fill="#c97b3f"/>
+  <circle cx="340" cy="300" r="45" fill="#e8a33d"/>
+
+  <!-- Continents (6 archipelagos) on hydrosphere -->
+  <g fill="#c9a84c" opacity="0.9">
+    <ellipse cx="516" cy="205" rx="26" ry="10" transform="rotate(-25 516 205)"/>
+    <ellipse cx="470" cy="148" rx="22" ry="8" transform="rotate(-5 470 148)"/>
+    <ellipse cx="385" cy="112" rx="24" ry="9" transform="rotate(15 385 112)"/>
+    <ellipse cx="300" cy="120" rx="20" ry="8" transform="rotate(35 300 120)"/>
+    <ellipse cx="218" cy="180" rx="26" ry="9" transform="rotate(70 218 180)"/>
+    <ellipse cx="232" cy="262" rx="22" ry="8" transform="rotate(-30 232 262)"/>
+  </g>
+
+  <!-- Rotation arrow -->
+  <path d="M 555 255 A 226 226 0 0 1 560 330" fill="none" stroke="#e8a33d" stroke-width="2" stroke-dasharray="6,4"/>
+  <path d="M 560 330 l 9 -3 M 560 330 l 2 -9" stroke="#e8a33d" stroke-width="2"/>
+  <text x="592" y="296" fill="#e8a33d" font-size="11">вращение</text>
+
+  <!-- Satellites -->
+  <circle cx="255" cy="82" r="17" fill="#8a8676" stroke="#dfeaf0" stroke-width="1.2"/>
+  <text x="255" y="64" fill="#dfeaf0" font-size="11" text-anchor="middle">Serrin</text>
+  <text x="255" y="110" fill="#8a8676" font-size="9" text-anchor="middle">радиус 3 845 мо</text>
+  <circle cx="560" cy="430" r="9" fill="#123049" stroke="#dfeaf0" stroke-width="1"/>
+  <text x="560" y="454" fill="#dfeaf0" font-size="10" text-anchor="middle">Thel</text>
+
+  <!-- Layer legend -->
+  <g font-size="11">
+    <text x="620" y="120" fill="#c9a84c" font-size="13" font-weight="bold">Слои Théxar</text>
+    <rect x="620" y="140" width="16" height="12" fill="#1a3a5a" opacity="0.8"/>
+    <text x="646" y="150" fill="#e8e4d8">атмосфера · 1.45 атм</text>
+    <rect x="620" y="160" width="16" height="12" fill="#1f5f86"/>
+    <text x="646" y="170" fill="#e8e4d8">гидросфера · 6 континентов-архипелагов</text>
+    <rect x="620" y="180" width="16" height="12" fill="#4a5a4a"/>
+    <text x="646" y="190" fill="#e8e4d8">кора</text>
+    <rect x="620" y="200" width="16" height="12" fill="#5a7a52"/>
+    <text x="646" y="210" fill="#e8e4d8">верхняя мантия · 43–500 км</text>
+    <rect x="620" y="220" width="16" height="12" fill="#8a6b3e"/>
+    <text x="646" y="230" fill="#e8e4d8">нижняя мантия · 805–3 524 км</text>
+    <rect x="620" y="240" width="16" height="12" fill="#c97b3f"/>
+    <text x="646" y="250" fill="#e8e4d8">внешнее ядро (жидк.) · 3 524–6 280 · Fe 85%</text>
+    <rect x="620" y="260" width="16" height="12" fill="#e8a33d"/>
+    <text x="646" y="270" fill="#e8e4d8">внутреннее ядро (тв.) · 6 280–7 453 · Fe-Ni</text>
+    <text x="620" y="305" fill="#8a8676" font-size="10">Радиус планеты: 6 814.2 мо.</text>
+    <text x="620" y="320" fill="#8a8676" font-size="10">Сутки: 45.1 ч · Гравитация: 0.83 g.</text>
+  </g>
+
+  <!-- Title -->
+  <text x="30" y="30" fill="#c9a84c" font-size="16" font-weight="bold">ART-000016 · Строение планеты Théxar (поперечный разрез)</text>
+  <text x="30" y="46" fill="#8a8676" font-size="10">схема · не в масштабе · согласовано с Гл.03 §3.2 (внутреннее строение) и Гл.24 (спутники)</text>
+
+  <!-- Bottom note -->
+  <g transform="translate(40,565)">
+    <rect x="-10" y="-15" width="920" height="45" fill="#0d1b2a" stroke="#c9a84c" stroke-width="1"/>
+    <text x="0" y="4" fill="#e8e4d8" font-size="10">два спутника: Serrin (крупнее) и Thel (мельче) · поле 42 мкТл · атмосфера 1.45 атм</text>
+  </g>
+</svg>

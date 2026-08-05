@@ -62,6 +62,10 @@ A greenhouse planet with a dense CO₂ atmosphere (pressure 90 tyazh). Surface t
 
 Located between the orbits of Xhel and Zhal (1.15–1.65 AU). Rich in metals (Fe, Ni, Pt). Source of raw materials for space industry.
 
+![Space infrastructure of the Théxar system](../assets/art/ART-000020-space-infrastructure.svg)
+
+*Fig. 32.1. Space infrastructure of the Théxar system: Khar-Tor elevator, 4 stations, GNSS network (24), Xhel aerostat base, Veksarr mining, probe to the heliopause.*
+
 ---
 
 *End of chapter 32. Approved with CANON.md v0.3.0*

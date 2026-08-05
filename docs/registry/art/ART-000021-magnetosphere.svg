@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="Georgia, 'IBM Plex Serif', serif">
+  <defs>
+    <radialGradient id="ms-star" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd79a"/>
+      <stop offset="60%" stop-color="#e8a33d"/>
+      <stop offset="100%" stop-color="#7a4a12"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="620" fill="#0a0e17"/>
+  <rect x="20" y="20" width="960" height="520" fill="#0d1b2a" stroke="#c9a84c" stroke-width="2"/>
+
+  <!-- Solar wind from star -->
+  <g stroke="#e86a2f" stroke-width="1.5" opacity="0.7">
+    <line x1="130" y1="270" x2="300" y2="230"/>
+    <line x1="130" y1="290" x2="300" y2="285"/>
+    <line x1="130" y1="310" x2="300" y2="340"/>
+    <line x1="130" y1="330" x2="300" y2="380"/>
+  </g>
+  <text x="215" y="215" fill="#e88a4a" font-size="10">солнечный ветер</text>
+  <text x="215" y="227" fill="#e88a4a" font-size="9">Khar'Vex</text>
+
+  <!-- Star -->
+  <circle cx="90" cy="300" r="24" fill="url(#ms-star)"/>
+  <text x="90" y="345" fill="#e8c9a0" font-size="9" text-anchor="middle">Khar'Vex</text>
+
+  <!-- Bow shock -->
+  <path d="M 330 200 A 120 120 0 0 1 330 400" fill="none" stroke="#e8a33d" stroke-width="2"/>
+  <text x="285" y="205" fill="#e8c9a0" font-size="9">головная ударная волна</text>
+
+  <!-- Magnetosphere boundary (teardrop) -->
+  <path d="M 350 175 C 400 150 480 150 520 170 L 900 300 C 480 430 400 450 350 425 Z" fill="#1a3a5a" fill-opacity="0.25" stroke="#3ddad7" stroke-width="1.5"/>
+
+  <!-- Field lines -->
+  <g fill="none" stroke="#3ddad7" stroke-width="1" opacity="0.6">
+    <path d="M 450 180 C 520 220 700 280 880 300"/>
+    <path d="M 450 420 C 520 380 700 320 880 300"/>
+    <path d="M 470 165 C 560 200 720 270 890 298"/>
+    <path d="M 470 435 C 560 400 720 330 890 302"/>
+  </g>
+
+  <!-- Planet -->
+  <circle cx="450" cy="300" r="36" fill="url(#ms-star)" stroke="#f2e2bd" stroke-width="1.5"/>
+  <text x="450" y="355" fill="#f2c98a" font-size="11" font-weight="bold" text-anchor="middle">Théxar</text>
+  <text x="450" y="370" fill="#8a8676" font-size="9" text-anchor="middle">42 мкТл</text>
+
+  <!-- Radiation belts -->
+  <ellipse cx="450" cy="300" rx="70" ry="26" fill="none" stroke="#7fe8e5" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <ellipse cx="450" cy="300" rx="95" ry="38" fill="none" stroke="#7fe8e5" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="545" y="255" fill="#9fe8e5" font-size="9">радиационные пояса</text>
+
+  <!-- Magnetotail -->
+  <path d="M 515 300 L 880 300" stroke="#3ddad7" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="720" y="292" fill="#7fe8e5" font-size="9">хвост магнитосферы ~80 Rₜ</text>
+
+  <!-- Moons crossing the field -->
+  <circle cx="600" cy="245" r="6" fill="#8a8676" stroke="#dfeaf0" stroke-width="1"/>
+  <text x="600" y="234" fill="#dfeaf0" font-size="8" text-anchor="middle">Serrin</text>
+  <circle cx="650" cy="350" r="4" fill="#123049" stroke="#dfeaf0" stroke-width="1"/>
+  <text x="660" y="362" fill="#dfeaf0" font-size="8">Thel</text>
+
+  <!-- Title -->
+  <text x="30" y="30" fill="#c9a84c" font-size="16" font-weight="bold">ART-000021 · Магнитосфера Théxar</text>
+  <text x="30" y="46" fill="#8a8676" font-size="10">напряжённость 42 мкТл · радиус ~12 Rₜ · хвост ~80 Rₜ · согласовано с Гл.16</text>
+
+  <!-- Bottom note -->
+  <g transform="translate(40,565)">
+    <rect x="-10" y="-15" width="920" height="45" fill="#0d1b2a" stroke="#c9a84c" stroke-width="1"/>
+    <text x="0" y="4" fill="#e8e4d8" font-size="10">ядро Fe 85% · Ni 10% · S 5% · пропускает космическую радиацию → радиационная стойкость жизни ×5</text>
+  </g>
+</svg>
