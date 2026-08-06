@@ -76,6 +76,10 @@ Teaching-ven according, cosmos cycles-the-in exist-en — "**Great Breath**" (Mo
             → Time (Mor) flows clockwise →
 ```
 
+![Great Breath cycle](../registry/art/ART-000012-great-breath.png)
+
+*Fig. 10.1a. Great Breath (Mor-Vokh) — universe cycle-ak: Exhalation, Pause, Inhalation, Silence.*
+
 ---
 
 ## 10.2 Pantheon: Deities-ak-mor Nature

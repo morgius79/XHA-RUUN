@@ -161,6 +161,10 @@ Tor-vex thorex-sha Thexar thurvex-thar GSO-ven vexak-en, space-ven thorak khar-v
 | **Counterweight** | GSO station "GSO-1" (expanded, mass ~2,545.5 ru) |
 | **Energy** | Solar panels on cable + laser energy transmission from the surface |
 
+![Khar-Tor orbital elevator](../registry/art/ART-000011-orbital-lift.png)
+
+*Fig. 9.3. Khar-Tor orbital elevator: cable from Théxar equator to GSO, cabins, counterweight, orbital hub.*
+
 **Elevator economics:**
 - Cargo delivery cost to orbit: ~200 VT/kg (vs. ~12,000 VT/kg by rocket)
 - Payback period: achieved in 80 y

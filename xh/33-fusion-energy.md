@@ -77,6 +77,10 @@ D-³He reaction — fusion-mor "holy grail". Its advantage-ak:
 
 D-³He magnetic confinement reactor-ak-thar use-el — tokamak-ak.
 
+![Fusion reactor scheme](../registry/art/ART-000010-termoyad-reactor.png)
+
+*Fig. 33.1. Controlled fusion reactor scheme (tokamak, D-³He): plasma torus, magnetic coils, He-3 supply, power output.*
+
 | Parameter | Value |
 |----------|----------|
 | Type | Tokamak (magnetic confinement) |

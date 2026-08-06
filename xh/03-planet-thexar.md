@@ -35,6 +35,10 @@
 | Outer core | 3,524–6,280 | Fe (85%), Ni (10%) | **Liquid** | 2,057…2,710 |
 | Inner core | 6,280–7,453 | Fe (90%), Ni (8%) | **Solid** | 2,710…2,873 |
 
+![Thexar-mor internal structure](../registry/art/ART-000026-thexar-structure.png)
+
+*Fig. 3.1a. Thexar-mor internal structure-ak (visualization): core, mantle, crust, hydrosphere, atmosphere.*
+
 ### 3.1.3 Plate Tectonics
 
 | Plate | Type | Area (million mo²) | Direction | Speed |

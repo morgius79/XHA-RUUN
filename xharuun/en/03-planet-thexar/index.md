@@ -73,7 +73,7 @@ Thexar formed ~6.5 billion cycles ago in the protoplanetary disk of Khar'Vex thr
 
 *Fig. 3.1. Internal structure of Thexar. The planet has a fully differentiated core, an active mantle, and plate tectonics.*
 
-![Cross-section of Théxar](../assets/art/ART-000016-thexar-structure.svg)
+![Cross-section of Théxar](../assets/art/ART-000026-thexar-structure.png)
 
 *Fig. 3.2. Internal structure of Théxar (visualization): core, mantle, crust, hydrosphere, atmosphere.*
 

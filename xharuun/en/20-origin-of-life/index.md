@@ -107,7 +107,7 @@ The emergence of the 6-letter genetic code is the key puzzle of Théxar's abioge
 
 ---
 
-![Evolutionary tree of life on Théxar](../assets/art/ART-000013-evolution-tree.svg)
+![Evolutionary tree of life on Théxar](../assets/art/ART-000023-evolution-tree.png)
 
 *Fig. 20.2. Evolutionary tree of life on Théxar: from the common ancestor to flora, fauna, and the three intelligent species.*
 

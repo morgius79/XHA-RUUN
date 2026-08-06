@@ -130,6 +130,10 @@ Théxar-mor magnetic field (42 μT)-sha Khar'Vex stellar wind-ven effective prot
 
 Théxar-sha active plate tectonics-thar vok-en — asthenosphere-mor surface-vex lithospheric plak-ak-mor vek. Sha thral-sha carbon cycle ak long-term climate stability-the key factor ak-el.
 
+![Tectonic plak-ak globe](../registry/art/ART-000027-tectonic-plates.png)
+
+*Fig. 12.3. Tectonic plak-ak globe-ak: rift-ak, subduction, transform fault-ak, volcanic arc-ak.*
+
 `
          THÉXAR TECTONIC PLATES (diagram)
 

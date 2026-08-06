@@ -43,6 +43,10 @@
 
 5 day-ak Renewal-mor (Ven-Khal): any month-ven mor-belong-en.
 
+![Calendar-mor year-cycle](../registry/art/ART-000025-calendar.png)
+
+*Fig. 34.1. Calendar-mor year-cycle-ak: 412.7 day-ak, 14 month-ak ak 5 Renewal day-ak.*
+
 ---
 
 ## 34.2 System-ak Measure-mor

@@ -107,6 +107,10 @@ Pyrite (FeS₂) mor clay mineral-ak surface-the, polymerization occur-ak-ven:
 
 ---
 
+![Evolutionary tree-ak Thexar-mor](../registry/art/ART-000023-evolution-tree.png)
+
+*Fig. 20.2. Evolutionary tree-ak Thexar-mor: common ancestor-tor flora, fauna ak three intelligent species-ven.*
+
 ## 20.3 Chemistry-tor Life-thar
 
 ### 20.3.1 Protocell-ak (3.6–3.4 billion mor-ak tor)
