@@ -38,46 +38,7 @@ Carbon is the basis of life, the currency of energy, the regulator of climate. I
 
 ### 13.1.2 Carbon Fluxes
 
-```
-          CARBON CYCLE OF THÉXAR (Gt C/cycle)
-
-    ┌──────────────────────────────────────────────┐
-    │           Atmosphere: 2,840 Gt C              │
-    │              CO₂ = 0.8%                       │
-    └────┬─────────────────────────────────────┬───┘
-         │                                     │
-         │ 120 (photosynthesis)               │ 114 (respiration, fires)
-         ▼                                     ▲
-    ┌────────────────────────────────────────────┐
-    │    Terrestrial biosphere: 1,186 Gt C      │
-    │    Production: 84 Gt C/cycle               │
-    └────┬───────────────────────────────────────┘
-         │
-         │ 61 (death, erosion)
-         ▼
-    ┌────────────────────────────────────────────┐
-    │      Soils: 1,640 Gt C                     │
-    │      Humus, peat, detritus                 │
-    └────┬───────────────────────────────────────┘
-         │
-         │ 24 (leaching)
-         ▼
-    ┌────────────────────────────────────────────┐
-    │    Ocean: 38,400 Gt C dissolved            │
-    │    Marine production: 36 Gt C/cycle        │
-    └────┬───────────────────────────────────────┘
-         │
-         │ 0.12 (burial in sediments)
-         ▼
-    ┌────────────────────────────────────────────┐
-    │   Lithosphere: 60,000,000 Gt C             │
-    │   Carbonates, organogenic rocks            │
-    └────────────────────────────────────────────┘
-         │
-         │ 0.082 (volcanism, metamorphism)
-         │
-         └──────────────→ Atmosphere
-```
+![Carbon cycle of Théxar: atmosphere 2,840 Gt C → biosphere 1,186 → soils 1,640 → ocean 38,400 → lithosphere 60,000,000, with fluxes of photosynthesis, respiration, leaching and volcanism](../../assets/art/ART-000031-thexar-carbon-cycle.png)
 
 ### 13.1.3 The Biological Carbon Pump
 
@@ -158,40 +119,7 @@ The sulfur cycle of Théxar is **unique** compared with Earth: H₂S is not mere
 
 ### 13.3.2 Sulfur Fluxes
 
-```
-          SULFUR CYCLE OF THÉXAR (million ru S/cycle)
-
-    ┌──────────────────────────────────────────────┐
-    │      Atmosphere: H₂S = 0.0008%                │
-    │      (the planet's biomarker)                 │
-    └────┬─────────────────────────────────────┬───┘
-         │                                     │
-         │ 46 (biogenic emission)             │ 48 (wet/dry deposition)
-         ▲                                     ▼
-    ┌────────────────────────────────────────────┐
-    │    Terrestrial biosphere + soils           │
-    │    Chemosynthesis: 52 million ru S/cycle    │
-    └────┬───────────────────────────────────────┘
-         │
-         │ 121 (river runoff of sulfates)
-         ▼
-    ┌────────────────────────────────────────────┐
-    │    Ocean: SO₄²⁻ and H₂S dissolved          │
-    │    Chemosynthesis: 340 million ru S/cycle   │
-    └────┬───────────────────────────────────────┘
-         │
-         │ 84 (volcanic H₂S from the floor)
-         │ 118 (pyrite burial in sediments)
-         │
-         ▼
-    ┌────────────────────────────────────────────┐
-    │   Lithosphere: FeS₂, CaSO₄                 │
-    └────────────────────────────────────────────┘
-         │
-         │ 72 (volcanism, degassing)
-         │
-         └──────────────→ Atmosphere
-```
+![Sulfur cycle of Théxar: atmosphere H₂S 0.0008% ↔ biosphere (chemosynthesis 52) → ocean (chemosynthesis 340) → lithosphere FeS₂/CaSO₄, returning via volcanism](../../assets/art/ART-000032-thexar-sulfur-cycle.png)
 
 ### 13.3.3 Biogenic Emission of H₂S
 

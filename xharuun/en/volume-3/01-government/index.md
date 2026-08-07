@@ -39,29 +39,7 @@ This chapter describes the structure of modern governance: its principles, the s
 
 ## 1.2 Structure of Power
 
-```
-          STRUCTURE OF XHA'RUUN POWER
-
-        ┌──────────────────────────────┐
-        │     Council of Unity (49)    │
-        │  24 Guilds + 25 Regions      │
-        │  + Keeper (without vote)     │
-        └──────────────┬───────────────┘
-                       │
-        ┌──────────────┴───────────────┐
-        │   Executive Committee        │
-        │        (12 members)          │
-        └──────────────┬───────────────┘
-                       │
-        ┌──────────────┴───────────────┐
-        │  8 Domains → Provinces →     │
-        │         Districts            │
-        └──────────────┬───────────────┘
-                       │
-        ┌──────────────┴───────────────┐
-        │  12 Guilds (sectors)         │
-        └──────────────────────────────┘
-```
+![Structure of Xha'Ruun power: Council of Unity (49) → Executive Committee (12) → 8 Domains → 12 Guilds](../../assets/art/ART-000030-xharuun-power-structure.png)
 
 **The Council of Unity (Rass-Vokh-Sha)** — the supreme body of **49 members**: 24 delegates from 12 guilds (2 each) and 25 delegates from eight domains. The **Keeper of Knowledge** participates without vote — his function is constitutional: control of decisions' conformity to the canon.
 
