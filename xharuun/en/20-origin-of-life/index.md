@@ -43,7 +43,7 @@ The main "reactor" of prebiotic chemistry became the **hydrothermal vents of the
 3. **Catalytic surfaces** — pyrite (FeS₂), clay, silicon sediments
 4. **Constant energy supply** — chemical (H₂S, H₂, CH₄) and thermal
 
-`
+```
       HYDROTHERMAL VENT — PREBIOTIC REACTOR
 
       ┌──────────────────────────────────────────────┐
@@ -62,7 +62,7 @@ The main "reactor" of prebiotic chemistry became the **hydrothermal vents of the
       │            Magmatic chamber                │
       │              T = 697.6°X                   │
       └──────────────────────────────────────────────┘
-`
+```
 
 *Fig. 20.1. Hydrothermal vent as a prebiotic reactor.*
 

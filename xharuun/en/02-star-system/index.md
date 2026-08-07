@@ -150,45 +150,9 @@ The Khar'Vex system formed ~6.5 billion cycles ago from a molecular cloud enrich
 
 ### 2.2.3 System Architecture
 
-```
-           SCHEME OF THE KHAR'VEX STAR SYSTEM
-                (top view, not to scale)
-
-                                     ╭─────╮
-             ╭─────╮    ╭─────╮     │     │
-             │     │    │     │     ╰─────╯
-             ╰─────╯    ╰─────╯       Koss
-    Vax       Xhel    ───☀───       (ice giant)
-   (0.21)    (0.42)   │ Khar'Vex    ╭─────╮
-                      │             │     │
-                  ╭───────╮         ╰─────╯
-                  │Thexar │           Phor
-                  │(0.63) │         (dwarf, 18.6 AU)
-                  ╰───────╯
-                      │
-                    ══╪═══     <── Asteroid belt
-                   ═══╪═══        (1.15–1.65 AU)
-                      │
-                   ╭─────╮
-                   │Zhal │
-                   │(2.8)│      ╭──────────╮
-                   ╰─────╯      │  Rhuun   │
-                                │  (5.9)   │
-                                │  rings   │
-                                │  17 moons│
-                                ╰──────────╯
-
-a (AU): ══> distance from star
-
-Habitable zone: ▓▓▓▓▓▓▓▓▓▓▓▓▓ (0.44–0.82 AU)
-                    ↑ Thexar (0.63 AU)
-```
-
-*Fig. 2.2. Schematic of the Khar'Vex star system. Thexar is located in the central part of the habitable zone. The system demonstrates a classic architecture: rocky planets inside, gas giants outside.*
-
 ![Khar'Vex star system](../assets/art/ART-000014-kharvex-system.svg)
 
-*Fig. 2.3. Map-schematic of the Khar'Vex star system: planet orbits, asteroid belt, Théxar system inset, probe trajectory.*
+*Fig. 2.2. Map-schematic of the Khar'Vex star system: planet orbits, asteroid belt, Théxar system inset, probe trajectory. Thexar sits in the central part of the habitable zone; classic architecture — rocky planets inside, gas giants outside.*
 
 ### 2.2.4 Habitable Zone
 

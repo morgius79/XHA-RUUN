@@ -23,41 +23,9 @@ The total land area of Théxar is ~3.3 million mo² — about 33% of the planet'
 
 ## 13.1 Geographical Overview
 
-```
-           GEOGRAPHICAL MAP OF THÉXAR (schematic)
-
-                    North Pole
-                   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-                ╔══╧══╧══╧══╧══╧══╗
-             ╔══╝   ╔═══════════╗ ╚══╗
-            ╔╝      ║           ║    ╚╗
-            ║ Serrin║  Kharak   ║     ║
-            ║  Sea  ║ (1.4)     ║Thalas║
-            ║       ║           ║  Sea ║
-             ║     ╚═══════════╝     ╔╝
-             ╚══╗  ╔═══════╗        ╔╝
-                ║  ║Rhuval║        ║
-                ║  ║(0.9) ║        ║
-                 ║ ╚═══════╝       ║
-                 ║      ╔═══════╗ ╔╝
-                  ║     ║ Vexar ║ ║
-                  ║     ║(0.8) ║ ╔╝
-                   ║    ╚═══════╝ ║
-                   ╚══╗      ╔═══╝
-                      ║▓▓▓▓▓║
-                   South Pole
-
-    Legend:
-    ▓▓ — polar ice sheet
-    ═══ — continent boundaries
-    ─── — sea boundaries
-```
-
-*Fig. 13.1. Schematic map of Théxar. Numbers in parentheses indicate continent area in million mo².*
-
 ![Map of the planet Théxar](../assets/art/ART-000001-planetary-map.svg)
 
-*Fig. 13.1a. Full vector map of Théxar.*
+*Fig. 13.1. Full vector map of Théxar: three continents (Kharak 1.4, Rhuval 0.9, Vexar 0.8 million mo²), oceans, seas, polar ice sheets.*
 
 > **TABLE 13.1: Comparative characteristics of continents**
 >

@@ -41,7 +41,7 @@ In this chapter, we examine the evolution, systematics, and ecology of the anima
 
 ### 18.1.2 Evolutionary Tree
 
-`
+```
                 EVOLUTIONARY TREE OF THERMOCHROMADAE
 
                  ┌─────────────────────────────────────┐
@@ -74,7 +74,7 @@ In this chapter, we examine the evolution, systematics, and ecology of the anima
                                           │  (sapient species) │
                                           │  1 species         │
                                           └───────────────────┘
-`
+```
 
 *Fig. 18.1. Simplified cladogram of Thermochromadae.*
 

@@ -35,7 +35,7 @@ Théxar is divided into **3 biogeographic kingdoms** (corresponding to the conti
 
 ### 11.1.2 Vertical Zones
 
-`
+```
     ALTITUDINAL ZONES OF THÉXAR (diagram)
 
   Height (мо)    Zone                 Characteristic Fauna
@@ -51,7 +51,7 @@ Théxar is divided into **3 biogeographic kingdoms** (corresponding to the conti
      −0.81       🌊 Deep Water         Bioluminescent fauna
      −1.42       🌊 Trenches           Chemosynthetic communities
      ~−1.99      🌊 Maximum Depth      Extremophiles
-`
+```
 
 *Fig. 11.1. Vertical distribution of life on Théxar. Each zone has a unique set of adaptations.*
 
@@ -120,7 +120,7 @@ Théxar's flora is adapted to the Khar'Vex spectrum (→ see [Ch.02, "Khar'Vex"]
 
 A unique group that uses silicon for structural support:
 
-`
+```
     STRUCTURE OF SILICON STEM (cross-section)
 
       ┌────────────────────────┐
@@ -136,7 +136,7 @@ A unique group that uses silicon for structural support:
       │  └──────────────────┘  │
       │  ◇◇◇  Core  ◇◇◇       │
       └────────────────────────┘
-`
+```
 
 *Fig. 11.3. Cross-section of a silicon stem. Silicon fibers (SiO₂) provide rigidity and protection against herbivores.*
 
@@ -159,7 +159,7 @@ The class **Thermochromadae** ("warm-colored") — an endemic vertebrate class o
 
 #### Evolutionary Tree of Thermochromadae
 
-`
+```
     EVOLUTIONARY TREE OF THERMOCHROMADAE (simplified)
 
      ┌──────────────────────────────────────────────────┐
@@ -182,7 +182,7 @@ The class **Thermochromadae** ("warm-colored") — an endemic vertebrate class o
      │-lik│ │    │    │ers) │ │  Xha'Ruun   │
      │e   │ │    │    │     │ │            │
      └────┘ └────┘    └──────┘ └────────────┘
-`
+```
 
 *Fig. 11.4. Simplified evolutionary tree of class Thermochromadae — the dominant animal group of Théxar.*
 
@@ -196,7 +196,7 @@ The class **Thermochromadae** ("warm-colored") — an endemic vertebrate class o
 | **Khel-venidae** (sky) | Bluewing (Khel-vektor) | 1.5–2.4 ша | Mountains, forests | Gliding flight via vexes |
 | **Thal-shidae** (aquatic) | Deep Stinger (Thal-shak) | 1.2–4.9 ша | Oceans | Electroreception |
 
-`
+```
     PROFILE: PLAINS TIGER (Ghal-thass ghal-thassus)
 
     Size: 3.4 ша (body) + 1.8 ша (tail)
@@ -230,7 +230,7 @@ The class **Thermochromadae** ("warm-colored") — an endemic vertebrate class o
          ╱   ╱       │   │       ╲   ╲
         ╱   ╱       👂  👂         ╲   ╲
        ╱  ╱      (rear ears)        ╲  ╲
-`
+```
 
 *Fig. 11.5. Plains Tiger — apex predator of Théxar's savannas.*
 
@@ -284,7 +284,7 @@ In the ocean depths (below 3,658 ша), ecosystems are based on **H₂S chemosyn
 
 ### 11.5.1 Terrestrial Food Chain
 
-`
+```
     TERRESTRIAL FOOD CHAIN (Kharak, savanna)
 
     ☀ Khar'Vex (light)
@@ -323,7 +323,7 @@ In the ocean depths (below 3,658 ша), ecosystems are based on **H₂S chemosyn
     │(Si-bacteria│      cycle closed
     │+ archaea)  │
     └────────────┘
-`
+```
 
 *Fig. 11.6. Typical terrestrial food chain of Théxar.*
 
@@ -342,7 +342,7 @@ In the ocean depths (below 3,658 ша), ecosystems are based on **H₂S chemosyn
 
 A unique feature of Théxar's ecosystems is the **active sulfur cycle** (→ see [Ch.04, "Hydrogen Sulfide Metabolism"]):
 
-`
+```
     THÉXAR SULFUR CYCLE
 
     ┌──────────────────────────────────────────────────┐
@@ -358,7 +358,7 @@ A unique feature of Théxar's ecosystems is the **active sulfur cycle** (→ see
     │                  │ (H₂S ←)  │                │
     │                  └──────────┘                │
     └──────────────────────────────────────────────────┘
-`
+```
 
 *Fig. 11.7. Sulfur cycle of Théxar. H₂S is not a toxin but a key metabolic substrate, closing a separate energy cycle.*
 
@@ -407,7 +407,7 @@ Karst formations of Kharak and Vexar contain isolated underground ecosystems (to
 
 In the Gharra ocean, at depths of 0.71–1.52 мо, around 6 hydrothermal vent fields (black smokers, T up to 252°X) exist ecosystems completely independent of photosynthesis:
 
-`
+```
     HYDROTHERMAL OASIS (diagram)
 
            ┌───────────────────┐
@@ -424,7 +424,7 @@ In the Gharra ocean, at depths of 0.71–1.52 мо, around 6 hydrothermal vent f
             ║  Black Smoker    ║  <── T = 252°X, pH 2.5
             ║  H₂S, Fe, Mn, Si ║       hydrothermal vent
             ╚══════════════════╝
-`
+```
 
 *Fig. 11.8. Hydrothermal oasis — a completely isolated ecosystem based on H₂S chemosynthesis.*
 

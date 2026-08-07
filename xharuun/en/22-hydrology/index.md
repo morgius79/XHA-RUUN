@@ -110,7 +110,7 @@ Total groundwater reserves of Théxar are estimated at ~70.5 thous. мо³.
 
 ## 22.4 Hydrological Cycle
 
-`
+```
                 HYDROLOGICAL CYCLE OF THÉXAR
 
          ┌──────────────────────────────────────┐
@@ -135,7 +135,7 @@ Total groundwater reserves of Théxar are estimated at ~70.5 thous. мо³.
             │                                  │
             └──────────Oceans─────────── 42 thous. мо³/year
                                              (via rivers)
-`
+```
 
 *Fig. 22.1. Hydrological cycle of Théxar.*
 

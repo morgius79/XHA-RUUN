@@ -47,30 +47,9 @@ A key feature of Xha'Ruun technological development is **acceptance of fundament
 | **Stellarator (Khel-Thar)** | D + ³He | 108.7 million °X | Industrial (+2,100) | Compact reactors |
 | **Laser fusion (Khar-Thar)** | D + D | 163.1 million °X | Experimental | Future prospect |
 
-```
-    FUSION REACTOR DIAGRAM (TOKAMAK)
+![Fusion reactor diagram](../assets/art/ART-000010-termoyad-reactor.png)
 
-    ┌──────────────────────────────────────────┐
-    │  ═══════════════  Cryostat  ═══════════  │
-    │  ┌────────────────────────────────────┐  │
-    │  │  ══  Toroidal coils  ════════════  │  │
-    │  │  ┌──────────────────────────────┐  │  │
-    │  │  │  ════  Vacuum  ═══════════   │  │  │
-    │  │  │  ┌────────────────────────┐  │  │  │
-    │  │  │  │  ▓▓▓▓  Plasma  ▓▓▓▓  │  │  │  │
-    │  │  │  │  T = 81.6 million °X  │  │  │  │
-    │  │  │  │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  │  │  │
-    │  │  │  └────────────────────────┘  │  │  │
-    │  │  │  ════  Blanket (Li)  ═════  │  │  │
-    │  │  └──────────────────────────────┘  │  │
-    │  └────────────────────────────────────┘  │
-    │  ════  Magnetic confinement  ═══════════  │
-    │        │  Shielding (Thr + SiC) │        │
-    │        └───────────────────────┘         │
-    └──────────────────────────────────────────┘
-```
-
-*Fig. 9.1. Diagram of a tokamak-type fusion reactor (Thar-Vek). Magnetic confinement of plasma (D+T) at 81.6 million °X. Arrows show energy flow to the blanket.*
+*Fig. 9.1. Diagram of a controlled fusion reactor (tokamak, Thar-Vek): magnetic confinement of plasma (D+T) at 81.6 million °X, toroidal coils, vacuum chamber, lithium blanket, energy flow.*
 
 **Fuel base:**
 - **Deuterium:** abundant (→ see [Ch.01, "Nucleosynthesis"]) — concentration 3.2×
@@ -167,45 +146,9 @@ The orbital elevator is an engineering feat of Xha'Ruun civilization. It connect
 - Passenger traffic: ~5,000 persons/y (specialists, tourists)
 - Cargo flow: ~1,454.5 ru/y (station materials, spacecraft)
 
-```
-    KHAR-TOR ORBITAL ELEVATOR (diagram)
-
-                       ┌──────────────┐
-                       │   Station    │
-                       │   GSO-1      │  <── geostationary
-                       │ (counterwei- │       orbit (7,764.2 mo)
-                       │  ght)        │
-                       └──────┬───────┘
-                              │
-                 ═════════════╪══════════════  <── cable
-                              │              (C-nanotubes + Kh)
-                              │
-                    ┌─────────┴─────────┐
-                    │   Cabin           │  <── electromagnetic
-                    │   (cargo/passengers)│       lift
-                    └─────────┬─────────┘    V = 40.7 mo/h
-                              │
-                 ═════════════╪══════════════
-                              │
-                              │            ┌─────────┐
-                    ┌─────────┴─────────┐  │  Atmo-  │
-                    │   Cabin           │  │  sphere │
-                    └─────────┬─────────┘  │  (2.8 mo)│
-                              │            └────┬────┘
-                 ═════════════╪══════════════   │
-                              │                  │
-                    ┌─────────┴─────────┐       │
-                    │   Anchor          │◄──────┘
-                    │   (equator)       │
-                    │   0°, 142° E      │
-                    └───────────────────┘
-```
-
-*Fig. 9.2. Diagram of the Khar-Tor orbital elevator. Length: 7,764.2 mo. Cable material: carbon nanotubes + kharinium.*
-
 ![Khar-Tor orbital elevator](../assets/art/ART-000011-orbital-lift.png)
 
-*Fig. 9.3. Khar-Tor orbital elevator: cable from the Théxar equator to geostationary orbit, elevator cabins, counterweight, orbital hub.*
+*Fig. 9.2. Khar-Tor orbital elevator: cable from the Théxar equator to geostationary orbit (7,764.2 mo, carbon nanotubes + kharinium), elevator cabins (V = 40.7 mo/h), counterweight, orbital hub.*
 
 **New elevators (under construction):**
 - **"Ven-Khal"** — second elevator, location: 0°, 28° W (off the coast of Rhuval). Planned completion: +4,080 y.c.

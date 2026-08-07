@@ -43,7 +43,7 @@ Théxar has formed 10 major terrestrial biomes, 5 marine, and 3 unique ecosystem
 
 The sulfur cycle is the key difference of Théxar's ecosystems; on Théxar, sulfur is a **full-fledged analog of nitrogen** in biogeochemical cycles.
 
-`
+```
                     THÉXAR SULFUR CYCLE
 
         Atmosphere                   H₂S (0.0008%)
@@ -70,7 +70,7 @@ The sulfur cycle is the key difference of Théxar's ecosystems; on Théxar, sulf
         │  Lithosphere: FeS₂, CaSO₄, S°    │
         │  Mantle sulfur                   │
         └────────────────────────────────────┘
-`
+```
 
 *Fig. 21.1. Sulfur cycle of Théxar.*
 
@@ -94,7 +94,7 @@ Primary production of Théxar's ecosystems is estimated at ~120 Gt C/year. The r
 
 **Grazing chain (Kharak savannas):**
 
-`
+```
   Chromophyta (grasses)
        ↓
   Ghal-Shar (herbivore, 2nd level)    → Rhu-Hopper (scavenger)
@@ -102,17 +102,17 @@ Primary production of Théxar's ecosystems is estimated at ~120 Gt C/year. The r
   Shar-Ghar (predator, 3rd level)
        ↓
   (rarely) Tor-Mor (superpredator, 4th level)
-`
+```
 
 **Detrital chain (Vexar forests):**
 
-`
+```
   Leaf litter (from Ven-Shar)
        ↓
   Khal-Burrower (detritivore) + Mycophyta fungi
        ↓
   Rhu-Hopper (scavenger) → Vex-Thorn (predator)
-`
+```
 
 ---
 

@@ -135,41 +135,13 @@ Théxar's magnetic field (42 μT) provides effective protection against the Khar
 
 Théxar has active plate tectonics — the movement of lithospheric plates across the asthenosphere's surface. This process is a key factor in the carbon cycle and long-term climate stability.
 
-`
-         THÉXAR TECTONIC PLATES (diagram)
-
-              ╔═══════════════════════╗
-              ║      Kharak Plate      ║  ← largest
-              ║    (continental)       ║
-              ╠═════════════╤═════════╣
-              ║             │         ║
-              ║   Thalas    │ Rhuval  ║
-              ║   Plate     │ Plate   ║
-              ║  (oceanic)  │(cont.)  ║
-              ║             │         ║
-              ╠═════════════╪═════════╣
-              ║     Gharra Plate      ║
-              ║    (oceanic)          ║
-              ║             │         ║
-              ║   Vexar     │  Koss   ║
-              ║   Plate     │  Plate  ║
-              ║  (cont.)   │(ocean.) ║
-              ╚═════════════╧═════════╝
-
-    ──────── divergent boundary (rift)
-    ═══════  convergent boundary (subduction)
-    ═══════  transform fault
-`
-
-*Fig. 12.2. Diagram of Théxar's tectonic plates. 10 major plates, 3 of which are continental.*
-
 ![Tectonic plates of Théxar](../assets/art/ART-000002-tectonic-plates.svg)
 
-*Fig. 12.2a. Full vector diagram of the plates.*
+*Fig. 12.2. Full vector diagram of Théxar's tectonic plates: 10 major plates, 3 of which are continental, with boundaries (rifts, subduction, transform faults).*
 
 ![Tectonic plates of Théxar (globe)](../assets/art/ART-000027-tectonic-plates.png)
 
-*Fig. 12.2b. Globe of Théxar's tectonic plates: rifts, subduction, transform faults, volcanic arcs.*
+*Fig. 12.2a. Globe of Théxar's tectonic plates: rifts, subduction, transform faults, volcanic arcs.*
 
 ### 12.3.1 Plate List
 
@@ -192,7 +164,7 @@ Théxar has active plate tectonics — the movement of lithospheric plates acros
 
 Théxar's three continents have not always been in their current positions. Reconstruction of their movement shows:
 
-`
+```
         GEOLOGICAL HISTORY OF CONTINENTS
 
   5.0 billion cycles ago   3.0 billion cycles ago   Present day
@@ -210,7 +182,7 @@ Théxar's three continents have not always been in their current positions. Reco
   └──────────────────┘   └──────────────────┘   └──────────────────┘
                         Movement vectors ⟶ ⟶ ⟶
 
-`
+```
 
 *Fig. 12.3. Continental drift of Théxar: from a single supercontinent to the modern configuration.*
 

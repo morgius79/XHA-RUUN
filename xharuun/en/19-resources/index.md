@@ -198,7 +198,7 @@ Théxar's biodiversity created an extremely rich pharmacopoeia:
 
 The resource specialization of continents formed three economic zones:
 
-`
+```
 ECONOMIC ZONES OF THÉXAR
 
 ┌─────────────────────────────────────────────────────┐
@@ -222,7 +222,7 @@ ECONOMIC ZONES OF THÉXAR
 │  • Biotechnology      • Reserves (15% of land)       │
 │  GDP: ~15% of planetary                              │
 └─────────────────────────────────────────────────────┘
-`
+```
 
 ### 19.4.2 Economic Indicators
 

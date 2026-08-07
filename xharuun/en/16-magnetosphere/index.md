@@ -68,36 +68,9 @@ The longer period between reversals is explained by lower turbulence in Théxar'
 
 ## 16.2 Magnetosphere Structure
 
-`
-           THÉXAR MAGNETOSPHERE (diagram)
-
-          ┌─────────── Khar'Vex stellar wind (→ 842.6 мо/mig)
-          │
-          ▼
-     ╔═══════╗    ┌───────────────────────┐
-     ║ Bow    ║═══│                       │ ════════════════►
-     ║ Shock  ║   │     Magnetosphere     │
-     ╚═══════╝   │   (radius ~12 Rₜ)     │
-          │      │    ┌──┤                   ├──┐    │
-          │  ────┤────│Th│─── Inner          │
-          │      │    └──┤ radiation belt     │
-          │      │    ┌──┤                   ├──┐    │
-          │      │    │Th│─── Outer          │
-          │      │    └──┤ radiation belt     │
-          │      │       ╰───────────────────╯    │
-          └──────┴──────────────────┬──────────────┘
-                                    │
-                              Magnetotail
-                              (length ~80 Rₜ)
-
-         ───────────────────► Direction to Khar'Vex
-`
-
-*Fig. 16.1. Structure of Théxar's magnetosphere.*
-
 ![Magnetosphere of Théxar](../assets/art/ART-000021-magnetosphere.svg)
 
-*Fig. 16.1a. Magnetosphere of Théxar (visualization): Khar'Vex solar wind, bow shock, radiation belts, magnetotail.*
+*Fig. 16.1. Magnetosphere of Théxar (visualization): Khar'Vex stellar wind (842.6 mo/mig), bow shock, magnetosphere (radius ~12 Rₜ), inner and outer radiation belts, magnetotail (~80 Rₜ).*
 
 ### 16.2.1 Key Elements
 

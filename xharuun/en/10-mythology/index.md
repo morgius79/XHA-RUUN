@@ -57,46 +57,9 @@ The cosmos, according to the Teaching, exists in cycles called **"Great Breath"*
 
 This directly corresponds to the cyclic universe cosmological model discussed by Thexar physicists (→ see [Ch.01, "Future of the Universe"]).
 
-```
-         GREAT BREATH (Mor-Vokh) — CYCLE OF THE UNIVERSE
-
-          ╱╲
-         ╱  ╲             1. EXHALATION (expansion)
-        ╱    ╲            ─────────────────────────
-       ╱      ╲           Current phase.
-      ╱        ╲          The universe expands.
-     ╱          ╲         Voices sing separately.
-    ╱            ╲
-   ╱              ╲
-  ╱                ╲
- ╱                  ╲
-╱    ────────────    ╲    2. PAUSE (max expansion)
-╲                    ╱    ─────────────────────────
- ╲                  ╱     Greatest size.
-  ╲                ╱      Entropy is maximal.
-   ╲              ╱       Silence between notes.
-    ╲            ╱
-     ╲          ╱        3. INHALATION (contraction)
-      ╲        ╱         ─────────────────────────
-       ╲      ╱          Contraction of the universe.
-        ╲    ╱           Voices merge.
-         ╲  ╱
-          ╲╱
-           ∙            4. SILENCE (singularity)
-           ∙            ─────────────────────────
-           ∙            The One. Potential.
-           ∙            Waiting for a new Exhalation.
-           ∙
-          ╱╲
-         ╱  ╲           → return to phase 1
-        ╱    ╲
-```
-
-*Fig. 10.1. Diagram of the "Great Breath" — cyclic model of the universe in the Teaching of Vibration. Four phases: Exhalation → Pause → Inhalation → Silence.*
-
 ![Great Breath](../assets/art/ART-000012-great-breath.png)
 
-*Fig. 10.4. "Great Breath" (Mor-Vokh) — the cycle of the universe in the Teaching of Vibration: Exhalation, Pause, Inhalation, Silence.*
+*Fig. 10.1. "Great Breath" (Mor-Vokh) — the cycle of the universe in the Teaching of Vibration. Four phases: Exhalation (expansion) → Pause → Inhalation (contraction) → Silence.*
 
 ---
 
@@ -224,42 +187,9 @@ The centers of religious life are **Resonance Temples** (Khar-Vokh-Thel), archit
 
 The architecture of the temple turns it into a gigantic musical instrument. Each temple is "tuned" to a specific frequency corresponding to one of the Seven Voices. The voice of the worshippers, resonating with the architecture, creates an acoustic pattern that, Xha'Ruun believe, "tunes" the soul into harmony with the corresponding cosmic force.
 
-```
-    ACOUSTICS OF A RESONANCE TEMPLE (cross section)
-
-        Sound waves (chorale)
-              │
-              ▼
-    ┌──────────────────────────────────────┐
-    │  ╲        ╱  ▲  ╲        ╱  ▲       │
-    │   ╲  ◄───╱───│───╲  ◄──╱───│───     │
-    │    ╲   ╱     │    ╲   ╱     │       │
-    │     ╲ ╱      │     ╲ ╱      │       │
-    │      ╲  ──── │ ───  ╲  ─── │ ───   │
-    │     ╱ ╲      │     ╱ ╲      │       │
-    │    ╱   ╲     │    ╱   ╲     │       │
-    │   ╱     ╲    │   ╱     ╲    │       │
-    │  ╱       ╲   │  ╱       ╲   │       │
-    │ ╱         ╲  │ ╱         ╲  │       │
-    │═════════════ │ ═════════════ │       │
-    │  ░░░░░░░░░░  │  ░░░░░░░░░░  │  <── stone floor
-    └──────────────┴──────────────┘
-         ▲              ▲
-         │              │
-     Acoustic       Acoustic
-     focus 1        focus 2
-    (priest)       (choir)
-
-    ■■■ — sound reflection from walls (hexagonal)
-    ▲ — points of constructive interference
-    ◄──► — standing waves (resonance)
-```
-
-*Fig. 10.2. Acoustic diagram of a resonance temple. The hexagonal shape creates 6 focal points where sound is amplified through interference.*
-
 ![Resonance temple Khar-Vokh-Thel](../assets/art/ART-000019-resonator-temple.svg)
 
-*Fig. 10.2a. Resonance temple Khar-Vokh-Thel (cross-section): modulation galleries, reverberator hall, 7 niches of the Voices, resonance focus.*
+*Fig. 10.2. Resonance temple Khar-Vokh-Thel (cross-section): modulation galleries, reverberator hall, 7 niches of the Voices, resonance focus. The hexagonal shape creates 6 focal points where sound is amplified through interference.*
 
 ### 10.4.2 Musical Meditations
 

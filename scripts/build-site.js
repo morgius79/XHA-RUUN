@@ -95,7 +95,14 @@ for (const lang of Object.keys(LANGS)) {
       const title = extractTitle(md);
       const body = marked.parse(md);
       const depth = relPath.split('/').length - 1;
-      const base = depth > 0 ? '../'.repeat(depth) : './';
+      // RU-страницы собираются в docs/ru/... — на один уровень глубже,
+      // поэтому CSS (docs/style.css) и ссылка «назад к энциклопедии» (docs/)
+      // требуют лишний '../'.
+      const offset = lang === 'ru' ? 1 : 0;
+      const styleDepth = depth + offset;
+      const styleBase = styleDepth > 0 ? '../'.repeat(styleDepth) : './';
+      const rootDepth = depth + offset;
+      const rootBase = rootDepth > 0 ? '../'.repeat(rootDepth) : './';
 
       // Переключатель языка — только если парная страница существует
       let langSwitch = '';
@@ -113,7 +120,8 @@ for (const lang of Object.keys(LANGS)) {
         .replace('{{breadcrumb}}', title)
         .replace('{{navLabel}}', cfg.navLabel)
         .replace('{{backLabel}}', cfg.backLabel)
-        .replace(/\{\{base\}\}/g, base)
+        .replace(/\{\{base\}\}/g, styleBase)
+        .replace(/\{\{rootBase\}\}/g, rootBase)
         .replace('{{htmlLang}}', cfg.htmlLang)
         .replace('{{langSwitch}}', langSwitch)
         .replace('{{content}}', body);
