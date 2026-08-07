@@ -2,29 +2,90 @@
 <html lang="xh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xha'Ruun — Ven-Khal-Vokh</title>
-<link rel="stylesheet" href="/XHA-RUUN/style.css">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .lang{float:right;padding:.15rem .7rem;border:1px solid #e8a33d;border-radius:999px;color:#e8a33d;text-decoration:none;font-size:.85rem;margin-left:1rem}
+  .lang:hover{background:#e8a33d;color:#0d1b2a}
+  .chgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.6rem;margin:1.5rem 0}
+  .ch{display:block;padding:.55rem .8rem;border:1px solid rgba(232,163,61,.35);border-radius:8px;color:#e8a33d;text-decoration:none;font-size:.92rem;line-height:1.35}
+  .ch:hover{background:rgba(232,163,61,.12)}
+  .note{border:1px solid rgba(61,218,215,.35);border-radius:8px;padding:.7rem .9rem;color:#9ad;font-size:.9rem}
+  .sharuu-lg{font-family:'Sharuu',serif;font-size:48px;color:#e8a33d;letter-spacing:8px}
+  .sharuu{font-family:'Sharuu',serif;font-size:20px;color:#c9a84c}
+</style>
 </head>
 <body>
 <div class="stars"></div>
 <div class="container">
-<header>
-  <p class="sharuu-lg" style="text-align:center;margin-bottom:20px;">𐤑𐰀𐰺𐰆𐰣</p>
-  <h1>✧ Xha'Ruun ✧</h1>
-  <p class="subtitle">Ven-Khal-Vokh — The Great Encyclopedia</p>
-  <p class="desc">10 thexar-mor · 120+ sha-el · Xha'Ruun-vokh thexen</p>
-  <p class="sharuu" style="text-align:center;margin-top:16px;color:#c9a84c;">𐤑𐰀𐰺𐰆𐰣 𐰺𐰆𐰣𐰣 𐰺𐰆𐰣 𐰺𐰆𐰣</p>
-</header>
+  <header>
+    <p class="sharuu-lg" style="text-align:center;margin-bottom:20px;">𐤑𐰀𐰺𐰆𐰣</p>
+    <h1>✧ Xha'Ruun ✧</h1>
+    <p class="subtitle">Ven-Khal-Vokh — The Great Encyclopedia</p>
+    <p class="desc">28 ruun-sha · Xha'Ruun-ak ven-khal thexar</p>
+  </header>
 
-<nav class="volumes">
-  <a href="/XHA-RUUN/" class="vol"><span class="num">⌂</span><span class="title">Encyclopedia (EN)</span><span class="ch">English version</span></a>
-</nav>
+  <nav style="text-align:right"><a class="lang" href="/">English</a><a class="lang" href="/ru/">Русский</a></nav>
 
-<footer class="info" style="margin-top:40px;">
-  <p style="color:#5b7db5;">Xha'Ruun — thought-nation of the great harmony.</p>
-  <p class="sharuu" style="font-size:18px;margin-top:12px;">𐤑𐰀𐰺𐰆𐰣 𐰺𐰆𐰣𐰣 𐰺𐰆𐰣 𐰺𐰆𐰣</p>
-</footer>
+  <div class="note">
+    <strong>Ven-Khal-Vokh xha-sha-ven Xha'Ruun-thar.</strong>
+    Xha'Ruun vokh-ak the-sha-ak ven-thar: Ruun 27–37 (11), sha-vokh-ak (4), sha-ruu-ak (2), ven thexar-mor-ak (11).
+  </div>
+
+  <h2 style="margin-top:1.75rem;color:#e8a33d">Ruun-Sha-Ak — Chapters</h2>
+
+  <nav class="chgrid">
+    <a class="ch" href="/xh/27-geodesy/">Ruun 27: Théxar-mor The-Sha ven The-Sha-Vex</a>
+    <a class="ch" href="/xh/28-exploration-history/">Ruun 28: Théxar Xha-Sha Mor</a>
+    <a class="ch" href="/xh/29-climate-history/">Ruun 29: Théxar Thal-Mor Mor</a>
+    <a class="ch" href="/xh/30-planet-in-numbers/">Ruun 30: Thexar Ven-ak-the</a>
+    <a class="ch" href="/xh/31-future/">Ruun 31: Théxar-mor Mor</a>
+    <a class="ch" href="/xh/32-kharvex-system/">Ruun 32: Khar'Vex Khal-sha — Rass Ven</a>
+    <a class="ch" href="/xh/33-fusion-energy/">Ruun 33: Khar-mor rass Thel-ak-mor Khal-vex</a>
+    <a class="ch" href="/xh/34-measurement/">Ruun 34: Théxar-mor The-ven Khal-sha-ak</a>
+    <a class="ch" href="/xh/35-index/">Volume I: Thexar — Rass Ven</a>
+    <a class="ch" href="/xh/36-geochemistry/">Ruun 36: Théxar-mor The-ven</a>
+    <a class="ch" href="/xh/37-ecological-zones/">Ruun 37: Théxar-mor Xa-ak Thel-ak</a>
+  </nav>
+
+  <h2 style="margin-top:1.75rem;color:#e8a33d">Sha-Vokh — Stories</h2>
+
+  <nav class="chgrid">
+    <a class="ch" href="/xh/001-the-last-journey/">Xha'Ruun-Vokh: Ven-Khal Mor-El (The Last Journey)</a>
+    <a class="ch" href="/xh/002-the-first-word/">Xha'Ruun-Vokh: Sha-En Ven-El (The First Word)</a>
+    <a class="ch" href="/xh/003-silence-vexar/">Xha'Ruun-Vokh: Vexar Rass-Mor (The Silence of Vexar)</a>
+    <a class="ch" href="/xh/004-deep-covenant/">Xha'Ruun-Vokh: Gharra Rass (The Deep Covenant)</a>
+  </nav>
+
+  <h2 style="margin-top:1.75rem;color:#e8a33d">Sha-Ruu-Ak — References</h2>
+
+  <nav class="chgrid">
+    <a class="ch" href="/xh/grammar-full/">Xha'Ruun Grammar — Complete Reference</a>
+    <a class="ch" href="/xh/lexicon-full/">Xha'Ruun Full Lexicon — 500+ Roots</a>
+  </nav>
+
+  <h2 style="margin-top:1.75rem;color:#e8a33d">Thexar-Mor Ven-Sha — Volume Chapters</h2>
+
+  <nav class="chgrid">
+    <a class="ch" href="/xh/volume-3/10-science-organization/">Thexar-III: Ruun-El — Sha-El 10: Ven-Khal-mor The-El</a>
+    <a class="ch" href="/xh/volume-7/06-kelvash-biology/">Thexar-VII: The-Xa — Sha-El 6: Kel'vash-mor Xa-Sha</a>
+    <a class="ch" href="/xh/volume-7/14-conclusion/">Thexar-VII: The-Xa — Mor-El</a>
+    <a class="ch" href="/xh/volume-8/03-rhuval-physical/">Volume VIII: Thexar-Sha — Ruun 3: Rhuval-mor Sha-Ruun</a>
+    <a class="ch" href="/xh/volume-8/04-vexar-physical/">Volume VIII: Thexar-Sha — Ruun 4: Vexar-mor Sha-Ruun</a>
+    <a class="ch" href="/xh/volume-8/05-ocean-thalas/">Volume VIII: Thexar-Sha — Ruun 5: Thal Thalas</a>
+    <a class="ch" href="/xh/volume-8/06-ocean-gharra/">Volume VIII: Thexar-Sha — Ruun 6: Thal Gharra</a>
+    <a class="ch" href="/xh/volume-8/12-conclusion/">Thexar-VIII: The-Mor-Ven — Mor-El</a>
+    <a class="ch" href="/xh/volume-9/12-name-guide/">Thexar-IX: Sha-Ruun — Sha-El 12: Xha'Ruun Sha-Ruun Khar-Sha</a>
+    <a class="ch" href="/xh/volume-9/13-conclusion/">Volume IX: Sha-Ruun — Mor-Thal</a>
+    <a class="ch" href="/xh/volume-10/02-cross-ref-index/">Thexar-X: The-Ak — Sha-El 2: Vokh-Ak Ven-Thar-Sha Sha-Ven</a>
+  </nav>
+
+  <section class="info">
+    <p><a href="/">English Encyclopedia</a> · <a href="/ru/">Русская энциклопедия</a></p>
+    <p><a href="https://github.com/morgius79/XHA-RUUN">Репозиторий на GitHub</a></p>
+    <p class="sharuu" style="margin-top:1rem;">𐤑𐰀𐰺𐰆𐰣 𐰺𐰆𐰣𐰣 𐰺𐰆𐰣 𐰺𐰆𐰣</p>
+  </section>
 </div>
 </body>
 </html>

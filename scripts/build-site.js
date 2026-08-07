@@ -41,14 +41,17 @@ function copyDir(src, dest) {
 
 function urlOf(rel) { return '/' + rel.replace(/index\.md$/, ''); }
 
+// Корневые пути языков относительно EN-корня (docs/). Используются для
+// переключателей языков: href = LOCATIONS[target] + urlOf(relPath).
+const LOCATIONS = { en: '', ru: '/ru', xh: '/xh' };
+
 const LANGS = {
   en: {
     src: path.join(ROOT, 'xharuun', 'en'),
     dest: path.join(ROOT, 'docs'),
     skip: [],
     htmlLang: 'en',
-    altPrefix: '/ru',
-    label: 'Русский',
+    selfName: 'English',
     titleSuffix: ' — Xha\'Ruun Encyclopedia',
     navLabel: 'Encyclopedia',
     backLabel: 'Back to the Encyclopedia',
@@ -56,18 +59,28 @@ const LANGS = {
   ru: {
     src: path.join(ROOT, 'xharuun'),
     dest: path.join(ROOT, 'docs', 'ru'),
-    // Все Тома I–X публикуются (листинг глав — в xharuun/volume-*/index.md)
+    // Все Тома I–X публикуются (листинг глав — в xharuun/volume-*/index.md);
+    // en/, xh/ — отдельные языковые версии.
     skip: ['en', 'build', 'sharuun', 'scripts', 'templates', 'assets', 'xh'],
     htmlLang: 'ru',
-    altPrefix: '',
-    label: 'English',
+    selfName: 'Русский',
     titleSuffix: ' — Энциклопедия Xha\'Ruun',
     navLabel: 'Энциклопедия',
     backLabel: 'Назад к энциклопедии',
   },
+  xh: {
+    src: path.join(ROOT, 'xharuun', 'xh'),
+    dest: path.join(ROOT, 'docs', 'xh'),
+    skip: [],
+    htmlLang: 'xh',
+    selfName: 'Xha\'Ruun',
+    titleSuffix: ' — Ven-Khal-Vokh',
+    navLabel: 'Ven-Khal-Vokh',
+    backLabel: 'Rhu ven-khal-vokh',
+  },
 };
 
-console.log('Building Xha\'Ruun site (en + ru)...');
+console.log('Building Xha\'Ruun site (en + ru + xh)...');
 
 const files = {};
 for (const lang of Object.keys(LANGS)) {
@@ -93,23 +106,28 @@ for (const lang of Object.keys(LANGS)) {
       const title = extractTitle(md);
       const body = marked.parse(md);
       const depth = relPath.split('/').length - 1;
-      // RU-страницы собираются в docs/ru/... — на один уровень глубже,
+      // RU и XH собираются в docs/ru/, docs/xh/ — на один уровень глубже, чем EN,
       // поэтому CSS (docs/style.css) требует лишний '../'.
-      // Ссылка «назад к энциклопедии» ведёт на свой язык: EN → docs/, RU → docs/ru/.
-      const offset = lang === 'ru' ? 1 : 0;
+      // Ссылка «назад к энциклопедии» ведёт на свой язык: EN → docs/, RU → docs/ru/, XH → docs/xh/.
+      const offset = (lang === 'ru' || lang === 'xh') ? 1 : 0;
       const styleDepth = depth + offset;
       const styleBase = styleDepth > 0 ? '../'.repeat(styleDepth) : './';
       const rootBase = depth > 0 ? '../'.repeat(depth) : './';
 
-      // Переключатель языка — только если парная страница существует
-      let langSwitch = '';
-      if (sets[other].has(relPath)) {
-        const href = cfg.altPrefix + urlOf(relPath);
-        langSwitch = `<a class="lang" href="${href}">${cfg.label}</a>`;
-      } else if (lang === 'en' && relPath === 'volume-1/index.md') {
-        // EN-лендинг Тома I → RU-главная (Том I на RU — 40 корневых глав)
-        langSwitch = `<a class="lang" href="/ru/">${cfg.label}</a>`;
+      // Переключатели языков — ссылки на все остальные языки, где есть парная страница
+      const switches = [];
+      for (const other of Object.keys(LANGS)) {
+        if (other === lang) continue;
+        if (sets[other].has(relPath)) {
+          const href = LOCATIONS[other] + urlOf(relPath);
+          switches.push(`<a class="lang" href="${href}">${LANGS[other].selfName}</a>`);
+        }
       }
+      // Спецслучай: EN-лендинг Тома I → RU-главная (Том I на RU — 40 корневых глав)
+      if (lang === 'en' && relPath === 'volume-1/index.md' && sets.ru.size > 0) {
+        switches.unshift(`<a class="lang" href="/ru/">${LANGS.ru.selfName}</a>`);
+      }
+      const langSwitch = switches.join('');
 
       const html = TEMPLATE
         .replace('{{title}}', title)
