@@ -56,10 +56,8 @@ const LANGS = {
   ru: {
     src: path.join(ROOT, 'xharuun'),
     dest: path.join(ROOT, 'docs', 'ru'),
-    // Томы II-IV финализированы и публикуются; Тома 5-10 — черновики
-    skip: ['en', 'build', 'sharuun', 'scripts', 'templates', 'assets', 'xh',
-           'volume-5', 'volume-6',
-           'volume-7', 'volume-8', 'volume-9', 'volume-10'],
+    // Все Тома I–X публикуются (листинг глав — в xharuun/volume-*/index.md)
+    skip: ['en', 'build', 'sharuun', 'scripts', 'templates', 'assets', 'xh'],
     htmlLang: 'ru',
     altPrefix: '',
     label: 'English',
