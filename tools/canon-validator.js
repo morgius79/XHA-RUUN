@@ -192,10 +192,13 @@ const CANONICAL_PARAMS = [
   // Species Xha'ri
   { key: 'Рост', canonicalValue: '2.2–2.4 м', type: 'height' },
   { key: 'Масса', canonicalValue: '95–130 кг', type: 'weight' },
-  { key: 'Конечности', canonicalValue: '6', type: 'limbs' },
-  { key: 'Глаза', canonicalValue: '3', type: 'eyes' },
-  { key: 'Уши', canonicalValue: '4', type: 'ears' },
-  { key: 'Сердец', canonicalValue: '2', type: 'hearts' },
+  // Голые цифры короче 3 символов отсекаются поиском (line 245), поэтому
+  // добавляем словесные алиасы, несущие и значение, и анатомический контекст.
+  // Только фразы с числом — голые основы ловили бы упоминания без цифр.
+  { key: 'Конечности', canonicalValue: '6', type: 'limbs', alias: ['6 конечностей', 'шесть конечностей'] },
+  { key: 'Глаза', canonicalValue: '3', type: 'eyes', alias: ['3 глаза', 'три глаза'] },
+  { key: 'Уши', canonicalValue: '4', type: 'ears', alias: ['4 уха', '4 ушей', 'четыре уха', 'две пары ушей', 'двумя парами ушей'] },
+  { key: 'Сердец', canonicalValue: '2', type: 'hearts', alias: ['2 сердца', 'два сердца', 'двумя сердцами'] },
   { key: 'Продолжительность жизни', canonicalValue: '150–200', type: 'lifespan' },
 
   // Calendar
