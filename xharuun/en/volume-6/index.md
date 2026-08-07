@@ -2,7 +2,7 @@
 
 > The technological achievements of the Xha'Ruun — from energy and transport to computing and space exploration, all viewed through the lens of biological symbiosis rather than mechanical engineering.
 
-**Chapters: 1–7**
+**Chapters: 1–11**
 
 | # | Chapter | |
 |---|---------|---|
@@ -12,4 +12,8 @@
 | 4 | [Living Computation](04-computing/) | Biological computing, organic processors |
 | 5 | [Non-AI: A Different Path](05-ai/) | The Xha'Ruun approach to intelligence augmentation |
 | 6 | [Space: Symbiotic Expansion](06-space/) | Orbital infrastructure, lunar bases, interplanetary |
-| 7 | [Conclusion](07-conclusion/) | Technological synthesis and limitations |
+| 7 | [Materials Science](07-materials/) | Six classes of matter, living and grown materials |
+| 8 | [Medicine](08-medicine/) | Three-species medicine, molecular surgery, regeneration |
+| 9 | [Construction](09-construction/) | Growing structures, living buildings, building keeper |
+| 10 | [Infrastructure](10-infrastructure/) | Six planetary networks, 500-year planning |
+| 11 | [Conclusion](11-conclusion/) | Technological synthesis and limitations |

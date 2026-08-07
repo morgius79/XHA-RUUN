@@ -19,4 +19,4 @@
 
 ---
 
-*End of Volume VII: Nature. 8 chapters. Consistent with CANON.md v0.3.0*
+*End of Volume VII: Nature. 14 chapters. Consistent with CANON.md v0.3.0*

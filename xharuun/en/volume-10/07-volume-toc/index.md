@@ -16,16 +16,16 @@ Laws, government, economy
 ## Volume IV: Language (12 chapters)
 Phonetics, grammar, writing system
 
-## Volume V: Culture (7 chapters)
-Art, science, religion
+## Volume V: Culture (13 chapters)
+Art, science, religion, sports, cuisine, ethics
 
-## Volume VI: Technology (7 chapters)
-Energy, transport, computing
+## Volume VI: Technology (11 chapters)
+Energy, transport, computing, medicine, infrastructure
 
-## Volume VII: Nature (8 chapters)
+## Volume VII: Nature (14 chapters)
 Flora, fauna, ecology — in-depth
 
-## Volume VIII: Atlas (6 chapters)
+## Volume VIII: Atlas (12 chapters)
 Maps and geographic descriptions
 
 ## Volume IX: Dictionary (13 chapters)

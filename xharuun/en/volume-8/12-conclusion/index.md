@@ -19,4 +19,4 @@
 
 ---
 
-*End of Volume VIII: Atlas. 6 chapters. Consistent with CANON.md v0.3.0*
+*End of Volume VIII: Atlas. 12 chapters. Consistent with CANON.md v0.3.0*

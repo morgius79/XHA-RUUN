@@ -14,6 +14,9 @@ Caddyfile.tmp
 *.sh
 *.py
 awg/
+
+# CamGuard (локальная разработка, на сервере)
+camguard-work/
 iptables*.sh
 setup-*.sh
 fix-*.sh
