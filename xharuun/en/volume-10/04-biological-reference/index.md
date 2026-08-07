@@ -1,0 +1,133 @@
+# Volume X: Appendices — Chapter 4: Biological Reference
+
+> *"Six DNA letters. Three sapient species. One world."*
+> — Institute of Xenobiology, +3,000 Y.E.
+
+---
+
+**Related sections:** → see [Volume I, Ch.11, "Flora and Fauna"], → see [Volume VII, "Nature"], → see [Volume VII, Ch.06, "Biology of the Kel'vash"], → see [Volume VII, Ch.07, "Biology of the Moryn"]
+
+---
+
+## 4.1 Three Sapient Species
+
+| Parameter | Xha'Ruun | Kel'vash | Moryn |
+|-----------|----------|----------|-------|
+| Biochemistry | Carbon + H₂O | Silicon + H₂SO₄ | Carbon + H₂O |
+| Habitat | Land, 0–3,000 m ASL | Highlands >1,500 m, deserts | Ocean, 1,200–3,000 m depth |
+| T optimum | 15–30 °C | 180–220 °C | 2–8 °C |
+| Pressure optimum | 0.8–1.2 atm | 0.5–0.7 atm | 120–300 atm |
+| Metabolism | Aerobic | Chemoautotrophic | Aerobic (slow) |
+| Respiration | O₂ | Sulfur compounds | O₂ (dissolved) |
+| Lifespan | 80–120 mormor | 200–400 mormor | 150–300 mormor |
+| Reproduction | Viviparity, pair | Fission + fusion | Spawning, group |
+| Communication | Vocal (air) | Vibrational (crystals) | Bioluminescent |
+| Population (~+4,000 Y.E.) | 3.8 billion | 120 million | 18 million |
+| Planetary share (territory) | 34% of land | 8% of land | 12% of ocean |
+| Contact status | — | stable, +1,800 Y.E. | stable, +2,000 Y.E. |
+
+## 4.2 Class Thermochromadae (Six-Letter DNA)
+
+| Characteristic | Description |
+|----------------|-------------|
+| Base pairs | G-C, A-T, X-Y (additional pair) |
+| X-Y function | Thermostabilization, repair |
+| Chromosome count (Xha'ruun) | 24 pairs (48 chromosomes) |
+| Genome size | 4.2 billion base pairs |
+| Coding genes | ~28,000 |
+| Uniqueness | only on Théxar |
+| Evolutionary advantage | +40% resistance to UV and radiation |
+
+## 4.3 Xha'ruun Physiology
+
+| Parameter | Value |
+|-----------|-------|
+| Mean height | 178 cm (♂), 172 cm (♀) |
+| Mean mass | 68 kg (♂), 61 kg (♀) |
+| Respiratory rate | 14–18/min |
+| Resting pulse | 62–74 bpm |
+| Body temperature | 37.2 °C |
+| Lung volume | 5.8 L |
+| Blood volume | 5.2 L |
+| Hemoglobin | iron-based |
+| Color vision | trichromatic + UV |
+| Auditory range | 18–24,000 Hz |
+| Sleep duration | 7–9 h/day |
+| Sexual maturity | 18 mormor |
+| Menopause | 60–70 mormor |
+| Gestation period | 280 days (0.68 mormor) |
+
+## 4.4 Kel'vash Physiology
+
+| Parameter | Value |
+|-----------|-------|
+| Mean height | 140 cm |
+| Mean mass | 95 kg (high density) |
+| Respiratory rate | 2–4/min (chemosynthesis) |
+| Resting pulse | 18 bpm |
+| Body temperature | 190–210 °C |
+| Blood | silicon-based + sulfur |
+| Color vision | infrared |
+| Auditory range | vibration 1–500 Hz |
+| Sleep duration | 2 h/day |
+| Sexual maturity | 80 mormor |
+| Fission | once per 50 mormor |
+| Fusion (reproduction) | once per 200 mormor |
+
+## 4.5 Moryn Physiology
+
+| Parameter | Value |
+|-----------|-------|
+| Mean length | 2.8 m |
+| Mean mass | 120 kg |
+| Respiratory rate | 4–6/min |
+| Resting pulse | 28 bpm |
+| Body temperature | 4–6 °C |
+| Hemoglobin | copper-organic |
+| Color vision | full visible spectrum + deep blue |
+| Auditory range | 2–8,000 Hz + electroreception |
+| Sleep duration | none (30-min meditative cycles) |
+| Sexual maturity | 40 mormor |
+| Spawning | once per 20 mormor |
+| Larval stage duration | 8 mormor |
+
+## 4.6 Flora (Principal Classes)
+
+| Class | Species | Habitat | Feature |
+|-------|---------|---------|---------|
+| **Khel-xa** (trees) | ~8,200 | land, 0–2,000 m | photosynthesis |
+| **Ven-xa** (shrubs) | ~14,000 | land | X-Y-stabilized DNA |
+| **Thal-xa** (algae) | ~22,000 | ocean 0–200 m | symbiosis with Thermochromadae |
+| **Tor-xa** (lichens) | ~3,600 | highlands | UV resistance |
+| **Moryn-xa** (deep-water) | ~1,800 | ocean >1,200 m | bioluminescence |
+
+## 4.7 Fauna (Principal Classes)
+
+| Class | Species | Habitat | Feature |
+|-------|---------|---------|---------|
+| **Xhari-xa** (mammal analogues) | ~4,200 | land | warm-blooded, viviparity |
+| **Khal-xa** (bird analogues) | ~9,800 | land, air | flight, egg-laying |
+| **Thal-xa** (fish) | ~18,000 | ocean | gill respiration |
+| **Vex-xa** (insect analogues) | ~124,000 | land, air | exoskeleton, 6 limbs |
+| **Gharra-xa** (deep-sea) | ~2,400 | ocean >1,200 m | bioluminescence, pressure |
+
+---
+
+## Chapter Summary
+
+| Section | Entries |
+|---------|---------|
+| Three sapient species | 12 parameters |
+| Class Thermochromadae | 7 characteristics |
+| Xha'ruun physiology | 13 |
+| Kel'vash physiology | 12 |
+| Moryn physiology | 11 |
+| Flora (classes) | 5 |
+| Fauna (classes) | 5 |
+| **Total** | **65** |
+
+The biological diversity of Théxar is the result of **six-letter DNA** and three independent evolutionary lines (carbon-water, silicon-acid, carbon-water-depth). Each of the three occupied its own ecological niche; there is no direct competition for resources between the species.
+
+---
+
+*End of Chapter 4, Volume X. Consistent with CANON.md v1.3.0*
