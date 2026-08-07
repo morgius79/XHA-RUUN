@@ -21,8 +21,6 @@ Each glossary entry follows the format:
 
 **Ablative** (*ling.*) — case of motion from a source (-tor). → see [Volume IV, Ch.04]
 
-**Adaptive thinking** (*AI*) — extended reasoning mode in Claude 5. → see [technical context]
-
 **Adit** (*mining*) — horizontal working; **məlkhar** in Xha'Ruun, a loan from Kel'vash. → see [Volume IX, Ch.09]
 
 **Agglutination** (*ling.*) — word formation via suffixes that retain form and meaning. → see [Volume IV, Ch.03]
@@ -167,8 +165,8 @@ Each glossary entry follows the format:
 | Geography and cosmology | 12 |
 | Biology | 8 |
 | Politics and society | 6 |
-| Technology | 6 |
-| **Total** | **60** |
+| Technology | 5 |
+| **Total** | **59** |
 
 The glossary covers **key terms** from all 10 volumes. The full lexicon (50,000+ words) requires a separate reference; here only terms that occur **in three or more volumes** or bear special significance for understanding Xha'Ruun civilization are included.
 
