@@ -23,7 +23,29 @@
 
 ## 2.2 Orographic Scheme
 
-![Orography of Kharak: Khar-Tor ridge in the west, Serrin Plateau in the north, Central Plain, Shan Desert in the southeast](../../assets/art/ART-000029-kharak-orography.png)
+```
+       OROGRAPHY OF KHARAK (schematic)
+
+         ╔═══╗       Northern taiga
+   ╔═════╝   ╚═════╗
+   ║   Serrin      ║
+   ║   Plateau     ║
+   ╚═════╗   ╔═════╝
+         ╚═╤═╝
+    ╔═══════╧═══════╗
+    ║    Central    ║
+    ║     Plain     ║
+    ╚═══════╤═══════╝
+            │
+    ┌───────┴───────┐
+    │   Shan        │
+    │   Desert      │
+    └───────────────┘
+
+    ╔═══╗ — mountains (Khar-Tor ridge)
+    ═══ — plains
+    ░░░ — desert
+```
 
 ---
 

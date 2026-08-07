@@ -12,9 +12,34 @@
 
 ## 1.1 Physical Map of Théxar
 
-![Physical map of Théxar: continents Kharak (34.2), Rhuval (21.7), Vexar (18.5), Ocean Thalas, Sea Serrin, polar caps](../../assets/art/ART-000028-thexar-planetary-map.png)
+```
+           PHYSICAL MAP OF THÉXAR (schematic)
 
-*Scale ~1:80,000,000. Projection: equal-area (Lambert).*
+                     North Pole
+                    ▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+                 ╔══╧══╧══╧══╧══╧══╗
+              ╔══╝   ╔═══════════╗ ╚══╗
+             ╔╝      ║           ║    ╚╗
+             ║  Sea  ║  Kharak   ║     ║
+             ║ Serrin║ (34.2)    ║ Sea ║
+             ║       ║           ║Thalas║
+              ║     ╚═══════════╝     ╔╝
+              ╚══╗  ╔═══════╗        ╔╝
+                 ║  ║Rhuval║        ║
+                 ║  ║(21.7)║        ║
+                  ║ ╚═══════╝       ║
+                  ║      ╔═══════╗ ╔╝
+                   ║     ║ Vexar ║ ║
+                   ║     ║(18.5)║ ╔╝
+                    ║    ╚═══════╝ ║
+                    ╚══╗      ╔═══╝
+                       ║▓▓▓▓▓║
+                    South Pole
+
+    ═══ Land     ▓▓ Ice     ≈≈ Water
+    Scale ~1:80,000,000
+    Projection: equal-area (Lambert)
+```
 
 ## 1.2 Map Parameters
 
