@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-I, Ruun 15, "Atmosphere and Climate"]; → rhu [Thexar-I, Ruun 37, "Ecological Zones"]; → rhu [Thexar-VIII, Sha-El 01, "Planetary Map"]; → rhu [Thexar-I, Ruun 13, "Continents"].
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 15, "Atmosphere and Climate"], → rhu [Thexar-I, Ruun 37, "Ecological Zones"], → rhu [Thexar-VIII, Sha-El 01, "Théxar-mor Ak-El"], → rhu [Thexar-I, Ruun 13, "The-Xar-Ak Théxar"].
 **Volume:** 15 sha-ruun
 **Mor-ven:** Climate zonation of Théxar is set by K2V low insolation, elevated CO₂, and a 14.2° axial tilt — yielding smooth transitions and muted seasons. Seven latitudinal zones from equatorial to polar are complemented by altitudinal belts and ocean moderation.
 

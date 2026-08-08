@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-VIII, Sha-El 27, "Geodesy"]; → rhu [Thexar-VIII, Sha-El 13, "Continents"].
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 27, "Geodesy"], → rhu [Thexar-I, Ruun 13, "The-Xar-Ak Théxar"], → rhu [Thexar-VIII, Sha-El 02, "Kharak Ak-El"], → rhu [Thexar-VIII, Sha-El 11, "Khar'Vex Ak-El"].
 **Volume:** 20 sha-ruun
 **Mor-ven:** Physical schematic of Théxar showing three continents (Kharak, Rhuval, Vexar) bordered by Sea Serrin and Sea Thalas, with polar ice caps. Rendered in Lambert equal-area projection at scale 1:80,000,000, with prime meridian anchored at Khar-Vexar (42°18′ N).
 

@@ -1,25 +1,42 @@
-# Volume VIII: Thexar-Sha — Ruun 3: Rhuval-mor Sha-Ruun
+# Thexar-VIII: The-Xar-Ak — Sha-El 03: Rhuval Ak-El — Map of Rhuval
 
-> *"Rhuval shan-mor thexar en-ven. Shan-thar-ak mor-kha-mor, the-ak mor-ven-mor. Rhuval ghash-en, shan-en, khal-thar mor-tha-en."*
-> — Shan-Xha Ven-Khal
+> *"Rhuval is the continent of fire. Its volcanoes never sleep, its depths never cool. It is young, hot, and impatient."*
+> — Volcanologist Ven-Khal
 
 ---
 
-**Ruun-ak rass:** → rhu [Ruun 13, "Thexar-ak"]
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 13, "The-Xar-Ak Théxar"], → rhu [Thexar-VIII, Sha-El 01, "Théxar-mor Ak-El"], → rhu [Thexar-VIII, Sha-El 08, "Thar-Vokh Ak-El"]
 **Volume:** 15 sha-ruun
+**Mor-ven:** Rhuval is the equatorial continent of fire — young, hot, and volcanically restless. The chapter maps its key parameters: the highest peak, average elevation, extent, and its longest river.
 
 ---
 
-## 3.1 Vokh Shan-ak
+## 03.1 Key Parameters
 
-| Shan | Ven |
-|------|-----|
-| Thexar | 21.7 million мо² |
-| Vokh Tor | Mt. Moraat — 1,319 мо |
-| Ven Tor-el | 840 мо |
-| Tor-el (N khar S) | 3,250 мо |
-| Vokh Thal | Thash-Ven — 776 мо |
+| Parameter | Value |
+|-----------|-------|
+| Area | 21.7 million мо² |
+| Highest point | Mt. Moraat — 1,319 мо |
+| Average elevation | 840 мо |
+| Length (N to S) | 3,250 мо |
+| Longest river | Thash-Ven — 776 мо |
 
 ---
 
-*Ruun 3, Volume VIII mor-thal.*
+## Ruun Ven
+
+1. Rhuval is the equatorial continent, "continent of fire."
+2. Area 21.7 million мо²; highest point Mt. Moraat 1,319 мо.
+3. Average elevation 840 мо; length 3,250 мо north-south.
+4. Longest river Thash-Ven, 776 мо.
+
+**Rass-Ven (CANON):**
+- Rhuval area 21.7 million мо² ✓
+- Mt. Moraat 1,319 мо ✓
+- Average elevation 840 мо ✓
+- Length 3,250 мо ✓
+- Thash-Ven 776 мо ✓
+
+---
+
+*Thexar-VIII: The-Xar-Ak mor-el. Sha-El 03. CANON.md v1.0.0-ak ven-an-ven.*

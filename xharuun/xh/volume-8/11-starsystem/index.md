@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-I, Ruun 32, "The Khar'Vex System"]; → rhu [Thexar-I, Ruun 02, "The Star System"]; → rhu [Thexar-I, Ruun 24, "Moons"]; → rhu [Thexar-VI, Ruun 06, "Space"]; → rhu [Thexar-II, Ruun 15, "History of the Space Era"].
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 32, "Khar'Vex Khal-sha"], → rhu [Thexar-I, Ruun 02, "The Star System"], → rhu [Thexar-VI, Sha-El 06, "Vex-El Khal-sha"], → rhu [Thexar-II, Sha-El 15, "History of the Space Era"].
 **Volume:** 18 sha-ruun
 **Mor-ven:** The Khar'Vex system — an orange K2V dwarf, seven planets, two asteroid belts, and an extensive orbital infrastructure — forms the single economic complex that hosts the Xha'Ruun civilization. This chapter systematizes the astronomical parameters of the star, its planets, and the moons of Théxar. It also catalogues the space assets: the "Khar-Tor" orbital elevator, the GNSS constellation, orbital stations, the Orbital Forest, and the interstellar "Sowing-1" probe.
 

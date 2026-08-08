@@ -1,26 +1,44 @@
-# Volume VIII: Thexar-Sha — Ruun 4: Vexar-mor Sha-Ruun
+# Thexar-VIII: The-Xar-Ak — Sha-El 04: Vexar Ak-El — Map of Vexar
 
-> *"Vexar vokh-ruun-ak mor-vex-en. Vexar khal-ak vex-en. Khal-ak-the khar-mor xa en-ven."*
-> — Khal-Xha Shan-En
+> *"Vexar does not build empires. Vexar grows forests. And in these forests lies the key to the future."*
+> — Ecologist Shan-En
 
 ---
 
-**Ruun-ak rass:** → rhu [Ruun 13, "Thexar-ak"]
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 13, "The-Xar-Ak Théxar"], → rhu [Thexar-VIII, Sha-El 01, "Théxar-mor Ak-El"], → rhu [Thexar-VIII, Sha-El 07, "Rass-Vokh Ak-El"]
 **Volume:** 15 sha-ruun
+**Mor-ven:** Vexar is the southern forested continent. The chapter maps its key parameters — the highest peak, forest cover, flora endemism, longest river, and largest city.
 
 ---
 
-## 4.1 Vokh Shan-ak
+## 04.1 Key Parameters
 
-| Shan | Ven |
-|------|-----|
-| Thexar | 18.5 million мо² |
-| Vokh Tor | Mt. Sharrus — 1,242 мо |
-| Khal Vex | 52% |
-| Xa Ruun | 31% |
-| Vokh Thal | Sharrus — 638 мо |
-| Vokh Khal | Shan-En (7.8 million) |
+| Parameter | Value |
+|-----------|-------|
+| Area | 18.5 million мо² |
+| Highest point | Mt. Sharrus — 1,242 мо |
+| Forest cover | 52% |
+| Flora endemism | 31% |
+| Longest river | Sharrus — 638 мо |
+| Largest city | Shan-En (7.8 million) |
 
 ---
 
-*Ruun 4, Volume VIII mor-thal.*
+## Ruun Ven
+
+1. Vexar is the southern continent of forests.
+2. Area 18.5 million мо²; highest point Mt. Sharrus 1,242 мо.
+3. Forest cover 52%; flora endemism 31%.
+4. Longest river Sharrus 638 мо; largest city Shan-En (7.8 M).
+
+**Rass-Ven (CANON):**
+- Vexar area 18.5 million мо² ✓
+- Mt. Sharrus 1,242 мо ✓
+- Forest cover 52% ✓
+- Flora endemism 31% ✓
+- Sharrus river 638 мо ✓
+- Shan-En 7.8 million ✓
+
+---
+
+*Thexar-VIII: The-Xar-Ak mor-el. Sha-El 04. CANON.md v1.0.0-ak ven-an-ven.*

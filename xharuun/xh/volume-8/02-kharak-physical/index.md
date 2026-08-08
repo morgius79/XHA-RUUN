@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-VIII, Sha-El 13, "Continents"]; → rhu [Thexar-VIII, Sha-El 01, "Planetary Map"]; → rhu [Thexar-VIII, Sha-El 03, "Rhuval Physical"]; → rhu [Thexar-VIII, Sha-El 04, "Vexar Physical"].
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 13, "The-Xar-Ak Théxar"], → rhu [Thexar-VIII, Sha-El 01, "Théxar-mor Ak-El"], → rhu [Thexar-VIII, Sha-El 03, "Rhuval Ak-El"], → rhu [Thexar-VIII, Sha-El 04, "Vexar Ak-El"].
 **Volume:** 20 sha-ruun
 **Mor-ven:** Physical portrait of Kharak, the oldest continent of Théxar: an eroded orogenic core, deep central plain, and southern Shan Desert. Anchored by Mt. Verksan (1,590 мо), the Khar-Tor river (870 мо), and the megacity Khar-Vexar (18.6 million).
 

@@ -1,27 +1,53 @@
-# Thexar-IX: Sha-Ruun — Sha-El 12: Xha'Ruun Sha-Ruun Khar-Sha
+# Thexar-IX: Sha-Ruun — Sha-El 12: Ven-Khal Xha-El — Xha'Ruun Name Guide
 
-> *"Sha-ruun the-sha mor-en-ven. Sha-ruun mor-sha en-ven. Sha-ruun vex khal-ven-thar ven-khal en-ven."*
-> — "Sha-Ruun Vokh," Sha-Ruun Khal-Ven
-
----
-
-## 12.1 Sha-Ruun The-El
-
-Xha'Ruun sha-ruun-ak the-ak el en-en-ven: [the-1]-[the-2]. Ruun-thar el-sha-vex en-en-ven.
-
-**Khal-ven-ak:**
-- **Khar-Vexar** — "Khar-Vex"
-- **Ven-Khal** — "Ven-Xa"
-- **Shan-En** — "Shan-En"
-
-## 12.2 Ruun-Thar Mor-Sha
-
-| Ruun-thar | Mor-sha | Khal-ven |
-|-----------|---------|----------|
-| Ruun-en (♂) | -en, -un | **Verksen**, **Torun** |
-| Ruun-xa (♀) | -a, -ae | **Thexa**, **Rhuae** |
-| Ruun-el (⚲) | -in, -el | **Sharin**, **Vexel** |
+> *"A name is not a label. A name is destiny. To give a name is to determine a path."*
+> — From the "Book of Names," Naming Ceremony
 
 ---
 
-*Thexar-IX: Sha-Ruun mor-el. Sha-El 12. CANON.md v0.3.0-rass en-ven.*
+**Ruun-ak rass:** → rhu [Thexar-IX, Sha-El 08, "Ven-Khal Sha-Ruun"], → rhu [Thexar-IX, Sha-El 02, "Thel-ak Ruun"], → rhu [Thexar-IX, Sha-El 07, "Sha-Ruun Ven-El"]
+**Volume:** 30 sha-ruun
+**Mor-ven:** The practical companion to the rules of naming: how a two-part name is built, where the stress falls, and how the gender endings -en/-un, -a/-ae, and -in/-el close a name. Names are destiny — the Naming Ceremony binds the path of the bearer.
+
+---
+
+## 12.1 Name Structure
+
+Xha'Ruun names are two-part: **[root-1]-[root-2]**. Stress falls on the second part.
+
+**Examples:**
+- **Khar-Vexar** — "Light-Giver"
+- **Ven-Khal** — "Truth-Life"
+- **Shan-En** — "Flame-Being"
+
+## 12.2 Gender Endings
+
+| Gender | Ending | Example |
+|--------|--------|---------|
+| Male (♂) | -en, -un | **Verksen**, **Torun** |
+| Female (♀) | -a, -ae | **Thexa**, **Rhuae** |
+| Neuter (⚲) | -in, -el | **Sharin**, **Vexel** |
+
+---
+
+## 12.3 Summary
+
+Two parts, second stressed; the gender ending closes the second root. The same suffixes may carry other functions elsewhere in the grammar — as lineal suffixes (-en, -in, -el) or nominal endings (-a, -ae) — so a name is read whole, never root by root (→ rhu [Thexar-IX, Sha-El 08, "Ven-Khal Sha-Ruun"]).
+
+---
+
+## Ruun Ven
+
+1. Names are two-part: [root-1]-[root-2]; stress on the second part.
+2. Khar-Vexar "Light-Giver"; Ven-Khal "Truth-Life"; Shan-En "Flame-Being."
+3. Gender endings: -en/-un (♂), -a/-ae (♀), -in/-el (⚲).
+4. Suffixes recur across functions — a name is read as a whole.
+
+**Rass-Ven (CANON):**
+- two-part structure ✓
+- stress on second part ✓
+- gender endings -en/-un, -a/-ae, -in/-el ✓
+
+---
+
+*Thexar-IX: Sha-Ruun mor-el. Sha-El 12. CANON.md v1.0.0-ak ven-an-ven.*

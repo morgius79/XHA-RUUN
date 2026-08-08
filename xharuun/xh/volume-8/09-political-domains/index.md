@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-III, Sha-El 05, "The 8 Domains"]; → rhu [Thexar-II, Sha-El 11, "History of the Eight Domains"]; → rhu [Thexar-I, Sha-El 13, "Continents"]; → rhu [Thexar-III, Sha-El 02, "The Council of Unity"].
+**Ruun-ak rass:** → rhu [Thexar-III, Sha-El 05, "Khal-Ven Rass"], → rhu [Thexar-II, Sha-El 11, "History of the Eight Domains"], → rhu [Thexar-I, Ruun 13, "The-Xar-Ak Théxar"], → rhu [Thexar-III, Sha-El 02, "The Council of Unity"].
 **Volume:** 15 sha-ruun
 **Mor-ven:** The eight political domains cover the whole of Théxar, with borders shaped by historical, cultural, and economic distinctions accumulated over millennia. Three lie on Kharak, two on Rhuval, two on Vexar, plus the Island and Polar domains. Each has its own capital, guild headquarters, and specialization within a unified planetary framework.
 
