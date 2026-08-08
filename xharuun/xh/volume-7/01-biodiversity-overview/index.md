@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-VII, Sha-El 17, "Flora"], → rhu [Thexar-VII, Sha-El 18, "Fauna"], → rhu [Thexar-VII, Sha-El 21, "Ecosystems"].
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 17, "Flora"], → rhu [Thexar-I, Ruun 18, "Fauna"], → rhu [Thexar-I, Ruun 21, "Xa-The Xa-Vokh Mor-Ven"].
 **Volume:** 35 sha-ruun
 **Mor-ven:** Théxar hosts an exceptional biosphere shaped by 4.2 billion cycles of evolution under an orange sun, active tectonics, and abundant sulfur. Its life uses a 6-letter genetic code (G, C, A, T, P, X), D-chirality, and H₂S chemosynthesis, yielding roughly 3.15 million described species out of an estimated 5.22 million.
 

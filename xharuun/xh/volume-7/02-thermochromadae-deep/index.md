@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-VII, Sha-El 18, "Fauna"], → rhu [Thexar-VII, Sha-El 05, "The Xha'Ruun Species"]
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 18, "Fauna"], → rhu [Thexar-I, Ruun 05, "Xha'Ruun Sha-Mor"], → rhu [Thexar-VII, Sha-El 11, "Mor-Ven Xha-El"]
 **Volume:** 30 sha-ruun
 **Mor-ven:** The class Thermochromadae is Théxar's dominant animal lineage, radiating over ~350 million cycles into ~24,000 described species. Its body plan is defined by five conserved adaptations — hexapodalism, a dual bloodstream, trinocular vision, thermochromatism, and a 6-nucleotide genetic code — that the digest catalogs as the enduring khal-el of Théxaran life.
 

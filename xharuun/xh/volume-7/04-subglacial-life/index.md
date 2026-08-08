@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-VII, Sha-El 23, "Cryosphere"]
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 23, "Cryosphere"], → rhu [Thexar-VII, Sha-El 03, "Thar-Mor Xa-Sha"]
 **Volume:** 25 sha-ruun
 **Mor-ven:** Subglacial ecosystems of Théxar lie beneath 3 ша of polar ice, sealed for millions of cycles. Chemosynthetic microbial life persists in the Ven-Deep and Khal-Sub lake systems, forming 100% endemic communities — "living fossils" of pre-glacial Théxar.
 

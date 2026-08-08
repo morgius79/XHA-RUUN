@@ -5,7 +5,7 @@
 
 ---
 
-**Ruun-ak rass:** → rhu [Thexar-VII, Sha-El 05, "The Xha'Ruun Species"], → rhu [Thexar-VII, Sha-El 07, "Sha-Ruun Xa-Sha"], → rhu [Thexar-VII, Sha-El 09, "Xa-Sha Ven-Ruun"], → rhu [Thexar-I, Ruun 05, "Xha'Ruun Origins"].
+**Ruun-ak rass:** → rhu [Thexar-I, Ruun 05, "Xha'Ruun Sha-Mor"], → rhu [Thexar-VII, Sha-El 02, "Thermochromadae Khal-El"], → rhu [Thexar-VII, Sha-El 07, "Moryn-mor Xa-Sha"], → rhu [Thexar-VII, Sha-El 11, "Mor-Ven Xha-El"].
 **Volume:** 30 sha-ruun
 **Mor-ven:** Deep evolutionary anatomy of the Xha'Ruun species — hexapodal body plan, dual cardiovascular and respiratory systems, and a three-sex reproductive structure. Every organ reflects millions of evolutionary cycles adapted to environmental challenge.
 
