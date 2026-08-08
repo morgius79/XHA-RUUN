@@ -196,33 +196,9 @@ Théxar's biodiversity created an extremely rich pharmacopoeia:
 
 ### 19.4.1 Economic Zones
 
-The resource specialization of continents formed three economic zones:
+![Economic zones of Théxar](../assets/art/ART-000061-thexar-economic-zones.png)
 
-```
-ECONOMIC ZONES OF THÉXAR
-
-┌─────────────────────────────────────────────────────┐
-│  Kharak: Energy + Industry + Agriculture             │
-│  ─────────────────────────────────────────────────── │
-│  • Thorium (52%↑)  • Iron (45%)  • Arable land      │
-│  • Fusion energy              • Metallurgy           │
-│  • High technology            • Agriculture          │
-│  GDP: ~48% of planetary                              │
-├─────────────────────────────────────────────────────┤
-│  Rhuval: Mining + Heavy Industry                     │
-│  ─────────────────────────────────────────────────── │
-│  • Platinum (48%)  • Chromium (55%)  • Manganese (50%) │
-│  • Mining          • Petrochemicals  • Military industry  │
-│  GDP: ~35% of planetary                              │
-├─────────────────────────────────────────────────────┤
-│  Vexar: High Technology + Biotech                    │
-│  ─────────────────────────────────────────────────── │
-│  • REE (45%)  • Cobalt (52%)  • Endemic biota       │
-│  • Quantum computing  • Pharmaceuticals             │
-│  • Biotechnology      • Reserves (15% of land)       │
-│  GDP: ~15% of planetary                              │
-└─────────────────────────────────────────────────────┘
-```
+*Fig. 19.2. Economic zones of the three continents: Kharak (energy, industry, agriculture; thorium 52%, iron 45%; GDP ~48%), Rhuval (mining, heavy industry; platinum 48%, chromium 55%, manganese 50%; GDP ~35%), Vexar (high tech, biotech; REE 45%, cobalt 52%; GDP ~15%).*
 
 ### 19.4.2 Economic Indicators
 

@@ -85,37 +85,9 @@ Thanks to the constant Ωᵈᵐ = 0.262, the formation of large-scale structure 
 - **Galaxy clusters are on average 3–5% more massive**
 - **Voids are larger** — dark matter "pulled" matter together more efficiently
 
-```
-                       STRUCTURE OF THE COSMIC WEB
-                              (diagram)
-                                
-                    ╱╲                    ╱╲
-                  ╱    ╲   filament     ╱    ╲
-                 ╱  [G1] ╲────────────╱  [G2] ╲
-                ╱          ╲        ╱          ╲
-               ╱            ╲      ╱            ╲
-              ╱              ╲    ╱              ╲
-             ╱     void       ╲  ╱     void       ╲
-            ╱                 ╲ ╱                 ╲
-           ╱                   ╱                   ╲
-          ╱                   |                    ╲
-         ╱                    | filament            ╲
-        ╱                    |                      ╲
-       ╱        [G3]─────────|─────────[G4]          ╲
-      ╱                    ╱ ╲                      ╲
-     ╱                 ╱       ╲                    ╲
-    ╱              ╱             ╲                  ╲
-   ╱           ╱     void          ╲                ╲
-  ╱         ╱                       ╲              ╲
- ╱       ╱     [G5]─────[G6]        ╲            ╲
-╱     ╱                                ╲          ╲    
+![Cosmic web of the Vokh-Rass universe](../assets/art/ART-000033-universe-cosmic-web.png)
 
-[G1]... [G6] — galaxies and their clusters
-void — region 100-300 million light-years in size with extremely low density
-filament — a strand of dark matter and gas
-```
-
-*Fig. 1.1. Schematic representation of the large-scale structure of the Vokh-Rass universe. Each point at the intersection of strands is a galaxy or cluster of galaxies.*
+*Fig. 1.1. Schematic representation of the large-scale structure of the Vokh-Rass universe. Filaments (strands of dark matter and gas), galaxies and their clusters (G1–G6), and voids (regions 100–300 million light-years across with extremely low density).*
 
 ---
 
@@ -395,35 +367,9 @@ Current cosmological models of Vokh-Rass predict the **Big Freeze** — a scenar
 >
 > The prospect of the heat death of the universe is not a reason for pessimism in Xha'Ruun culture. Cyclic cosmology, interwoven with religious beliefs (see [Ch.10, "Eschatology"]), suggests that the "Great Breath" — expansion and contraction — may give way to a new cycle. Even if physically the Big Crunch is unlikely, philosophically the Xha'Ruun believe that the universe will "exhale" and begin a new inhale.
 
-```
-    HISTORY OF THE VOKH-RASS UNIVERSE (chronological scale)
+![History of the Vokh-Rass universe](../assets/art/ART-000034-universe-history-timeline.png)
 
-    t = 0             t = 380,000 years    t = 200 million yrs    t = 6.5 billion cycles
-    │                    │                    │                    │
-    │   Inflation        │   Recombination    │   First            │   Birth
-    │   (9.2×10⁻³⁴ mig)  │   (CMB)            │   stars            │   of Khar'Vex
-    │                    │                    │                    │
-    ▼                    ▼                    ▼                    ▼
-  ╔══════╗           ╔══════════╗        ╔══════════╗         ╔══════════╗
-  ║  ░░  ║           ║    ░░    ║        ║    ░░    ║         ║    ░░    ║
-  ╚══════╝           ╚══════════╝        ╚══════════╝         ╚══════════╝
-  ───────────────────────────────────────────────────────────────────────►
-  Big Bang         Dark Ages        Galaxy formation      Present day
-                                                            (+13.82 bln cycles)
-
-    ┌──── 13.82 billion cycles ────▶────▶────▶────▶────▶────▶────▶────▶───┐
-    │                                                                      │
-    │  ═══════════════  Expansion (accelerated)  ════════════════════════  │
-    │                                                                      │
-    │  t_now             +1 bln          +5 bln        +20 bln             │
-    │  ──────┬───────────┬──────────────────┬──────────────┬───────►       │
-    │        │           │                  │              │               │
-    │      Khar'Vex   Thexar became       Khar'Vex —     All stars        │
-    │      stable     uninhabitable       red giant      go out            │
-    └──────────────────────────────────────────────────────────────────────┘
-```
-
-*Fig. 1.8. Chronology of the Vokh-Rass universe from the Big Bang to heat death.*
+*Fig. 1.8. Chronology of the Vokh-Rass universe: from the Big Bang (t = 0) through recombination (380,000 years) and the first stars (200 million years) to the birth of Khar'Vex (6.5 billion cycles), and onward to the red giant phase and the fading of the stars.*
 
 ---
 

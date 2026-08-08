@@ -49,28 +49,9 @@ Hydrogen sulfide (H₂S) at a concentration of 0.0008% is a unique feature of Th
 
 ### 15.1.2 Vertical Structure
 
-```
-         VERTICAL STRUCTURE OF THÉXAR'S ATMOSPHERE
+![Vertical structure of Théxar's atmosphere](../assets/art/ART-000059-thexar-atmosphere-layers.png)
 
-    Height (mo)
-    20.3 ──────────────────────────────────────
-         │  MESOSPHERE                         │ ← H₂S-glow (purple)
-    17.3 ─┴─────────────────────────────────────
-         │  │                                  │
-         │  │  STRATOSPHERE                     │ ← ozone layer (thinner
-         │  │  Ozone layer: 4.1–8.1 mo         │    by 30%)
-    9.1  ─┴─────────────────────────────────────
-         │  │  │  TROPOSPHERE                   │
-         │  │  │  0–2.2 mo                     │ ← tropopause 19.0°X
-         │  │  │  Gradient: 32.0 K/mo          │
-         │  │  │                                │
-      0  ─┴──┴──────────────────────────────────
-         │  5.4    32.6   59.8   87.0  114.1 °X
-         └───────────────────────────────────────
-                     Temperature
-```
-
-*Fig. 15.1. Vertical structure of Théxar's atmosphere.*
+*Fig. 15.1. Vertical structure of Théxar's atmosphere: mesosphere (17.3–20.3 mo, purple H₂S glow), stratosphere (9.1–17.3 mo, ozone layer 4.1–8.1 mo, 30% thinner), troposphere (0–9.1 mo, tropopause 19.0°X, gradient 32.0 K/mo).*
 
 > **TABLE 15.2: Atmospheric layers**
 >
@@ -138,33 +119,9 @@ The Xha'ri are tetrachromats with sensitivity in the 320–780 nm range. → see
 
 Main conclusion: Théxar receives 36% less stellar energy, but due to the CO₂-enhanced greenhouse effect, it has a sufficiently high average temperature.
 
-```
-       RADIATION BALANCE OF THÉXAR (schematic)
+![Radiation balance of Théxar](../assets/art/ART-000060-thexar-radiation-balance.png)
 
-      Stellar radiation: 923 W/m²
-              │
-              ▼
-    ┌─────────────────────┐
-    │  Upper atmosphere   │ ← 31% reflected (albedo)
-    └─────────────────────┘
-              │
-        ╱─────┴─────╲
-       ╱             ╲
-      ╱       24%     ╲  Atmospheric absorption
-     ╱      (CO₂, H₂O) ╲
-    ╱                   ╲
-    └─────────────────────┘
-              │
-      638 W/m²          Thermal radiation
-              │              of the planet: 398 W/m²
-              ▼              │
-    ┌──────────────────┐     │
-    │  SURFACE         │ ←──┘ Greenhouse amplification: +16.9°X
-    │  T = 51.6°X      │
-    └──────────────────┘
-```
-
-*Fig. 15.2. Radiation balance of Théxar.*
+*Fig. 15.2. Radiation balance of Théxar: stellar radiation 923 W/m², albedo 31%, atmospheric absorption 24% (CO₂, H₂O), surface influx 638 W/m², planetary thermal radiation 398 W/m², greenhouse amplification +16.9°X, T = 51.6°X.*
 
 ### 15.3.2 Long-Term Stability
 
